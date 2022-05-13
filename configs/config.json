@@ -1,0 +1,137 @@
+{
+  "mainFile" : "main.php",
+  "language" : "ko",
+
+  "theme" : {
+    "logo" : "logo.png",
+    "icon" : "icon.png",
+    "favicon" : "favicon.ico",
+    "themeColor" : "light"
+  },
+
+  "libraries" : {
+    "styles" : [
+      "styles/global.css?v=0.01",
+      "styles/main.css?v=0.01"
+    ],
+    "scripts" : [
+      "scripts/functions.js",
+      "scripts/popup.js",
+      "scripts/form.js",
+      "scripts/script.js"
+    ],
+    "postscripts" : [
+      "scripts/postscript.js"
+    ]
+  },
+
+  "dateTime" : {
+    "timezone" : "Asia/Seoul",
+    "dateFormat" : "YYYY-MM-DD",
+    "timeFormat" : "HH:mm:ss",
+    "dateTimeFormat" : "YYYY-MM-DD HH:mm:ss",
+    "timezoneOffset" : "+0900"
+  },
+
+  "permission" : {
+    "siteOwner" : 99,
+    "admin" : 9,
+    "manager" : 8,
+    "team" : 4,
+    "user" : 3,
+    "guest" : 1
+  },
+
+  "pages" : {
+    "main" : {
+      "name" : "",
+      "items" : 1,
+      "listType": "none",
+      "postType": "text"
+    },
+    "exhibition" : {
+      "name" : "전시",
+      "items" : 6,
+      "listType": "preview",
+      "postType": "html",
+      "categories" : {
+        "current" : "현재 전시",
+        "past" : "과거 전시",
+        "planned" : "예정 전시"
+      }
+    },
+    "education" : {
+      "name" : "교육",
+      "items" : 6,
+      "listType": "preview",
+      "postType": "html",
+      "categories" : {
+        "edu01" : "어린이·가족",
+        "edu02" : "청소년·성인",
+        "edu03" : "도슨트"
+      }
+    },
+    "collection" : {
+      "name" : "소장품",
+      "items" : 6,
+      "listType": "gallery",
+      "postType": "html",
+      "categories" : {
+        "collection" : "소장품",
+        "endowment": "작품기증",
+        "book": "도서"
+      },
+      "links" : {
+        "app" : "AR 도슨트 투어"
+      }
+    },
+    "steel_art" : {
+      "name" : "스틸아트공방",
+      "items" : 6,
+      "listType": "list",
+      "postType": "html",
+      "links" : {
+        "steel" : "스틸공방"
+      }
+    },
+    "community" : {
+      "name" : "참여마당",
+      "items" : 6,
+      "listType": "list",
+      "postType": "html",
+      "categories" : {
+        "notice" : "공지사항",
+        "event": "문화행사소식",
+        "qna": "질문과 답변",
+        "news": "장두건미술상" 
+      }
+    },
+    "guide" : {
+      "name" : "관람안내",
+      "items" : 6,
+      "listType": "list",
+      "postType": "html",
+      "categories" : {
+        "information" : "관람안내",
+        "contact": "오시는 길",
+        "reserve": "단체관람 예약",
+        "facility": "편의시설" 
+      }
+    },
+    "greeting" : {
+      "name" : "미술관소개",
+      "items" : 6,
+      "listType": "list",
+      "postType": "html",
+      "categories" : {
+        "greeting" : "인사말",
+        "vision": "정체성·미션",
+        "reserve": "시설현황",
+        "organization": "조직도", 
+        "introduce": "MI 소개" 
+      }
+    }
+
+  }
+
+}
