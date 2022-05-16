@@ -47,7 +47,7 @@ $INFO = openJson(CONF.'info.json');
 // DB 초기화 ------------------------------------------------
 
 // DB 설정파일 로드
-$dbConfigFile = 'db.blog.json';
+$dbConfigFile = 'db.museum.json';
 if (!fileExists(CONF.$dbConfigFile)) {
   $dbConfigFile = 'db.default.json';
 }
@@ -84,43 +84,6 @@ if (!$USER) { // 로그인 안되어 있을 경우
 
 /* 리퀘스트
 action, category, do, postid, page, numb
-action=main
-       profile(=category)
-       portpolio(=category)
-       study(=category)
-       diary(=category)
-       
-       search(result)
-
-       board
-       user
-do=
-  post&page=1
-  list&page=1
-  view&postid=1
-  edit&postid=1
-  delete&postid=1
-  write&category=diary
-
-search=type=
-  post
-  board
-  user
-  tag
-category=
-query=검색어
-
-board&do=
-  list&category=notice&page=1
-  view&numb=1
-  edit&numb=1
-  delete&numb=1
-  write&category=notice
-user&do=
-  login
-  logout
-  signup
-  mypage
 */
 
 $ACT = isset($_REQUEST['action'])?$_REQUEST['action']:'main';
