@@ -57,18 +57,18 @@
 				<li class="dep1"><a href="edu01.php" class="dep_btn1">교육</a>
 					<div class="sub">
 						<ul class="gnb_sub">
-									<li><a href="/poma/p_edu/edu01/">어린이·가족</a></li>
-									<li><a href="/poma/p_edu/edu02/">청소년·성인</a></li>
-									<li><a href="/poma/p_edu/edu03/">도슨트</a></li>
+									<li><a href="edu01.php">어린이·가족</a></li>
+									<li><a href="edu02.php">청소년·성인</a></li>
+									<li><a href="edu03.php">도슨트</a></li>
 						</ul>
 					</div>
 				</li>
-				<li class="dep1"><a href="/poma/p_coll/c_coll/" class="dep_btn1">소장품</a>
+				<li class="dep1"><a href="c_coll.php" class="dep_btn1">소장품</a>
 					<div class="sub">
 						<ul class="gnb_sub">
-									<li><a href="/poma/p_coll/c_coll/">소장품</a></li>
-									<li><a href="/poma/p_coll/c_endow/">작품기증</a></li>
-									<li><a href="/poma/p_coll/c_libr/">도서</a></li>
+									<li><a href="c_coll.php">소장품</a></li>
+									<li><a href="c_endow.php">작품기증</a></li>
+									<li><a href="c_libr.php">도서</a></li>
 									<li><a href="http://poma.pohang.go.kr/poma/p_coll/c_app/index.html" target="_blank" title="[AR 도슨트 투어] 새창으로 화면 이동">AR 도슨트 투어</a></li>
 						</ul>
 					</div>

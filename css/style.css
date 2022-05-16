@@ -404,6 +404,39 @@ input[type=text], input[type=password], textarea, button {
     display: none;
 }
 
+#cont .text_wrap {
+    margin: 35px 0;
+}
+#cont .text_wrap .cont_tit {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+#cont .gallery_wrap {
+    padding: 20px 5px 0;
+    border-top: 2px solid #ddd;
+    overflow: hidden;
+}
+#cont .gallery_list {
+    overflow: hidden;
+}
+#cont .gallery_list li {
+    float: left;
+    margin: 0 15px 50px 15px;
+}
+#cont .gallery_list li .img {
+    padding: 5px;
+    width: 224px;
+    height: 153px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+#cont .gallery_list li .text {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
 
 #h_visual {
     position: relative;
