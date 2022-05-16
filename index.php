@@ -121,17 +121,11 @@
     <div id="h_visual">
 	<div id="imgslide">
 		<div class="imgs">
-			<a href="#"><img src="image/001.jpg"></a>
-			<a href="#"><img src="image/002.jpg"></a>
-			<a href="#"><img src="image/001.jpg"></a>		
-			<a href="#"><img src="image/002.jpg"></a>
-			<a href="#"><img src="image/001.jpg"></a>
-		</div>
-		<div class="btn_prev">
-			<a href="#">&#8249;</a>
-		</div>
-		<div class="btn_next">
-			<a href="#">&#8250;</a>
+			<img src="image/001.jpg">
+			<img src="image/002.jpg">
+			<img src="image/001.jpg">
+			<img src="image/002.jpg">
+			<img src="image/001.jpg">
 		</div>
 	</div>
     </div>
