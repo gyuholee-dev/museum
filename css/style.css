@@ -286,6 +286,108 @@ input[type=text], input[type=password], textarea, button {
 #board {
     width: 100%;
 }
+
+#board .bbs_gallery_defalut > ul > li:first-child {
+    padding-top: 0;
+}
+#board .bbs_gallery_defalut > ul > li {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+#board .bbs_gallery_defalut > ul li .img {
+    float: left;
+    margin-right: 0;
+    width: 355px;
+    height: 130px;
+    overflow: hidden;
+}
+#board .bbs_gallery_defalut > ul li .text {
+    float: left;
+    position: relative;
+    margin-left: 20px;
+    width: 445px;
+    height: 130px;
+    overflow: hidden;
+}
+#board .bbs_gallery_defalut > ul li p.tit {
+    width: 100%;
+    font-size: 17px;
+    line-height: 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    font-weight: bold;
+}
+#board .bbs_gallery_defalut > ul li .date {
+    margin: 5px 0 0;
+    color: #959595;
+}
+#board .bbs_gallery_defalut > ul li .text .cont {
+    display: -webkit-box;
+    height: 45px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+#board .bbs_gallery_defalut > ul li .text .detail_btn_wrap {
+    position: absolute;
+    bottom: 0;
+}
+#board .bbs_gallery_defalut > ul li .text .detail_btn_wrap a {
+    display: inline-block;
+    width: 113px;
+    height: 28px;
+    line-height: 28px;
+    color: #656565;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    text-align: center;
+}
+#cont .paging_wrap {
+    width: 100%;
+    margin: 50px 0 50px;
+    vertical-align: top;
+    text-align: center;
+}
+#cont .paging_wrap a:hover {
+    text-decoration: underline;
+}
+#cont .paging_wrap a.current {
+    margin-top: -1px;
+    width: 30px;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    border: 0;
+    background: #656565;
+    text-decoration: underline;
+    vertical-align: middle;
+}
+#cont .paging_wrap a:hover {
+    color: #fff;
+    background: #656565;
+}
+#cont .paging_wrap a {
+    display: inline-block;
+    width: 28px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+}
+#cont .paging_wrap a.next_page {
+    background: #f5f5f5 url(../image/paging_next_ico.png) no-repeat center center;
+}
+#cont .paging_wrap a.last_page {
+    background: #f5f5f5 url(../image/paging_last_ico.png) no-repeat center center;
+}
+
 #cont .btn_wrap {
     margin: 15px 0;
 }
