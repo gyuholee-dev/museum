@@ -690,6 +690,132 @@ input[type=text], input[type=password], textarea, button {
     font-weight: normal;
 }
 
+#board .exh_view_default .art_img_wrap {
+    margin-bottom: 50px;
+}
+.clearAfter {
+    *zoom: 1;
+}
+#board .exh_view_default .info {
+    float: left;
+    margin-right: 30px;
+    width: 535px;
+}
+#board .exh_view_default .info > .tit {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+#board .exh_view_default .art_wrap > .tit {
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+#board .exh_view_default .info .info_box {
+    margin-bottom: 30px;
+    padding: 30px 10px 30px;
+    border-bottom: 1px solid #ddd;
+}
+#board .exh_view_default .info .info_box ul li:first-child {
+    margin-top: 0;
+}
+#board .exh_view_default .info .info_box ul li {
+    margin-top: 5px;
+    overflow: hidden;
+}
+#board .exh_view_default .info .info_box ul li .tit {
+    width: 80px;
+    color: #000;
+}
+#board .exh_view_default .info .info_box ul li span {
+    display: inline-block;
+    color: #959595;
+}
+#board .exh_view_default .info .info_text p:first-child {
+    margin-top: 0;
+}
+#board .exh_view_default .info .info_text p {
+    margin-top: 30px;
+    line-height: 23px;
+    text-align: justify;
+}
+#board .exh_view_default .gallery {
+    float: left;
+    position: relative;
+    width: 255px;
+    overflow: hidden;
+}
+#board .exh_view_default .gallery ul {
+    width: 260px;
+    overflow: hidden;
+}
+#board .exh_view_default .gallery ul li {
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 125px;
+    height: 125px;
+    overflow: hidden;
+}
+#board .exh_view_default .gallery ul li > a {
+    display: block;
+}
+#board .exh_view_default .popzone .pop_layer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1200;
+}
+#board .exh_view_default .popzone .pop_layer .layer_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 650px;
+    margin: -325px 0 0 -400px;
+    background: #fff;
+}
+#board .exh_view_default .popzone .pop_layer .layer_close {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 20px;
+    height: 20px;
+    background: url(../image/mobile_nav_close_btn.png) no-repeat 0 0;
+    text-indent: -9999px;
+}
+#board .exh_view_default .popzone .pop_layer .layer_inner > .inner_wrap {
+    position: relative;
+    width: 100%;
+}
+#board .exh_view_default .popzone .pop_layer .layer_inner > .inner_wrap .inner_img {
+    position: relative;
+    width: 550px;
+    padding: 20px;
+}
+#board .exh_view_default .popzone .pop_layer .layer_inner > .inner_wrap .inner_txt {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 190px;
+}
+#cont .btn_wrap {
+    margin: 15px 0;
+}
+#cont .btn_wrap a {
+    display: inline-block;
+    width: 98px;
+    height: 28px;
+    line-height: 28px;
+    color: #656565;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    background: #f0f0f0;
+    text-align: center;
+}
 
 
 

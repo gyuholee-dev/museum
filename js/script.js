@@ -7,6 +7,16 @@ $(".submenu_back").mouseleave(function(){
   $(".submenu_back").stop().slideUp();
 });
 
+
+$(".pop").click(function(){
+    $(this).children(".pop_layer").css("display","block");
+});
+$(".pop").ready(function(){
+$(".layer_close").click(function(){
+    $(this).children(".pop_layer").css("display","none");
+});
+});
+
 var imgs=4;
 var now=0;
 

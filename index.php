@@ -73,41 +73,41 @@
 						</ul>
 					</div>
 				</li>
-				<li class="dep1"><a href="/poma/p_ste/steel_art/" class="dep_btn1">스틸아트공방</a>
+				<li class="dep1"><a href="steel_art.php" class="dep_btn1">스틸아트공방</a>
 					<div class="sub">
 						<ul class="gnb_sub">
-									<li><a href="/poma/p_ste/steel_art/">스틸공방</a></li>
+									<li><a href="steel_art.php">스틸공방</a></li>
 						</ul>
 					</div>
 				</li>
-				<li class="dep1"><a href="/poma/p_comm/cm_noti/" class="dep_btn1">참여마당</a>
+				<li class="dep1"><a href="cm_noti.php" class="dep_btn1">참여마당</a>
 					<div class="sub">
 						<ul class="gnb_sub">
-									<li><a href="/poma/p_comm/cm_noti/">공지사항</a></li>
-									<li><a href="/poma/p_comm/cm_event/">문화행사소식</a></li>
-									<li><a href="/poma/p_comm/cm_qna/">질문과답변</a></li>
-									<li><a href="/poma/p_comm/cm_news/">장두건미술상</a></li>
+									<li><a href="cm_noti.php">공지사항</a></li>
+									<li><a href="cm_event.php">문화행사소식</a></li>
+									<li><a href="cm_qna.php">질문과답변</a></li>
+									<li><a href="cm_news.php">장두건미술상</a></li>
 						</ul>
 					</div>
 				</li>
-				<li class="dep1"><a href="/poma/p_guid/g_guide/" class="dep_btn1">관람안내</a>
+				<li class="dep1"><a href="g_guide.php" class="dep_btn1">관람안내</a>
 					<div class="sub">
 						<ul class="gnb_sub">
-									<li><a href="/poma/p_guid/g_guide/">관람안내</a></li>
-									<li><a href="/poma/p_guid/g_contact/">오시는길</a></li>
-									<li><a href="/poma/p_guid/g_reser/?mode=write&amp;tm=1652400984">단체관람예약</a></li>
-									<li><a href="/poma/p_guid/g_facility/">편의시설</a></li>
+									<li><a href="g_guide.php">관람안내</a></li>
+									<li><a href="g_contact.php">오시는길</a></li>
+									<li><a href="g_reser.php">단체관람예약</a></li>
+									<li><a href="g_facility.php">편의시설</a></li>
 						</ul>
 					</div>
 				</li>
-				<li class="dep1"><a href="/poma/p_intr/i_greeting/" class="dep_btn1">미술관소개</a>
+				<li class="dep1"><a href="i_greeting.php" class="dep_btn1">미술관소개</a>
 					<div class="sub">
 						<ul class="gnb_sub">
-									<li><a href="/poma/p_intr/i_greeting/">인사말</a></li>
-									<li><a href="/poma/p_intr/vision/">정체성·미션</a></li>
-									<li><a href="/poma/p_intr/i_intr/">시설현황</a></li>
-									<li><a href="/poma/p_intr/i_organization/">조직도</a></li>
-									<li><a href="/poma/p_intr/i_mi/">MI소개</a></li>
+									<li><a href="i_greeting.php">인사말</a></li>
+									<li><a href="vision.php">정체성·미션</a></li>
+									<li><a href="i_intr.php">시설현황</a></li>
+									<li><a href="i_organization.php">조직도</a></li>
+									<li><a href="i_mi.php">MI소개</a></li>
 						</ul>
 					</div>
 				</li>
@@ -192,7 +192,7 @@
                                 <li><a href="#">2022년 제18회 포항시 장두건미술상 공모</a><span class="date">2022-03-07</span></li>
                             </ul>
                         </div>
-                        <a href="/poma/p_comm/cm_noti/" class="more_btn">
+                        <a href="cm_noti/" class="more_btn">
                         <img src="image/more_btn.gif" class="pc_ver" alt="더보기">
 
                         </a>
@@ -201,7 +201,7 @@
                         <div class="inner">
                             <span class="txt"><a style="color:white; display:block;" target="_blank" href="http://poma.pohang.go.kr/poma/p_coll/c_app/index.html">AR 도슨트 투어</a></span>
 
-                            <a href="/poma/p_comm/cm_event/" class="more_btn">
+                            <a href="cm_event/" class="more_btn">
                             <img src="image/more_btn.gif" class="pc_ver" alt="더보기">
 
                             </a>
