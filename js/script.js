@@ -1,9 +1,9 @@
 $(".dep_btn1").mouseover(function(){
-    $(".sub").stop().slideDown();
+    $(".dep1>div").stop().slideDown();
     $(".submenu_back").stop().slideDown();
 });
 $(".submenu_back").mouseleave(function(){
-  $(".sub").stop().slideUp();
+  $(".dep1>div").stop().slideUp();
   $(".submenu_back").stop().slideUp();
 });
 

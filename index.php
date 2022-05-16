@@ -48,9 +48,9 @@
 				<li class="dep1"><a href="p_exh.php" class="dep_btn1">전시</a>
 					<div class="sub">
 						<ul class="gnb_sub">
-									<li><a href="e_pre.php?">현재전시</a></li>
-									<li><a href="e_past.php?">과거전시</a></li>
-									<li><a href="e_expe.php?">예정전시</a></li>
+									<li><a href="e_pre.php">현재전시</a></li>
+									<li><a href="e_past.php">과거전시</a></li>
+									<li><a href="e_expe.php">예정전시</a></li>
 						</ul>
 					</div>
 				</li>
