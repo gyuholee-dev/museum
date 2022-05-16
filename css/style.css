@@ -817,12 +817,500 @@ input[type=text], input[type=password], textarea, button {
     text-align: center;
 }
 
+#cont .dlType_wrap {
+    width: auto;
+    overflow: hidden;
+}
+#cont .dlType_wrap .dlType01 {
+    float: left;
+    margin: 0 2% 30px 0;
+    width: 48%;
+    box-sizing: border-box;
+}
+#cont .dlType_wrap .dlType01 dt {
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #f0f0f0;
+}
+#cont .dlType_wrap .dlType01 dd {
+    padding: 10px;
+    height: 65px;
+    font-size: 14px;
+}
+.emph_LGray {
+    color: #6c6c6c !important;
+}
+#cont .dlType_wrap .inner {
+    width: 102%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.float_cut {
+    display: block;
+    float: none;
+    width: 100%;
+    height: 0;
+    clear: both;
+}
+#cont .dlType_wrap .dlType02 {
+    margin: 0 0 50px 0;
+    width: 100%;
+}
+#cont .dlType_wrap .dlType02 dt {
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #f0f0f0;
+}
+#cont .dlType_wrap .dlType02 dd {
+    position: relative;
+    padding: 10px;
+    font-size: 14px;
+}
+#cont .dlType_wrap .dlType02 dd p:first-child {
+    margin-top: 0;
+}
+#cont .dlType_wrap .dlType02 dd p {
+    margin-top: 30px;
+}
+#cont .br {
+    display: block;
+}
+#cont .dlType_wrap .dlType02 dd .reservation_btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 155px;
+    height: 40px;
+    line-height: 40px;
+    color: #656565;
+    border: 1px solid #ddd;
+    background: #f0f0f0;
+    text-align: center;
+}
+#cont .guide_tip_wrap {
+    margin-top: 35px;
+    width: 100%;
+    overflow: hidden;
+}
+#cont .guide_tip_wrap ul {
+    width: 100%;
+    overflow: hidden;
+}
+#cont .guide_tip_wrap ul li {
+    display: inline-block;
+    margin: 0 4% 40px 0;
+    width: 45%;
+    vertical-align: top;
+}
+#cont .dlType_wrap .dlType02 dd p:first-child {
+    margin-top: 0;
+}
+#cont .guide_tip_wrap ul li .tit {
+    margin-bottom: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+}
+#cont .guide_tip_wrap ul li .tit .ico {
+    margin-right: 10px;
+}
+#cont .guide_tip_wrap ul li .cont {
+    min-height: 65px;
+}
+
+#cont .greeting_wrap {
+    text-align: justify;
+}
+#cont .text_wrap {
+    margin: 35px 0;
+}
+#cont .greeting_wrap p {
+    margin-top: 30px;
+    word-break: keep-all;
+}
+#cont .greeting_wrap .sign {
+    vertical-align: bottom;
+    margin-left: 5px;
+}
+#board .bbs_search {
+    width: 100%;
+    padding: 10px 0 15px;
+    text-align: right;
+}
+#board .bbs_search input {
+    width: 150px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+#board .bbs_search select {
+    width: 120px;
+    height: 32px;
+    padding-left: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+#board .bbs_search button {
+    width: 50px;
+    height: 32px;
+    padding: 0;
+    color: #656565;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    vertical-align: top;
+}
+#board .bbs_list_defalut table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid #ddd;
+    table-layout: fixed;
+}
+#board .bbs_list_defalut table caption {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+#board .bbs_list_defalut table thead th {
+    padding: 13px 0;
+    border-bottom: 1px solid #ddd;
+    background: #f5f5f5;
+}
+#board .bbs_list_defalut table tbody td.notice {
+    color: #000;
+    font-weight: bold;
+}
+#board .bbs_list_defalut table tbody td.subject {
+    text-align: left;
+}
+#board .bbs_list_defalut table tbody td.subject a {
+    display: inline-block;
+    max-width: 93%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+#board .bbs_list_defalut table tbody td {
+    padding: 12px 0;
+    color: #959595;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+#board .bbs_list_defalut table thead th.hits {
+    width: 10%;
+}
+#board .bbs_list_defalut table thead th.subject {
+    width: 56%;
+}
+#board .bbs_list_defalut table thead th.writer {
+    width: 12%;
+}
+#board .bbs_list_defalut table thead th.date {
+    width: 12%;
+}
+
+/* login page start*/
+
+#container {
+    position: relative;
+    width: 100%;
+    padding: 120px 0;
+}
+#container > .rbox {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 1000px;
+    min-height: 540px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+}
+#container > .rbox > .head {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    background: url(../image/bg_blur.jpg) no-repeat 35% -120px;
+}
+#container > .rbox > .head > .inner {
+    padding: 30px 50px 0 50px;
+}
+#container > .rbox > .head > .inner > h2 {
+    line-height: 60px;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: -4px;
+}
+#container > .rbox > .head > .inner > p {
+    margin-top: 15px;
+}
+#container > .rbox > .head > .inner > p.txt > span {
+    display: block;
+    word-break: keep-all;
+}
+#container > .rbox > .head > .inner > p.cut {
+    width: 50px;
+    height: 0;
+    border-bottom: 1px solid #fff;
+}
+#container > .rbox > .head > .inner > a {
+    display: block;
+    width: 145px;
+    height: 40px;
+    margin-top: 15px;
+    padding-left: 15px;
+    background: url(../image/btn_arr.png) no-repeat 140px 50% rgba(0,0,0,.5);
+    line-height: 40px;
+}
+.security_chk {
+    margin-top: 20px;
+}
+.security_chk .txt, .security_chk .txt1 {
+    color: #fff;
+}
+.security_chk .chk_inp {
+    color: #fff;
+}
+.security_chk .inp_wrap {
+    display: inline-block;
+}
+.security_chk .security_apply_btn {
+    margin-left: 10px;
+    padding: 2px 15px;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 3px;
+    vertical-align: middle;
+}
+.certi_indi {
+    margin-top: 20px;
+    width: 300px;
+}
+.certi_indi p.info {
+    color: #ddd;
+    line-height: 20px;
+    font-size: 13px;
+}
+.certi_indi p.info > button {
+    width: 16px;
+    height: 20px;
+    margin-left: 5px;
+    background: url(../image/ico_info.png) no-repeat 50%;
+    text-indent: -9999px;
+}
+.certi_indi .help_pop {
+    bottom: 110px;
+}
+.help_pop {
+    display: none;
+    position: absolute;
+    width: 250px;
+    padding: 25px;
+    border: 1px solid #03a9f4;
+    background: #fff;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 25%);
+}
+.help_pop > button.close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../image/pop_close.png) no-repeat 50%;
+    text-indent: -9999px;
+}
+.help_pop > .txt_wrap {
+    margin-top: 10px;
+}
+.help_pop > .txt_wrap > p.tit {
+    padding-bottom: 5px;
+    color: #03a9f4;
+}
+.help_pop > .txt_wrap > p {
+    line-height: 20px;
+    font-size: 13px;
+}
+.certi_indi h3 {
+    line-height: 30px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 23px;
+}
+.certi_indi > .sel {
+    width: 100%;
+}
+.certi_indi > .sel > .select {
+    float: left;
+    width: 235px;
+    padding: 15px 0 15px 5px;
+    border-bottom: 1px solid #fff;
+}
+.certi_indi > .sel > .select select option {
+    color: #000;
+}
+.certi_indi > .sel > button {
+    display: block;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 20px;
+    background: url(../image/go_arr.png) no-repeat 50% #03a9f4;
+    text-indent: -9999px;
+}
+.break {
+    display: block;
+    clear: both;
+}
+#container > .rbox > .body {
+    float: right;
+    width: 600px;
+}
+.type_tab {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.type_tab ul {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.type_tab .active {
+    background-color: #fff;
+    color: #267dde;
+    border-color: #267dde;
+    font-weight: bold;
+}
+.type_tab li {
+    width: 33.3%;
+    display: table-cell;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#container > .rbox > .body > .login {
+    border-bottom: 1px solid #ddd;
+}
+#container > .rbox > .body > .inner.login > h3 {
+    font-size: 30px;
+    letter-spacing: 0;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+#container > .rbox > .body > .inner.login > form > ._id, #container > .rbox > .body > .inner.login > form > ._pw {
+    padding: 15px 0;
+    border-bottom: 1px solid #bbb;
+}
+#container > .rbox > .body > .inner.login > form > ._id > label {
+    background: url(../image/ico_id.png) no-repeat 50%;
+}
+#container > .rbox > .body > .inner.login > form > ._pw {
+    margin-top: 10px;
+}
+#container > .rbox > .body > .inner.login > form > ._pw > label {
+    background: url(../image/ico_pw.png) no-repeat 50%;
+}
+
+#container > .rbox > .body > .inner.login > form > ._id > input, #container > .rbox > .body > .inner.login > form > ._pw > input {
+    display: block;
+    width: 270px;
+    height: 20px;
+    padding-left: 10px;
+    border: none;
+    background: transparent;
+    font-size: 13px;
+}
+#container > .rbox > .body > .inner.login > form > button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background: #267dde;
+    color: #fff;
+}
+#container .rbox > .body > .inner > .find_idpw {
+    text-align: center;
+}
+#container .rbox > .body > .inner > .find_idpw ._btn {
+    padding-top: 10px;
+}
+#container .rbox > .body > .inner > .find_idpw ._btn > button, #container .rbox > .body > .inner > .find_idpw ._btn > span.cut {
+    line-height: 20px;
+}
+#container .rbox > .body > .inner > .find_idpw ._btn > span.cut {
+    padding: 0 10px;
+}
+.certi_indi > .sel > .select > select {
+    height: 20px;
+    border: none;
+    background: transparent;
+    width: 100%;
+    color: #fff;
+}
+#container > .rbox > .body > .inner {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+#container > .rbox > .body > .inner.login > form > ._id > label, #container > .rbox > .body > .inner.login > form > ._pw > label {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+}
 
 
 
 
 
 
+
+
+
+
+
+/* login page end */
 
 
 
