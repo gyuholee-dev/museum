@@ -13,12 +13,15 @@
     "styles" : [
       "styles/fonts.css?v=0.01",
       "styles/global.css?v=0.01",
-      "styles/main.css?v=0.01"
+      "styles/style.css?v=0.01",
+      "styles/fixed.css?v=0.01"
     ],
     "scripts" : [
       "scripts/functions.js",
       "scripts/popup.js",
-      "scripts/form.js",
+      "scripts/form.js"
+    ],
+    "deferscripts" : [
       "scripts/script.js"
     ],
     "postscripts" : [

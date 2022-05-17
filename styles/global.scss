@@ -18,34 +18,34 @@ html {
   word-break: break-all;
 }
 
-#container {
-  @include flex(center, start, column);
-  width: 100%;
-  // max-width: $max-width;
-  margin: 0 auto;
-  position: relative;
-  min-height: 100vh;
-}
+// #container {
+//   @include flex(center, start, column);
+//   width: 100%;
+//   // max-width: $max-width;
+//   margin: 0 auto;
+//   position: relative;
+//   min-height: 100vh;
+// }
 
-header, footer, nav {
-  @include flex(center, center);
-  width: 100%;
-  position: relative;
-}
+// header, footer, nav {
+//   @include flex(center, center);
+//   width: 100%;
+//   position: relative;
+// }
 
-main,
-article,
-section {
-  @include flex(start, center);
-  width: 100%;
-  position: relative;
-}
+// main,
+// article,
+// section {
+//   @include flex(start, center);
+//   width: 100%;
+//   position: relative;
+// }
 
-aside {
-  @include flex(center, start, column);
-  position: relative;
-  width: 0;
-}
+// aside {
+//   @include flex(center, start, column);
+//   position: relative;
+//   width: 0;
+// }
 
 #message {
   width: 100%;
@@ -137,7 +137,7 @@ input[type=reset] {
   font-weight: bold;
   line-height: 1.12;
   padding: 8px 12px;
-  min-width: 112px;
+  // min-width: 112px;
   background-color: $color-button;
   border: 1px solid rgba(black,0.35);
   border-radius: 8px;

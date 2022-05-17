@@ -45,9 +45,9 @@ function getSiteTitle()
   if ($INFO['subtitle']) {
     $siteTitle .= ' : '.$INFO['subtitle'];
   } else if ($ACT == 'user' && isset($CONF['pages'][$DO])) {
-    $siteTitle .= ($CONF['pages'][$DO]['name'])?' : '.$CONF['pages'][$DO]['name']:'';
+    $siteTitle .= ($CONF['pages'][$DO]['title'])?' : '.$CONF['pages'][$DO]['title']:'';
   } else if (isset($CONF['pages'][$ACT])) {
-    $siteTitle .= ($CONF['pages'][$ACT]['name'])?' : '.$CONF['pages'][$ACT]['name']:'';
+    $siteTitle .= ($CONF['pages'][$ACT]['title'])?' : '.$CONF['pages'][$ACT]['title']:'';
   }
   return $siteTitle;
 }
@@ -132,19 +132,12 @@ function getNavmenu($sep=null)
 {
   global $CONF, $ACT;
   $main = MAIN;
-  $pages = array();
-  foreach ($CONF['pages'] as $key => $conf) {
-    if ($conf['visible'] != 'none') {
-      if ($conf['visible'] == 'all' || in_array('menu', $conf['visible'])) {
-          $pages[$key] = $conf;
-      }
-    }
-  }
+  $pages = $CONF['pages'];
 
   $navmenu = '';
   foreach ($pages as $key => $conf) {
     $active = ($ACT==$key)?'active':'';
-    $navmenu .= "<li class='$active'><a href='$main?action=$key'>$conf[name]</a></li>";
+    $navmenu .= "<li class='$active'><a href='$main?action=$key'>$conf[title]</a></li>";
     if ($sep && $key != array_key_last($pages)) {
       $navmenu .= "<span class='sep'>$sep</span>";
     }

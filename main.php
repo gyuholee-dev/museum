@@ -9,6 +9,13 @@ $content = '';
 switch($ACT) {
   case 'main':
     // $content .= makeBannerSlide();
+    // $content .= makeWidgetList('exhibition', 3);
+    // $content .= makeWidgetList('education', 3);
+    // $content .= makeWidgetList('community', 4);
+    // $content .= makeWidgetLink(['title'=>'소장품/도서']);
+    // $content .= makeWidgetLink(['title'=>'미술관소개']);
+    // $content .= makeWidgetLink(['title'=>'스틸아트공방']);
+    // $content .= makeWidgetLink(['title'=>'관람안내/예약']);
     break;
 
   default : // main
@@ -21,15 +28,14 @@ switch($ACT) {
 // 프리로드
 preloadLibrary();
 
-
 // 랜더링
 $html_data = array(
-  // 'head' => makeHead(),
-  // 'header' => makeHeader(),
-  // 'content' => $content,
+  'head' => makeHead(),
+  'header' => makeHeader(),
+  'content' => $content,
   // 'leftmenu' => makeSidemenu('left'),
   // 'rightmenu' => makeSidemenu('right'),
-  // 'footer' => makeFooter(),
+  'footer' => makeFooter(),
   // 'postScript' => getLibraries('postscripts'),
   // 'popup' => makePopupList($popupData),
 );
