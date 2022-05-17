@@ -23,8 +23,7 @@ define('MAIN', 'main.php');
 global $MSG;
 global $INFO, $CONF, $DBCONF; 
 global $DB, $USER;
-global $ACT, $CAT, $DO;
-global $ID, $PAGE, $NUMB;
+global $ACT, $CAT, $DO, $ID, $PAGE;
 global $MAIN;
 $MAIN = MAIN;
 
@@ -84,12 +83,14 @@ if (!$USER) { // 로그인 안되어 있을 경우
 
 /* 리퀘스트
 action, category, do, postid, page, numb
+action: (=subject) main, exhibition, education ...
+category: current, past, planned ...
+do: list, view, edit, delete ...
+postid: post id
+page: page number
 */
-
 $ACT = isset($_REQUEST['action'])?$_REQUEST['action']:'main';
-$CAT = isset($_REQUEST['category'])?$_REQUEST['category']:'all';
-$DO = ($ACT=='board')?'thread':'list';
-$DO = isset($_REQUEST['do'])?$_REQUEST['do']:$DO;
+$CAT = isset($_REQUEST['category'])?$_REQUEST['category']:'';
+$DO = isset($_REQUEST['do'])?$_REQUEST['do']:'list';
 $ID = isset($_REQUEST['postid'])?$_REQUEST['postid']:null;
 $PAGE = isset($_REQUEST['page'])?$_REQUEST['page']:1;
-$NUMB = isset($_REQUEST['numb'])?$_REQUEST['numb']:1;
