@@ -11,7 +11,7 @@ function preloadLibrary()
     foreach ($libs as $lib) {
       if ($key == 'styles') {
         header("Link: <$lib>; rel=preload; as=style;");
-      } elseif ($key == 'scripts') {
+      } elseif ($key == 'scripts' || $key == 'deferscripts') {
         header("Link: <$lib>; rel=preload; as=script;");
       } elseif ($key == 'postscripts') {
         header("Link: <$lib>; rel=preload; as=script;");
@@ -87,6 +87,8 @@ function getLibraries($key='styles')
       $html .= "<link rel='stylesheet' href='$lib'>";
     } elseif ($key == 'scripts') {
       $html .= "<script type='text/javascript' src='$lib'></script>";
+    } elseif ($key == 'deferscripts') {
+      $html .= "<script type='text/javascript' src='$lib' defer='defer'></script>";
     } elseif ($key == 'postscripts') {
       $html .= "<script type='text/javascript' src='$lib'></script>";
     }
@@ -195,6 +197,7 @@ function makeHead()
 
   $head .= getLibraries('styles');
   $head .= getLibraries('scripts');
+  $head .= getLibraries('deferscripts');
 
   return $head;
 }

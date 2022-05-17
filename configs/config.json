@@ -17,9 +17,8 @@
       "styles/fixed.css?v=0.01"
     ],
     "scripts" : [
-      "scripts/functions.js",
-      "scripts/popup.js",
-      "scripts/form.js"
+      "scripts/jquery-1.12.4.min.js",
+      "scripts/functions.js"
     ],
     "deferscripts" : [
       "scripts/script.js"
