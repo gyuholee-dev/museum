@@ -7,9 +7,9 @@
 <title>포항시립미술관</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0">
 <link rel="icon" href="image/slogo.png">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="styles/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="js/script.js" defer="defer"></script>
+<script src="scripts/script.js" defer="defer"></script>
 <style>
 #container .rbox > .body > .inner > .find_idpw ._btn > button:hover {
     text-decoration: underline;
