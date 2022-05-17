@@ -1,5 +1,47 @@
-#header .search_wrap { border: none !important; overflow: initial !important; }
+#header .header_top {
+  background-image: none;
+  background-color: black;
+}
 
-#header .search_btn { border: none !important; background-color: transparent !important; box-shadow: none !important; }
+#header .header_top .inner .search_wrap {
+  border: none;
+  overflow: initial;
+}
 
-#container { background: initial; padding: 0; min-height: 400px; }
+#header .header_top .inner .search_wrap .search_btn {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 24px;
+  height: 24px;
+}
+
+#header .header_top .inner .search_wrap .search_btn :hover {
+  color: orange;
+}
+
+#header .header_top .inner .search_wrap .search_btn > i {
+  font-size: 1.5rem;
+  top: 1px;
+}
+
+#header .header_top .util_box > ul > li > a {
+  color: white;
+}
+
+#header .header_top .util_box > ul > li > a:hover {
+  color: orange;
+}
+
+#header .header_top .util_box > ul > li > a span {
+  color: inherit;
+}
+
+#container {
+  background: initial;
+  padding: 0;
+  min-height: 400px;
+}
