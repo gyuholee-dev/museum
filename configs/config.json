@@ -11,6 +11,7 @@
 
   "libraries" : {
     "styles" : [
+      "styles/fonts.css?v=0.01",
       "styles/global.css?v=0.01",
       "styles/main.css?v=0.01"
     ],

@@ -1,0 +1,39 @@
+@import "_variables.scss";
+
+// dark theme
+$color-background: $grey-10;
+$color-header: rgba($black, 0.65);
+$color-section: $grey-15;
+$color-footer: rgba($black, 0.65);
+
+$color-text: $grey-80;
+$color-text-faint: $grey-65;
+$color-text-emp: $white;
+$color-text-link: $blue;
+$color-border: $grey-35;
+$color-border-emp: $sky;
+
+$color-button: $grey-5;
+$color-button-float: $grey-5;
+$color-deactive: $grey-5;
+$color-input: $black;
+
+$color-box-grey: $grey-10;
+$color-box-blue: #0f1a24;
+$color-box-antique: #24170f;
+
+$color-light: $grey-25;
+
+body {
+  background-color: $color-background;
+  color: $color-text;
+}
+header {
+  background-color: $color-header;
+}
+section {
+  background-color: $color-section;
+}
+footer {
+  background-color: $color-footer;
+}

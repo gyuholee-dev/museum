@@ -1,0 +1,108 @@
+@charset "UTF-8";
+body { background-color: #f2f2f2; color: #0d0d0d; }
+
+header { background-color: rgba(255, 255, 255, 0.65); }
+
+section { background-color: #ffffff; }
+
+footer { background-color: #ffffff; }
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html { font-family: "나눔 고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; line-height: 1.5; word-break: break-all; }
+
+#container { display: flex; flex-direction: column; align-items: center; justify-content: start; flex-wrap: nowrap; width: 100%; margin: 0 auto; position: relative; min-height: 100vh; }
+
+header, footer, nav { display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: nowrap; width: 100%; position: relative; }
+
+main, article, section { display: flex; flex-direction: row; align-items: start; justify-content: center; flex-wrap: nowrap; width: 100%; position: relative; }
+
+aside { display: flex; flex-direction: column; align-items: center; justify-content: start; flex-wrap: nowrap; position: relative; width: 0; }
+
+#message { width: 100%; }
+
+#message .log { padding: 5px 10px; background-color: gray; color: white; font-size: 0.9rem; text-align: center; }
+
+#message .log.info { background-color: #5f5fff; }
+
+#message .log.success { background-color: green; }
+
+#message .log.error { background-color: red; }
+
+a { text-decoration: none; color: inherit; }
+
+img { width: 100%; }
+
+form { display: flex; flex-direction: column; align-items: start; justify-content: center; flex-wrap: nowrap; width: 100%; }
+
+table { width: 100%; width: -webkit-fill-available; border-collapse: collapse; }
+
+table * { font-size: 1rem; }
+
+table th, table td { padding: 5px; }
+
+table th.flex, table td.flex { display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: nowrap; }
+
+table th { text-align: center; white-space: nowrap; }
+
+table td { text-align: left; }
+
+table td.hr::before { content: ""; display: block; width: 100%; border-bottom: 1px solid #a5a5a5; }
+
+table input[type=text], table input[type=number], table input[type=password], table input[type=email], table textarea { width: 100%; }
+
+table textarea { min-height: 120px; resize: none; }
+
+.btn, button, input[type=submit], input[type=button], input[type=reset] { font-family: "나눔 고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; cursor: pointer; color: inherit; font-size: 1rem; font-weight: bold; line-height: 1.12; padding: 8px 12px; min-width: 112px; background-color: #f2f2f2; border: 1px solid rgba(0, 0, 0, 0.35); border-radius: 8px; overflow: hidden; }
+
+.btn:hover, .btn:active, .btn:focus, button:hover, button:active, button:focus, input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus, input[type=button]:hover, input[type=button]:active, input[type=button]:focus, input[type=reset]:hover, input[type=reset]:active, input[type=reset]:focus { color: #000000; border: 1px solid rgba(0, 0, 0, 0.5); text-shadow: 0 0 24px rgba(255, 255, 255, 0.5); box-shadow: inset 0 0 48px rgba(0, 0, 0, 0.1); }
+
+.btn:disabled, button:disabled, input[type=submit]:disabled, input[type=button]:disabled, input[type=reset]:disabled { background-color: #f2f2f2; color: inherit; opacity: 0.5; pointer-events: none; }
+
+.btn.inline { font-size: 0.9rem; padding: 6px 8px; min-width: 96px; }
+
+.btn.min { font-size: 0.9rem; padding: 6px 8px; min-width: initial; }
+
+.btn.min:empty { min-width: 47.5px; min-height: 32px; }
+
+.btn.none { padding: 0; border: none; background-color: initial; box-shadow: none; text-shadow: none; min-width: initial; line-height: inherit; }
+
+.btn.icon { min-width: initial; }
+
+.btn.float { text-align: center; background-color: initial; width: 42px; height: 42px; padding: 9px; min-width: initial; border-radius: 50%; font-size: 1.25rem; box-shadow: none !important; }
+
+.btn.close { text-align: center; background-color: initial; width: 42px; height: 42px; padding: 9px; min-width: initial; border-radius: 50%; font-size: 1.25rem; box-shadow: none !important; }
+
+.btn.red { background-color: #ff4200; color: white; }
+
+.btn.green { background-color: #34c234; color: white; }
+
+.btn.blue { background-color: #21abff; color: white; }
+
+input[type=text], input[type=number], input[type=password], input[type=email], select, textarea { font-family: "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; padding: 5px; border: 1px solid gray; border-radius: 6px; background-color: white; color: #0d0d0d; }
+
+input[type=text]:focus-visible, input[type=number]:focus-visible, input[type=password]:focus-visible, input[type=email]:focus-visible, select:focus-visible, textarea:focus-visible { border: 1px solid #29cdff; outline: 1px solid #0072ff; box-shadow: 0 0 6px #0014ff; }
+
+input[readonly], input[disabled] { background-color: #e6e6e6; opacity: 0.75; color: #262626; }
+
+input[readonly]:focus-visible, input[disabled]:focus-visible { border: 1px solid gray; outline: none; box-shadow: none; }
+
+input[type=radio], input[type=checkbox] { background-color: white; cursor: pointer; margin-right: 5px; width: 1rem; height: 1rem; position: relative; top: 0.15rem; }
+
+label { font-size: 1rem; cursor: pointer; font-weight: bold; margin-right: 5px; }
+
+i { position: relative; }
+
+p.red, b.red, span.red, a.red, label.red, h1.red, h2.red, h3.red, h4.red, h5.red, h6.red { color: red; }
+
+p.green, b.green, span.green, a.green, label.green, h1.green, h2.green, h3.green, h4.green, h5.green, h6.green { color: green; }
+
+p.blue, b.blue, span.blue, a.blue, label.blue, h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue { color: #5f5fff; }
+
+b[class*=" xi-"]:before, b[class^=xi-]:before, span[class*=" xi-"]:before, span[class^=xi-]:before, a[class*=" xi-"]:before, a[class^=xi-]:before, label[class*=" xi-"]:before, label[class^=xi-]:before, .btn[class*=" xi-"]:before, .btn[class^=xi-]:before { font-family: 'xeicon'; margin-right: 5px; font-size: 1.15rem; position: relative; top: 0.075rem; }
+
+p.text-left, .div h1.text-left, h2.text-left, h3.text-left, h4.text-left, h5.text-left, h6.text-left { text-align: left; }
+
+p.text-center, .div h1.text-center, h2.text-center, h3.text-center, h4.text-center, h5.text-center, h6.text-center { text-align: center; }
+
+p.text-right, .div h1.text-right, h2.text-right, h3.text-right, h4.text-right, h5.text-right, h6.text-right { text-align: right; }
