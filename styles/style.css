@@ -34,7 +34,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 }
 #header .header_top {
     border-bottom: 1px solid #b2b5b8;
-    background-image: url(../image/search_bg.jpg);
+    background-image: url(../images/search_bg.jpg);
 }
 #header .header_top .inner {
     margin: 0 auto;
@@ -134,7 +134,7 @@ input[type=text], input[type=password], textarea, button {
     float: left;
     margin: 20px 0 0;
     padding: 2px 25px 0 0;
-    background: url(../image/gnb_line.gif) no-repeat right 0;
+    background: url(../images/gnb_line.gif) no-repeat right 0;
 }
 #gnb ul.menu {
     position: relative;
@@ -234,7 +234,7 @@ input[type=text], input[type=password], textarea, button {
     color: #000;
     font-size: 16px;
     font-weight: bold;
-    background: #f9f9f9 url(../image/lnb_cur.png) no-repeat 30px center;
+    background: #f9f9f9 url(../images/lnb_cur.png) no-repeat 30px center;
 }
 #sCon .contents {
     float: left;
@@ -243,7 +243,7 @@ input[type=text], input[type=password], textarea, button {
 #sCon .sub_visual{
     width: 901px;height: 150px;float: left;position: relative;
     border-bottom: 1px solid #c4161c;
-    background: url(../image/sub_visual03.jpg) no-repeat 0 0;
+    background: url(../images/sub_visual03.jpg) no-repeat 0 0;
 }
 #cont {
     font-size: 14px;
@@ -263,7 +263,7 @@ input[type=text], input[type=password], textarea, button {
     font-size: 13px;
 }
 #cont .location .arrow {
-    background: url(../image/location_arr.png) no-repeat 0 center;
+    background: url(../images/location_arr.png) no-repeat 0 center;
 }
 #cont .sub_tit {
     margin-bottom: 40px;
@@ -382,10 +382,10 @@ input[type=text], input[type=password], textarea, button {
     background: #f5f5f5;
 }
 #cont .paging_wrap a.next_page {
-    background: #f5f5f5 url(../image/paging_next_ico.png) no-repeat center center;
+    background: #f5f5f5 url(../images/paging_next_ico.png) no-repeat center center;
 }
 #cont .paging_wrap a.last_page {
-    background: #f5f5f5 url(../image/paging_last_ico.png) no-repeat center center;
+    background: #f5f5f5 url(../images/paging_last_ico.png) no-repeat center center;
 }
 
 #cont .btn_wrap {
@@ -525,7 +525,7 @@ input[type=text], input[type=password], textarea, button {
     display: block;
     width: 100%;
     height: 265px;
-    background: url(../image/220506_sub.jpg) no-repeat 0 0;
+    background: url(../images/220506_sub.jpg) no-repeat 0 0;
     text-indent: -9999px;
 }
 #firstArea .box_wrap.box1 .cont01 a {
@@ -646,7 +646,7 @@ input[type=text], input[type=password], textarea, button {
     position: relative;
     height: 95px;
     line-height: 95px;
-    background: url(../image/20220405.jpg) no-repeat 0 0;
+    background: url(../images/20220405.jpg) no-repeat 0 0;
     background-size: cover;
 }
 #firstArea .box_wrap.box2 .cont04 span {
@@ -784,7 +784,7 @@ input[type=text], input[type=password], textarea, button {
     right: -30px;
     width: 20px;
     height: 20px;
-    background: url(../image/mobile_nav_close_btn.png) no-repeat 0 0;
+    background: url(../images/mobile_nav_close_btn.png) no-repeat 0 0;
     text-indent: -9999px;
 }
 #board .exh_view_default .popzone .pop_layer .layer_inner > .inner_wrap {
@@ -1061,7 +1061,7 @@ tr {
     top: 0;
     bottom: 0;
     width: 400px;
-    background: url(../image/bg_blur.jpg) no-repeat 35% -120px;
+    background: url(../images/bg_blur.jpg) no-repeat 35% -120px;
 }
 #container > .rbox > .head > .inner {
     padding: 30px 50px 0 50px;
@@ -1090,7 +1090,7 @@ tr {
     height: 40px;
     margin-top: 15px;
     padding-left: 15px;
-    background: url(../image/btn_arr.png) no-repeat 140px 50% rgba(0,0,0,.5);
+    background: url(../images/btn_arr.png) no-repeat 140px 50% rgba(0,0,0,.5);
     line-height: 40px;
 }
 .security_chk {
@@ -1126,7 +1126,7 @@ tr {
     width: 16px;
     height: 20px;
     margin-left: 5px;
-    background: url(../image/ico_info.png) no-repeat 50%;
+    background: url(../images/ico_info.png) no-repeat 50%;
     text-indent: -9999px;
 }
 .certi_indi .help_pop {
@@ -1147,7 +1147,7 @@ tr {
     top: 5px;
     width: 15px;
     height: 15px;
-    background: url(../image/pop_close.png) no-repeat 50%;
+    background: url(../images/pop_close.png) no-repeat 50%;
     text-indent: -9999px;
 }
 .help_pop > .txt_wrap {
@@ -1186,7 +1186,7 @@ tr {
     height: 40px;
     margin-top: 5px;
     border-radius: 20px;
-    background: url(../image/go_arr.png) no-repeat 50% #03a9f4;
+    background: url(../images/go_arr.png) no-repeat 50% #03a9f4;
     text-indent: -9999px;
 }
 .break {
@@ -1242,13 +1242,13 @@ form {
     border-bottom: 1px solid #bbb;
 }
 #container > .rbox > .body > .inner.login > form > ._id > label {
-    background: url(../image/ico_id.png) no-repeat 50%;
+    background: url(../images/ico_id.png) no-repeat 50%;
 }
 #container > .rbox > .body > .inner.login > form > ._pw {
     margin-top: 10px;
 }
 #container > .rbox > .body > .inner.login > form > ._pw > label {
-    background: url(../image/ico_pw.png) no-repeat 50%;
+    background: url(../images/ico_pw.png) no-repeat 50%;
 }
 
 #container > .rbox > .body > .inner.login > form > ._id > input, #container > .rbox > .body > .inner.login > form > ._pw > input {
@@ -1326,7 +1326,7 @@ form {
 /* 여기서부터 푸터 */
 .clear{clear:both;}
 #footer {
-    background: url(../image/search_bg.jpg) repeat 0 0;
+    background: url(../images/search_bg.jpg) repeat 0 0;
 }
 #footer .footer_nav {
     border: solid #bbb;
@@ -1358,17 +1358,17 @@ form {
 #footer .footer_nav .inner ul li a.face_book {
     padding-left: 12px;
     color: #004f9e;
-    background: url(../image/facebook_ico.png) no-repeat 0 4px;
+    background: url(../images/facebook_ico.png) no-repeat 0 4px;
 }
 #footer .footer_nav .inner ul li a.instagram {
     padding-left: 18px;
     color: #af003f;
-    background: url(../image/instagram_ico.png) no-repeat 0 4px;
+    background: url(../images/instagram_ico.png) no-repeat 0 4px;
 }
 #footer .footer_nav .inner ul li a.youtube {
     padding-left: 18px;
     color: #d21111;
-    background: url(../image/youtube_ico.png) no-repeat 0 4px;
+    background: url(../images/youtube_ico.png) no-repeat 0 4px;
 }
 #footer .footer_address {
     padding: 25px 0;
@@ -1400,7 +1400,7 @@ form {
     padding-left: 10px;
     color: #fff;
     font-size: 14px;
-    background: url(../image/gnb_line.gif) no-repeat 0 4px;
+    background: url(../images/gnb_line.gif) no-repeat 0 4px;
 }
 #footer .footer_address .inner .copy {
     color: #fff;

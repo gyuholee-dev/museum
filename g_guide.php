@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <title>포항시립미술관</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0">
-<link rel="icon" href="image/slogo.png">
+<link rel="icon" href="images/slogo.png">
 <link rel="stylesheet" href="styles/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="scripts/script.js" defer="defer"></script>
@@ -19,7 +19,7 @@
 <div id="header">
 	<div class="header_top">
 		<div class="inner">
-			<h1 class="logo"><a href="#"><img src="image/logo.png"></a></h1>
+			<h1 class="logo"><a href="#"><img src="images/logo.png"></a></h1>
 			<div class="util_box">
 				<ul>
 					<li class="login"><a href="login.php"><span class="ico">로그인</span></a></li>
@@ -32,7 +32,7 @@
 						<legend class="hide">검색 폼</legend>
 
                         <input type="text" name="qt" id="searchWord" placeholder="검색어를 입력하세요" title="검색어입력" style="ime-mode: active;"> 
-						<button type="submit" class="search_btn"><img src="image/search_btn.png"></button>
+						<button type="submit" class="search_btn"><img src="images/search_btn.png"></button>
 					</fieldset>
 				</form>
 			</div>
@@ -42,7 +42,7 @@
         <div class="submenu_back"></div>
 		<div class="inner">
 			<h2 class="logo">
-				<img src="image/gnb_logo.png" alt="포항시립미술관">
+				<img src="images/gnb_logo.png" alt="포항시립미술관">
 			</h2>
 			<ul class="menu">
 				<li class="dep1"><a href="p_exh.php" class="dep_btn1">전시</a>
@@ -222,43 +222,43 @@
 
 						<ul>
 							<li>
-								<p class="tit"><span class="ico"><img src="image/guide_ico01.gif" alt=""></span>음식물 반입금지</p>
+								<p class="tit"><span class="ico"><img src="images/guide_ico01.gif" alt=""></span>음식물 반입금지</p>
 								<div class="cont">
 									물, 음료 및 기타 음식물은 카페에서만 가능하며, 음식물을 가지고 온 경우에는 안내데스크에 보관하신 후 입장하시기 바랍니다.
 								</div>
 							</li>
 							<li>
-								<p class="tit"><span class="ico"><img src="image/guide_ico02.gif" alt=""></span>쓰레기 반입 금지</p>
+								<p class="tit"><span class="ico"><img src="images/guide_ico02.gif" alt=""></span>쓰레기 반입 금지</p>
 								<div class="cont">
 									미술관이 위치한 환호공원은 ‘쓰레기 되가져 가기’ 운동을 하는 공원이며, 미술관에도 쓰레기통이 없습니다. 자신의 쓰레기는 반드시 되가져가 주시기 바랍니다.
 								</div>
 							</li>
 							<li>
-								<p class="tit"><span class="ico"><img src="image/guide_ico03.gif" alt=""></span>위험 물품 반입금지</p>
+								<p class="tit"><span class="ico"><img src="images/guide_ico03.gif" alt=""></span>위험 물품 반입금지</p>
 								<div class="cont">
 									바퀴달린 신발, 퀵보드, 부피 큰 가방, 우산, 풍선, 물총 등 작품보호와 감상에 방해가 되는 물품 전시장을 입장할 수 없으니 안내데스크에 보관해 주시기 바랍니다.
 								</div>
 							</li>
 							<li>
-								<p class="tit"><span class="ico"><img src="image/guide_ico04.gif" alt=""></span>애완동물 출입금지</p>
+								<p class="tit"><span class="ico"><img src="images/guide_ico04.gif" alt=""></span>애완동물 출입금지</p>
 								<div class="cont">
 									미술관 내에 애완동물은 출입을 할 수 없습니다. 단 안내견은 입장이 가능합니다.
 								</div>
 							</li>
 							<li>
-								<p class="tit"><span class="ico"><img src="image/guide_ico05.gif" alt=""></span>작품보호</p>
+								<p class="tit"><span class="ico"><img src="images/guide_ico05.gif" alt=""></span>작품보호</p>
 								<div class="cont">
 									작품에 손가락이나 소지품이 닿지 않도록 주의 해주시기 바라며, 그 외에 작품을 훼손할 수 있는 행위를 자제해 주시기 바랍니다.
 								</div>
 							</li>
 							<li>
-								<p class="tit"><span class="ico"><img src="image/guide_ico06.gif" alt=""></span>사진촬영 여부</p>
+								<p class="tit"><span class="ico"><img src="images/guide_ico06.gif" alt=""></span>사진촬영 여부</p>
 								<div class="cont">
 									작품보호와 작가의 저작권이 관련되어 있으니 사진촬영 여부는 관리요원의 안내에 따라 주시기 바랍니다.
 								</div>
 							</li>
 							<li>
-								<p class="tit"><span class="ico"><img src="image/guide_ico07.gif" alt=""></span>관람예절 준수</p>
+								<p class="tit"><span class="ico"><img src="images/guide_ico07.gif" alt=""></span>관람예절 준수</p>
 								<div class="cont">
 									보호자는 아이들의 손을 잡아주시고, 아이들이 전시장에서 소리치거나, 뛰어다니지 않도록 지도 바랍니다. 또한 다른 관람객을 위해 휴대폰은 진동으로 해주시기 바랍니다.
 								</div>
@@ -295,7 +295,7 @@
 	</div>
 	<div class="footer_address">
 		<div class="inner">
-			<a href="#" class="footer_logo"><img src="image/footer_logo.png" alt="하단 로고"></a>
+			<a href="#" class="footer_logo"><img src="images/footer_logo.png" alt="하단 로고"></a>
 			<div class="address_wrap">
 				<ul class="address_list">
 					<li class="m_ver">포항시립미술관</li>
@@ -311,7 +311,7 @@
 				<p class="copy">copyright(c) 2012 POMA all right reserved</p>
 			</div>
 			<div id="topGo" class="home">
-				<a href="#" class="top_btn"><img src="image/top_btn.gif" alt="TOP"></a>
+				<a href="#" class="top_btn"><img src="images/top_btn.gif" alt="TOP"></a>
 			</div>
 		</div>
 	</div>

@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <title>포항시립미술관</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0">
-<link rel="icon" href="image/slogo.png">
+<link rel="icon" href="images/slogo.png">
 <link rel="stylesheet" href="styles/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="scripts/script.js" defer="defer"></script>
@@ -19,7 +19,7 @@
 <div id="header">
 	<div class="header_top">
 		<div class="inner">
-			<h1 class="logo"><a href="#"><img src="image/logo.png"></a></h1>
+			<h1 class="logo"><a href="#"><img src="images/logo.png"></a></h1>
 			<div class="util_box">
 				<ul>
 					<li class="login"><a href="login.php"><span class="ico">로그인</span></a></li>
@@ -32,7 +32,7 @@
 						<legend class="hide">검색 폼</legend>
 
                         <input type="text" name="qt" id="searchWord" placeholder="검색어를 입력하세요" title="검색어입력" style="ime-mode: active;"> 
-						<button type="submit" class="search_btn"><img src="image/search_btn.png"></button>
+						<button type="submit" class="search_btn"><img src="images/search_btn.png"></button>
 					</fieldset>
 				</form>
 			</div>
@@ -42,7 +42,7 @@
         <div class="submenu_back"></div>
 		<div class="inner">
 			<h2 class="logo">
-				<img src="image/gnb_logo.png" alt="포항시립미술관">
+				<img src="images/gnb_logo.png" alt="포항시립미술관">
 			</h2>
 			<ul class="menu">
 				<li class="dep1"><a href="p_exh.php" class="dep_btn1">전시</a>
@@ -157,7 +157,7 @@
 
 							<div class="exh_view_default">
 					<div class="art_img_wrap">
-							<img src="image/208030_3534906791_Z7MRX4xd.jpg">
+							<img src="images/208030_3534906791_Z7MRX4xd.jpg">
 					</div>
 
 
@@ -208,12 +208,12 @@
 				<div class="art_wrap gallery popzone">
 					<p class="tit">작품 더 보기</p>
 					<ul>
-						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="image/editor_208030_3534906791_BnsfvdHP.jpg" class="lightview" style="max-width:100%; height:auto;"></a>
+						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_BnsfvdHP.jpg" class="lightview" style="max-width:100%; height:auto;"></a>
 							<div class="pop_layer">
 								<div class="layer_inner">
 									<a href="#" class="layer_close">X</a>
 									<div class="inner_wrap">
-										<div class="inner_img"><img src="image/editor_208030_3534906791_BnsfvdHP.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
+										<div class="inner_img"><img src="images/editor_208030_3534906791_BnsfvdHP.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
 										<div class="inner_txt">
 											<p class="name"><span>작품명</span><strong>: 뉴 스트럭쳐 9 키 ＆ 그래픽</strong></p>
 											<p><span>작가명</span><strong>: 권오상</strong></p>
@@ -227,12 +227,12 @@
 								</div>
 							</div>
 						</li>
-						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="image/editor_208030_3534906791_NHj62Duh.jpg" class="lightview" rel="image/editor_208030_3534906791_NHj62Duh.jpg" style="max-width:100%; height:auto;"></a>
+						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_NHj62Duh.jpg" class="lightview" rel="images/editor_208030_3534906791_NHj62Duh.jpg" style="max-width:100%; height:auto;"></a>
 							<div class="pop_layer">
 								<div class="layer_inner">
 									<a href="#" class="layer_close">X</a>
 									<div class="inner_wrap">
-										<div class="inner_img"><img src="image/editor_208030_3534906791_NHj62Duh.jpg" alt="" class="lightview" rel="image/editor_208030_3534906791_NHj62Duh.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
+										<div class="inner_img"><img src="images/editor_208030_3534906791_NHj62Duh.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_NHj62Duh.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
 										<div class="inner_txt">
 											<p class="name"><span>작품명</span><strong>: 그들의 쉐라톤</strong></p>
 											<p><span>작가명</span><strong>: 김세진</strong></p>
@@ -246,12 +246,12 @@
 								</div>
 							</div>
 						</li>
-						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="image/editor_208030_3534906791_6yx2rXzo.jpg" alt="" class="lightview" rel="image/editor_208030_3534906791_6yx2rXzo.jpg" style="max-width:100%; height:auto;"></a>
+						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_6yx2rXzo.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_6yx2rXzo.jpg" style="max-width:100%; height:auto;"></a>
 							<div class="pop_layer">
 								<div class="layer_inner">
 									<a href="#" class="layer_close">X</a>
 									<div class="inner_wrap">
-										<div class="inner_img"><img src="image/editor_208030_3534906791_6yx2rXzo.jpg" alt="" class="lightview" rel="image/editor_208030_3534906791_6yx2rXzo.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
+										<div class="inner_img"><img src="images/editor_208030_3534906791_6yx2rXzo.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_6yx2rXzo.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
 										<div class="inner_txt">
 											<p class="name"><span>작품명</span><strong>: 나와 연계해（4）</strong></p>
 											<p><span>작가명</span><strong>: 수퍼플렉스</strong></p>
@@ -263,12 +263,12 @@
 								</div>
 							</div>
 						</li>
-						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="image/editor_208030_3534906791_t8Hh1AWp.jpg" alt="" class="lightview" rel="image/editor_208030_3534906791_t8Hh1AWp.jpg" style="max-width:100%; height:auto;"></a>
+						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_t8Hh1AWp.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_t8Hh1AWp.jpg" style="max-width:100%; height:auto;"></a>
 							<div class="pop_layer">
 								<div class="layer_inner">
 									<a href="#" class="layer_close">X</a>
 									<div class="inner_wrap">
-										<div class="inner_img"><img src="image/editor_208030_3534906791_t8Hh1AWp.jpg" alt="" class="lightview" rel="image/editor_208030_3534906791_t8Hh1AWp.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
+										<div class="inner_img"><img src="images/editor_208030_3534906791_t8Hh1AWp.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_t8Hh1AWp.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
 										<div class="inner_txt">
 											<p class="name"><span>작품명</span><strong>: 아파트</strong></p>
 											<p><span>작가명</span><strong>: 이문호</strong></p>
@@ -325,7 +325,7 @@
 	</div>
 	<div class="footer_address">
 		<div class="inner">
-			<a href="#" class="footer_logo"><img src="image/footer_logo.png" alt="하단 로고"></a>
+			<a href="#" class="footer_logo"><img src="images/footer_logo.png" alt="하단 로고"></a>
 			<div class="address_wrap">
 				<ul class="address_list">
 					<li class="m_ver">포항시립미술관</li>
@@ -341,7 +341,7 @@
 				<p class="copy">copyright(c) 2012 POMA all right reserved</p>
 			</div>
 			<div id="topGo" class="home">
-				<a href="#" class="top_btn"><img src="image/top_btn.gif" alt="TOP"></a>
+				<a href="#" class="top_btn"><img src="images/top_btn.gif" alt="TOP"></a>
 			</div>
 		</div>
 	</div>

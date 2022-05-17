@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <title>포항시립미술관</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0">
-<link rel="icon" href="image/slogo.png">
+<link rel="icon" href="images/slogo.png">
 <link rel="stylesheet" href="styles/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="scripts/script.js" defer="defer"></script>
@@ -19,7 +19,7 @@
 <div id="header">
 	<div class="header_top">
 		<div class="inner">
-			<h1 class="logo"><a href="#"><img src="image/logo.png"></a></h1>
+			<h1 class="logo"><a href="#"><img src="images/logo.png"></a></h1>
 			<div class="util_box">
 				<ul>
 					<li class="login"><a href="login.php"><span class="ico">로그인</span></a></li>
@@ -32,7 +32,7 @@
 						<legend class="hide">검색 폼</legend>
 
                         <input type="text" name="qt" id="searchWord" placeholder="검색어를 입력하세요" title="검색어입력" style="ime-mode: active;"> 
-						<button type="submit" class="search_btn"><img src="image/search_btn.png"></button>
+						<button type="submit" class="search_btn"><img src="images/search_btn.png"></button>
 					</fieldset>
 				</form>
 			</div>
@@ -42,7 +42,7 @@
         <div class="submenu_back"></div>
 		<div class="inner">
 			<h2 class="logo">
-				<img src="image/gnb_logo.png" alt="포항시립미술관">
+				<img src="images/gnb_logo.png" alt="포항시립미술관">
 			</h2>
 			<ul class="menu">
 				<li class="dep1"><a href="p_exh.php" class="dep_btn1">전시</a>
@@ -121,11 +121,11 @@
     <div id="h_visual">
 	<div id="imgslide">
 		<div class="imgs">
-			<img src="image/001.jpg">
-			<img src="image/002.jpg">
-			<img src="image/001.jpg">
-			<img src="image/002.jpg">
-			<img src="image/001.jpg">
+			<img src="images/001.jpg">
+			<img src="images/002.jpg">
+			<img src="images/001.jpg">
+			<img src="images/002.jpg">
+			<img src="images/001.jpg">
 		</div>
 	</div>
     </div>
@@ -140,7 +140,7 @@
                         <p class="tit">현재전시 <span class="eng">Current Exhibition</span></p>
                        <div class="inner">
 
-                            <a style="background: url(image/220506_sub.jpg) center center / 260px 265px no-repeat; display: block;" href="#" class="view01">현재전시 포스터</a>
+                            <a style="background: url(images/220506_sub.jpg) center center / 260px 265px no-repeat; display: block;" href="#" class="view01">현재전시 포스터</a>
                         </div>
                     </div>
                     <div class="box cont02">
@@ -148,7 +148,7 @@
                         <div class="inner">
                             <ul>
                                 <li>
-                                    <div class="img"><img src="image/tn219_208030_3534906791_yiETpBKW.png" alt="" style="width:219px; height:75px;"></div>
+                                    <div class="img"><img src="images/tn219_208030_3534906791_yiETpBKW.png" alt="" style="width:219px; height:75px;"></div>
                                     <div class="txt">
                                         <a href="#" class="tit">2022년 5월 전시 도슨트 자원봉사자 전시교육</a>
                                         <span class="state end">접수마감</span>
@@ -157,7 +157,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="img"><img src="image/tn219_208030_831464884_8DVaPQM3.jpg" alt="" style="width:219px; height:75px;"></div>
+                                    <div class="img"><img src="images/tn219_208030_831464884_8DVaPQM3.jpg" alt="" style="width:219px; height:75px;"></div>
                                     <div class="txt">
                                         <a href="#" class="tit">「메타픽션 : 현실 그 너머」 전시 연계 청소년 프로그램 《 나를 닮은 사물들 》</a>
                                         <span class="state end">접수마감</span>
@@ -166,7 +166,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="img"><img src="image/tn219_208030_3534906791_gNJU7qAt.jpg" alt="" style="width:219px; height:75px;"></div>
+                                    <div class="img"><img src="images/tn219_208030_3534906791_gNJU7qAt.jpg" alt="" style="width:219px; height:75px;"></div>
                                     <div class="txt">
                                         <a href="#" class="tit">손아유 展 「1978년, 돌담 아래」 연계 성인 프로그램 《 Color from my Life 》</a>
                                         <span class="state end">접수마감</span>
@@ -177,7 +177,7 @@
                             </ul>
                         </div>
                         <a href="/poma/p_edu/edu01/" class="more_btn">
-                        <img src="image/more_btn.gif" class="pc_ver" alt="더보기">
+                        <img src="images/more_btn.gif" class="pc_ver" alt="더보기">
                         </a>
                     </div>
                 </div>
@@ -193,7 +193,7 @@
                             </ul>
                         </div>
                         <a href="cm_noti/" class="more_btn">
-                        <img src="image/more_btn.gif" class="pc_ver" alt="더보기">
+                        <img src="images/more_btn.gif" class="pc_ver" alt="더보기">
 
                         </a>
                     </div>
@@ -202,7 +202,7 @@
                             <span class="txt"><a style="color:white; display:block;" target="_blank" href="http://poma.pohang.go.kr/poma/p_coll/c_app/index.html">AR 도슨트 투어</a></span>
 
                             <a href="cm_event/" class="more_btn">
-                            <img src="image/more_btn.gif" class="pc_ver" alt="더보기">
+                            <img src="images/more_btn.gif" class="pc_ver" alt="더보기">
 
                             </a>
                         </div>
@@ -218,19 +218,19 @@
                     <ul>
                         <li>
                             <p class="tit">소장품/도서 <span class="eng">Collection/Library</span></p>
-                            <a href="#"><img src="image/sec_img01.jpg" alt="소장품/도서 바로가기"></a>
+                            <a href="#"><img src="images/sec_img01.jpg" alt="소장품/도서 바로가기"></a>
                         </li>
                         <li>
                             <p class="tit">미술관소개 <span class="eng">About POMA</span></p>
-                            <a href="#"><img src="image/sec_img02.jpg" alt="미술관소개 바로가기"></a>
+                            <a href="#"><img src="images/sec_img02.jpg" alt="미술관소개 바로가기"></a>
                         </li>
                         <li>
                             <p class="tit">스틸아트공방 <span class="eng">Steel Art Workshop</span></p>
-                            <a href="#"><img src="image/sec_img03.jpg" alt="스틸아트공방 바로가기"></a>
+                            <a href="#"><img src="images/sec_img03.jpg" alt="스틸아트공방 바로가기"></a>
                         </li>
                         <li>
                             <p class="tit">관람안내/예약 <span class="eng">Guide/Reservation</span></p>
-                            <a href="#"><img src="image/sec_img04.jpg" alt="관람안내/예약 바로가기"></a>
+                            <a href="#"><img src="images/sec_img04.jpg" alt="관람안내/예약 바로가기"></a>
                         </li>
                     </ul>
                 </div>
@@ -255,7 +255,7 @@
 	</div>
 	<div class="footer_address">
 		<div class="inner">
-			<a href="#" class="footer_logo"><img src="image/footer_logo.png" alt="하단 로고"></a>
+			<a href="#" class="footer_logo"><img src="images/footer_logo.png" alt="하단 로고"></a>
 			<div class="address_wrap">
 				<ul class="address_list">
 					<li class="m_ver">포항시립미술관</li>
@@ -271,7 +271,7 @@
 				<p class="copy">copyright(c) 2012 POMA all right reserved</p>
 			</div>
 			<div id="topGo" class="home">
-				<a href="#" class="top_btn"><img src="image/top_btn.gif" alt="TOP"></a>
+				<a href="#" class="top_btn"><img src="images/top_btn.gif" alt="TOP"></a>
 			</div>
 		</div>
 	</div>

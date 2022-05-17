@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <title>포항시립미술관</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0">
-<link rel="icon" href="image/slogo.png">
+<link rel="icon" href="images/slogo.png">
 <link rel="stylesheet" href="styles/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="scripts/script.js" defer="defer"></script>
@@ -19,7 +19,7 @@
 <div id="header">
 	<div class="header_top">
 		<div class="inner">
-			<h1 class="logo"><a href="#"><img src="image/logo.png"></a></h1>
+			<h1 class="logo"><a href="#"><img src="images/logo.png"></a></h1>
 			<div class="util_box">
 				<ul>
 					<li class="login"><a href="login.php"><span class="ico">로그인</span></a></li>
@@ -32,7 +32,7 @@
 						<legend class="hide">검색 폼</legend>
 
                         <input type="text" name="qt" id="searchWord" placeholder="검색어를 입력하세요" title="검색어입력" style="ime-mode: active;"> 
-						<button type="submit" class="search_btn"><img src="image/search_btn.png"></button>
+						<button type="submit" class="search_btn"><img src="images/search_btn.png"></button>
 					</fieldset>
 				</form>
 			</div>
@@ -42,7 +42,7 @@
         <div class="submenu_back"></div>
 		<div class="inner">
 			<h2 class="logo">
-				<img src="image/gnb_logo.png" alt="포항시립미술관">
+				<img src="images/gnb_logo.png" alt="포항시립미술관">
 			</h2>
 			<ul class="menu">
 				<li class="dep1"><a href="p_exh.php" class="dep_btn1">전시</a>
@@ -154,7 +154,7 @@
 								<ul>
 									<li>
 										<div class="img" style="text-align:center; ">
-											<img src="image/editor_208030_3534906791_Z7MRX4xd.jpg" alt="">
+											<img src="images/editor_208030_3534906791_Z7MRX4xd.jpg" alt="">
 										</div>
 										<div class="text">
 											<p class="tit">2022 POMA Collection: 연결_시제</p>
@@ -169,7 +169,7 @@
 									</li>
 									<li>
 										<div class="img" style="text-align:center; ">
-											<img src="image/editor_216168_3534906791_QdnMfkST.jpg" alt="">
+											<img src="images/editor_216168_3534906791_QdnMfkST.jpg" alt="">
 										</div>
 										<div class="text">
 											<p class="tit">메타픽션 : 현실 그 너머</p>
@@ -184,7 +184,7 @@
 									</li>
 									<li>
 										<div class="img" style="text-align:center; ">
-											<img src="image/editor_208030_3534906791_SOBezKrM.jpg" alt="">
+											<img src="images/editor_208030_3534906791_SOBezKrM.jpg" alt="">
 										</div>
 										<div class="text">
 											<p class="tit">손아유: 1978년, 돌담아래</p>
@@ -199,7 +199,7 @@
 									</li>
 									<li>
 										<div class="img" style="text-align:center; ">
-											<img src="image/editor_208030_3534906791_yT7moRH1.jpg" alt="">
+											<img src="images/editor_208030_3534906791_yT7moRH1.jpg" alt="">
 										</div>
 										<div class="text">
 											<p class="tit">신화를 담다: 꺼지지 않는 불꽃</p>
@@ -214,7 +214,7 @@
 									</li>
 									<li>
 										<div class="img" style="text-align:center; ">
-											<img src="image/editor_208030_3534906791_dQYlUmaf.jpg" alt="">
+											<img src="images/editor_208030_3534906791_dQYlUmaf.jpg" alt="">
 										</div>
 										<div class="text">
 											<p class="tit">주한세르비아대사관 협력전 - 블라디슬라브 스체파노비치</p>
@@ -243,7 +243,7 @@
 									</li>
 									<li>
 										<div class="img" style="text-align:center; ">
-											<img src="image/editor_208030_3534906791_My9OBcw2.jpg" alt="">
+											<img src="images/editor_208030_3534906791_My9OBcw2.jpg" alt="">
 										</div>
 										<div class="text">
 											<p class="tit">제16회 장두건미술상 수상작가 김은솔 : 기억의 파동</p>
@@ -294,7 +294,7 @@
 	</div>
 	<div class="footer_address">
 		<div class="inner">
-			<a href="#" class="footer_logo"><img src="image/footer_logo.png" alt="하단 로고"></a>
+			<a href="#" class="footer_logo"><img src="images/footer_logo.png" alt="하단 로고"></a>
 			<div class="address_wrap">
 				<ul class="address_list">
 					<li class="m_ver">포항시립미술관</li>
@@ -310,7 +310,7 @@
 				<p class="copy">copyright(c) 2012 POMA all right reserved</p>
 			</div>
 			<div id="topGo" class="home">
-				<a href="#" class="top_btn"><img src="image/top_btn.gif" alt="TOP"></a>
+				<a href="#" class="top_btn"><img src="images/top_btn.gif" alt="TOP"></a>
 			</div>
 		</div>
 	</div>
