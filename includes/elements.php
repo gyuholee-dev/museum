@@ -51,7 +51,7 @@ function getSiteTitle()
   } else if (isset($pageData[$ACT])) {
     if (isset($CAT) && isset($pageData[$ACT]['categories'][$CAT])) {
       $siteTitle .= ' : '.$pageData[$ACT]['categories'][$CAT]['title'];
-    } else {
+    } else if ($pageData[$ACT]['title']) {
       $siteTitle .= ' : '.$pageData[$ACT]['title'];
     }
   }
