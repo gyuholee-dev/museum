@@ -1,4 +1,12 @@
+* {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+a {
+    text-decoration:underline;
+    color:inherit;
+}
 .content {
     width:100%;
-    display:flex;
 }
