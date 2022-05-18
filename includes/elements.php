@@ -142,17 +142,23 @@ function getNavmenu($sep=null)
   foreach ($pages as $key => $data) {
     if (!isset($data['categories'])) continue;
 
+    $defCat = '';
+    $defSubkey = '';
+
     $submenu = '';
+    $i = 0;
     foreach ($data['categories'] as $subKey => $value) {
+      if ($i == 0) {
+        $defCat = $value;
+        $defSubkey = $subKey;
+      }
       if ($value['type']=='link') {
         $submenu .="<li><a href='$value[url]'>$value[title]</a></li>";
       } else {
         $submenu .="<li><a href='$MAIN?action=$key&category=$subKey'>$value[title]</a></li>";
       }
+      $i++;
     }
-
-    $defCat = array_shift($data['categories']);
-    $defSubkey = array_key_first($data['categories']);
     if ($defCat['type']=='link') {
       $menuLink = $defCat['url'];
     } else {
