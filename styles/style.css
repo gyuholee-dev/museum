@@ -229,8 +229,8 @@ input[type=text], input[type=password], textarea, button {
     color: #575757;
     font-size: 15px;
 }
-.active {
-    padding-left: 20px;
+#lnb ul li.active a {
+    padding-left: 50px;
     color: #000;
     font-size: 16px;
     font-weight: bold;
