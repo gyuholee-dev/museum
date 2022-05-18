@@ -49,7 +49,7 @@ function getSiteTitle()
   } else if ($ACT == 'user' && isset($pageData[$DO])) {
     $siteTitle .= ($pageData[$DO]['title'])?' : '.$pageData[$DO]['title']:'';
   } else if (isset($pageData[$ACT])) {
-    if (isset($CAT)) {
+    if (isset($CAT) && isset($pageData[$ACT]['categories'][$CAT])) {
       $siteTitle .= ' : '.$pageData[$ACT]['categories'][$CAT]['title'];
     } else {
       $siteTitle .= ' : '.$pageData[$ACT]['title'];
@@ -140,7 +140,7 @@ function getSerchbox()
 // 네비게이션 출력
 function getNavmenu($sep=null)
 {
-  global $CONF, $ACT, $MAIN;
+  global $CONF, $ACT, $CAT, $MAIN;
   $main = MAIN;
   $pages = $CONF['pages'];
 
@@ -158,10 +158,11 @@ function getNavmenu($sep=null)
         $defCat = $value;
         $defSubkey = $subKey;
       }
+      $active = ($CAT==$subKey)?'active':'';
       if ($value['type']=='link') {
-        $submenu .="<li><a href='$value[url]'>$value[title]</a></li>";
+        $submenu .="<li class='$active'><a href='$value[url]'>$value[title]</a></li>";
       } else {
-        $submenu .="<li><a href='$MAIN?action=$key&category=$subKey'>$value[title]</a></li>";
+        $submenu .="<li class='$active'><a href='$MAIN?action=$key&category=$subKey'>$value[title]</a></li>";
       }
       $i++;
     }
