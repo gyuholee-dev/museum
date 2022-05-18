@@ -208,7 +208,7 @@ function getButton($type, $label='', $attr=array())
   return $button;
 }
 
-// --------------------------------------------------------------------------
+// 기본요소 출력 --------------------------------------------------------------------------
 
 // 헤드 출력
 function makeHead()
@@ -254,9 +254,79 @@ function makeFooter()
   global $INFO;
 
   $footer_data = array(
-    
+    'copyright' => $INFO['copyright'],
   );
   $footer = renderElement(TPL.'footer.html', $footer_data);
   return $footer;
+}
+
+// 본문 출력 -------------------------------------------------------------------------------
+
+function getLeftmenu($data) 
+{
+  global $ACT, $CAT, $MAIN;
+  if (!isset($data['categories'])) return '';
+  $catData = $data['categories'];
+  $html = '';  
+  foreach ($catData as $key => $data) {
+    $active = ($CAT==$key)?'active':'';
+    $link = "$MAIN?action=$ACT&category=$key";
+    $html .= "<li class='$active'><a href='$link'>$data[title]</a></li>";
+  }
+  return "<ul>$html</ul>";
+}
+
+function makeHeaderImg($data)
+{
+  if ($data['headerImg']=='') return '';
+  $IMG = IMG;
+  $imageUrl = $IMG.'header/'.$data['headerImg'];
+  $html = "
+    <div class='sub_visual'
+      style='background-image: url($imageUrl);'
+    ></div>
+  ";
+  return $html;
+}
+
+function getLocation($data)
+{
+  global $ACT, $CAT;
+  $catData = $data['categories'][$CAT];
+  $html = "<span class='home'>HOME</span>";
+  $html .= "<span class='loc1 arrow'>$data[title]</span>";
+  $html .= "<span class='loc2 arrow'>$catData[title]</span>";
+
+  return $html;
+}
+
+function getSubTitle($data)
+{
+  global $ACT, $CAT;
+  $catData = $data['categories'][$CAT];
+  $html = "<h3>$catData[title]<span class='eng'>$catData[name]</span></h3>";
+
+  return $html;
+}
+
+
+// 컨텐츠 출력
+function makeContents()
+{
+  global $CONF, $ACT, $INFO, $USER;
+  $html = '';
+
+  $pageData = $CONF['pages'][$ACT];
+
+  $contents_data = array(
+    'title' => "<h2>$pageData[title]</h2>",
+    'leftmenu' => getLeftmenu($pageData),
+    'headerImg' => makeHeaderImg($pageData),
+    'location' => getLocation($pageData),
+    'subTitle' => getSubTitle($pageData),
+    'innerContent' => '',
+  );
+  $html .= renderElement(TPL.'contents.html', $contents_data);
+  return $html;
 }
 

@@ -18,6 +18,17 @@ switch($ACT) {
     // $content .= makeWidgetLink(['title'=>'관람안내/예약']);
     break;
 
+  case 'exhibition':
+  case 'education':
+  case 'collection':
+  case 'collection':
+  case 'steel_art':
+  case 'community':
+  case 'guide':
+  case 'greeting':
+    $content .= makeContents();
+    break;
+
   default : // main
     header("Location: $MAIN");
     break;

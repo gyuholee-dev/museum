@@ -57,6 +57,7 @@
       "items" : 6,
       "listType" : "preview",
       "postType" : "html",
+      "headerImg" : "sub_visual03.jpg",
       "categories" : {
         "current" : { 
           "title" : "현재 전시",
@@ -80,6 +81,7 @@
       "items" : 6,
       "listType" : "preview",
       "postType" : "html",
+      "headerImg" : "sub_visual09.jpg",
       "categories" : {
         "edu01" : { 
           "title" : "어린이·가족",
@@ -103,6 +105,7 @@
       "items" : 6,
       "listType" : "gallery",
       "postType" : "html",
+      "headerImg" : "sub_visual03.jpg",
       "categories" : {
         "collection" : { 
           "title" : "소장품",
@@ -132,6 +135,7 @@
       "items" : 6,
       "listType" : "list",
       "postType" : "html",
+      "headerImg" : "",
       "categories" : {
         "steel" : { 
           "title" : "스틸공방",
@@ -146,6 +150,7 @@
       "items" : 6,
       "listType" : "list",
       "postType" : "html",
+      "headerImg" : "sub_visual08.jpg",
       "categories" : {
         "notice" : { 
           "title" : "공지사항",
@@ -174,6 +179,7 @@
       "items" : 6,
       "listType" : "list",
       "postType" : "html",
+      "headerImg" : "sub_visual05.jpg",
       "categories" : {
         "information" : { 
           "title" : "관람안내",
@@ -202,6 +208,7 @@
       "items" : 6,
       "listType" : "list",
       "postType" : "html",
+      "headerImg" : "sub_visual07.jpg",
       "categories" : {
         "greeting" : { 
           "title" : "인사말",
