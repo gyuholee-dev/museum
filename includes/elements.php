@@ -40,14 +40,20 @@ function renderElement(string $template, array $data=array()) : string
 // 사이트 타이틀
 function getSiteTitle()
 {
-  global $ACT, $DO, $CONF, $INFO;
+  global $ACT, $CAT, $DO, $CONF, $INFO;
+  $pageData = $CONF['pages'];
+
   $siteTitle = $INFO['title'];
   if ($INFO['subtitle']) {
     $siteTitle .= ' : '.$INFO['subtitle'];
-  } else if ($ACT == 'user' && isset($CONF['pages'][$DO])) {
-    $siteTitle .= ($CONF['pages'][$DO]['title'])?' : '.$CONF['pages'][$DO]['title']:'';
-  } else if (isset($CONF['pages'][$ACT])) {
-    $siteTitle .= ($CONF['pages'][$ACT]['title'])?' : '.$CONF['pages'][$ACT]['title']:'';
+  } else if ($ACT == 'user' && isset($pageData[$DO])) {
+    $siteTitle .= ($pageData[$DO]['title'])?' : '.$pageData[$DO]['title']:'';
+  } else if (isset($pageData[$ACT])) {
+    if (isset($CAT)) {
+      $siteTitle .= ' : '.$pageData[$ACT]['categories'][$CAT]['title'];
+    } else {
+      $siteTitle .= ' : '.$pageData[$ACT]['title'];
+    }
   }
   return $siteTitle;
 }
@@ -262,6 +268,7 @@ function makeFooter()
 
 // 본문 출력 -------------------------------------------------------------------------------
 
+// 왼쪽메뉴
 function getLeftmenu($data) 
 {
   global $ACT, $CAT, $MAIN;
@@ -276,6 +283,7 @@ function getLeftmenu($data)
   return "<ul>$html</ul>";
 }
 
+// 헤더 이미지
 function makeHeaderImg($data)
 {
   if ($data['headerImg']=='') return '';
@@ -289,6 +297,7 @@ function makeHeaderImg($data)
   return $html;
 }
 
+// 로케이션
 function getLocation($data)
 {
   global $ACT, $CAT;
@@ -300,6 +309,7 @@ function getLocation($data)
   return $html;
 }
 
+// 서브타이틀
 function getSubTitle($data)
 {
   global $ACT, $CAT;
