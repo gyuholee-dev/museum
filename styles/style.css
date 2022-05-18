@@ -229,8 +229,8 @@ input[type=text], input[type=password], textarea, button {
     color: #575757;
     font-size: 15px;
 }
-#lnb ul li.cur a {
-    padding-left: 50px;
+.active {
+    padding-left: 20px;
     color: #000;
     font-size: 16px;
     font-weight: bold;
@@ -768,7 +768,6 @@ input[type=text], input[type=password], textarea, button {
     background: rgba(0,0,0,0.7);
     z-index: 1200;
 }
-/* .lc01, .lc02,.lc03,.lc04{display: none;} */
 
 #board .exh_view_default .popzone .pop_layer .layer_inner {
     position: absolute;
@@ -1218,6 +1217,7 @@ tr {
     border-color: #267dde;
     font-weight: bold;
 }
+
 .type_tab li {
     width: 33.3%;
     display: table-cell;
