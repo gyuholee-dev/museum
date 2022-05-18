@@ -1,0 +1,62 @@
+<section class="form user signup">
+  <div class="header">
+    <div class="title">회원가입</div>
+  </div>
+  <div class="content">
+    <form name="signup" method="post" action="{main}?action=user&do=signup" autocomplete="on">
+      <table class="table signup">
+        <tr>
+          <th>아이디</th>
+          <td class="flex">
+            <input type="text" name="userid" onchange="resetCheck()" required>
+            <input type="button" class="btn inline" value="중복확인" onclick="checkId()">
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td><input type="password" name="password" required autocomplete="new-password"></td>
+        </tr>
+        <tr>
+          <th>비밀번호 확인</th>
+          <td><input type="password" name="password_check" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="hr"></td>
+        </tr>
+        <tr>
+          <th>이름</th>
+          <td><input type="text" name="nickname" required></td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td class="flex">
+            <input type="text" name="email" required>
+            <select name="domain">
+              <option value="">직접입력</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="naver.com">naver.com</option>
+              <option value="hanmail.net">hanmail.net</option>
+              <option value="nate.com">nate.com</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>프로필 사진</th>
+          <td><input type="text" name="avatar" readonly></td>
+        </tr>
+        <tr>
+          <th>링크</th>
+          <td><input type="text" name="link" readonly></td>
+        </tr>
+      </table>
+
+      <div class="buttons">
+        <input type="hidden" name="idcheked" value="false">
+        <input type="hidden" name="confirm" value="true">
+        <input class="btn" type="button" value="회원가입" onclick="sendSignup()">
+        <input class="btn" type="reset" value="재입력">
+      </div>
+
+    </form>
+  </div>
+</section>

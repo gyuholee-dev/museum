@@ -341,3 +341,30 @@ function makeContents()
   return $html;
 }
 
+// 유저페이지 출력
+function makeUserPage() : string
+{
+  global $DB, $USER, $DO;
+  if (!isset($DO) || !isset($USER)) return false; 
+
+  if ($DO == 'mypage') {
+    $userid = $USER['userid'];
+    $sql = "SELECT * FROM museum_user WHERE userid = '$userid' ";
+    $res = mysqli_query($DB, $sql);
+    $data = mysqli_fetch_assoc($res);
+  
+    $mypage_data = array(
+      'userid' => $data['userid'],
+      'nickname' => $data['nickname'],
+      'email' => $data['email'],
+      'avatar' => $data['avatar'],
+      'link' => $data['link']
+    );
+    $html = renderElement(TPL.'mypage.html', $mypage_data);
+    
+  } else {
+    $html = renderElement(TPL.$DO.'.html');
+  }
+  
+  return $html;
+}

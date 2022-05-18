@@ -30,6 +30,43 @@ switch($ACT) {
     $content .= makeContents();
     break;
 
+  case 'user':
+    if ($USER) {
+      switch ($DO) {
+        case 'mypage':
+          $content .= makeUserPage();
+          break;
+        case 'logout':
+          logout();
+          header("Location: $MAIN");
+          break;
+        case 'signout':
+          signout();
+          header("Location: $MAIN");
+          break;
+          
+        default:
+          header("Location: $MAIN?action=$ACT&do=mypage");
+          break;
+      }
+    } else {
+      include INC.'user.php';
+      switch ($DO) {
+        case 'login':
+          $content .= renderElement(TPL.'login.html');
+          break;
+        case 'signup':
+          $content .= renderElement(TPL.'signup.html');
+          break;
+
+        default:
+          pushLog('로그인 후 이용해주세요.');
+          $content .= renderElement(TPL.'login.html');
+          break;
+      }
+    }
+    break;
+
   default : // main
     header("Location: $MAIN");
     break;

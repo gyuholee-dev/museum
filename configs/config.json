@@ -15,11 +15,13 @@
       "styles/fonts.css?v=0.01",
       "styles/global.css?v=0.01",
       "styles/style.css?v=0.01",
-      "styles/fixed.css?v=0.01"
+      "styles/fixed.css?v=0.01",
+      "styles/userpage.css?v=0.01"
     ],
     "scripts" : [
       "scripts/jquery-1.12.4.min.js",
-      "scripts/functions.js"
+      "scripts/functions.js",
+      "scripts/form.js"
     ],
     "deferscripts" : [
       

@@ -92,6 +92,16 @@ function numStr($numb, $numSize)
 
 // 유저기능 함수 ------------------------------------------------
 
+// 유저 아이디 존재 검사
+// TODO: 테이블명 및 필드명 변수처리
+function checkId($userid)
+{
+  global $DB;
+  $sql = "SELECT * FROM museum_user WHERE userid = '$userid' ";
+  $res = mysqli_query($DB, $sql);
+  return mysqli_num_rows($res);
+}
+
 // 권한 검사
 function checkPerm(int $require) : bool
 {
@@ -109,16 +119,6 @@ function isOwner($userid) : bool
   global $USER;
   if (!$USER) return false;
   return $USER['userid'] == $userid;
-}
-
-// 유저 아이디 존재 검사
-// TODO: 테이블명 및 필드명 변수처리
-function checkId($userid)
-{
-  global $DB;
-  $sql = "SELECT * FROM user WHERE userid = '$userid' ";
-  $res = mysqli_query($DB, $sql);
-  return mysqli_num_rows($res);
 }
 
 // 로그인 처리
@@ -161,7 +161,7 @@ function unsetUserData() : bool
 function deleteUserData($userid) : bool
 {
   global $DB;
-  $sql = "DELETE FROM user WHERE userid = '$userid' ";
+  $sql = "DELETE FROM museum_user WHERE userid = '$userid' ";
   $res = mysqli_query($DB, $sql);
   return $res;
 }

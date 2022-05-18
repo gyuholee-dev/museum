@@ -1,0 +1,70 @@
+<section class="form user mypage">
+  <div class="header">
+    <div class="title">회원정보</div>
+  </div>
+  <div class="content">
+    <form name="edit" method="post" action="{main}?action=user&do=edit" autocomplete="off">
+      <table class="table edit">
+        <tr>
+          <th>아이디</th>
+          <td>
+            <input type="text" name="userid" value="{userid}" readonly required>
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td><input type="password" name="password" required></td>
+        </tr>
+        <tr>
+          <th>비밀번호 확인</th>
+          <td><input type="password" name="password_check" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="hr"></td>
+        </tr>
+        <tr>
+          <th>이름</th>
+          <td><input type="text" name="nickname" value="{nickname}" required></td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td>
+            <input type="email" name="email" value="{email}" required>
+          </td>
+        </tr>
+        <tr>
+          <th>프로필 사진</th>
+          <td><input type="text" name="avatar" value="{avatar}" readonly></td>
+        </tr>
+        <tr>
+          <th>링크</th>
+          <td>
+            <input type="text" name="link" value="{link}" readonly>
+          </td>
+        </tr>
+      </table>
+
+      <div class="buttons">
+        <input type="hidden" name="confirm" value="true">
+        <input class="btn" type="button" value="정보수정" onclick="sendEdit()">
+        <input class="btn" type="button" value="로그아웃" onclick="location.href='{main}?action=user&do=logout'">
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<section class="form user signout">
+  <div class="header">
+    <div class="title">회원탈퇴</div>
+  </div>
+  <div class="content">
+    <form name="signout" method="post" action="{main}?action=user&do=signout">
+      <div class="buttons">
+        <b class="xi-warning red">회원정보가 삭제됩니다.</b>
+        <input type="hidden" name="confirm" value="true">
+        <input class="btn red" type="button" value="회원탈퇴" onclick="checkForm('회원탈퇴하시겠습니까?', signout)">
+      </div>
+    </form>
+  </div>
+</section>

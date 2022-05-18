@@ -1,0 +1,29 @@
+<section class="form user login">
+  <div class="header">
+    <div class="title">로그인</div>
+  </div>
+  <div class="content">
+    <form name="login" method="post" autocomplete="on">
+      <table class="table login">
+        <tr>
+          <th>아이디</th>
+          <td>
+            <input type="text" name="userid" required>
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td>
+            <input type="password" name="password" required>
+          </td>
+        </tr>
+      </table>
+      <div class="buttons">
+        <input type="hidden" name="confirm" value="true">
+        <input type="hidden" name="do" value="login">
+        <input class="btn" type="button" value="로그인" onclick="sendLogin()">
+        <input class="btn" type="button" value="회원가입" onclick="location.href='main.php?action=user&do=signup'">
+      </div>
+    </form>
+  </div>
+</section>
