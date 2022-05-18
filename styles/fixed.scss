@@ -5,6 +5,7 @@
 // ---------------------------------------------------------
 
 #header {
+  height: initial;
   .header_top {
     background-image: none;
     background-color: black;
@@ -45,6 +46,8 @@
   }
 
   #gnb {
+    position: relative;
+    top: 0;
     .inner {
       position: initial;
     }

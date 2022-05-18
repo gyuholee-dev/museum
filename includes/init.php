@@ -55,12 +55,12 @@ $DBCONF = openJson(CONF.$dbConfigFile);
 // DB설정 체크, 접속, 테이블 검사
 $dbLog = '';
 $DB = connectDB($DBCONF);
-if (!$DB) {
-  $dbLog = 'DB 접속에 실패하였습니다.';
-}
-if ($dbLog) {
-  pushLog($dbLog.' 셋업을 실행해 주세요. [<a href="setup.php">바로가기</a>]', 'error');
-}
+// if (!$DB) {
+//   $dbLog = 'DB 접속에 실패하였습니다.';
+// }
+// if ($dbLog) {
+//   pushLog($dbLog.' 셋업을 실행해 주세요. [<a href="setup.php">바로가기</a>]', 'error');
+// }
 unset($dbConfigFile, $dbLog);
 
 // 유저 초기화 ------------------------------------------------
