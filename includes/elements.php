@@ -246,9 +246,11 @@ function makeHeader()
 function makeFooter()
 {
   global $INFO;
-  $footer = "
-    <p>$INFO[copyright]</p>
-  ";
+
+  $footer_data = array(
+    
+  );
+  $footer = renderElement(TPL.'footer.html', $footer_data);
   return $footer;
 }
 
