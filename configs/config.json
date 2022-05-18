@@ -21,7 +21,7 @@
       "scripts/functions.js"
     ],
     "deferscripts" : [
-      "scripts/script.js"
+      
     ],
     "postscripts" : [
       "scripts/postscript.js"
