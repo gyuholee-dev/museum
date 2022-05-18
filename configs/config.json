@@ -3,9 +3,10 @@
   "language" : "ko",
 
   "theme" : {
-    "logo" : "logo.png",
-    "icon" : "icon.png",
-    "favicon" : "favicon.ico",
+    "logo" : "logo/logo.png",
+    "logo_s" : "logo/logo_s.png",
+    "icon" : "logo/icon.png",
+    "favicon" : "logo/favicon.ico",
     "themeColor" : "light"
   },
 
@@ -237,7 +238,5 @@
         }
       }
     }
-
   }
-
 }

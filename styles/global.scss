@@ -49,6 +49,8 @@ html {
 
 #message {
   width: 100%;
+  position: relative;
+  z-index: 999;
   .log {
     padding: 5px 10px;
     background-color: gray;

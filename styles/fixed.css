@@ -1,3 +1,5 @@
+#header { height: initial; }
+
 #header .header_top { background-image: none; background-color: black; position: relative; z-index: 99; }
 
 #header .header_top .inner .search_wrap { border: none; overflow: initial; }
@@ -13,6 +15,8 @@
 #header .header_top .util_box > ul > li > a:hover { color: orange; }
 
 #header .header_top .util_box > ul > li > a span { color: inherit; }
+
+#header #gnb { position: relative; top: 0; }
 
 #header #gnb .inner { position: initial; }
 

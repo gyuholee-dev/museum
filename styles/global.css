@@ -3,7 +3,7 @@
 
 html { font-family: "나눔 고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; line-height: 1.5; word-break: break-all; }
 
-#message { width: 100%; }
+#message { width: 100%; position: relative; z-index: 999; }
 
 #message .log { padding: 5px 10px; background-color: gray; color: white; font-size: 0.9rem; text-align: center; }
 

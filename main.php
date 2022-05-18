@@ -8,6 +8,7 @@ $content = '';
 
 switch($ACT) {
   case 'main':
+    $content = renderElement(TPL.'toppage.html');
     // $content .= makeBannerSlide();
     // $content .= makeWidgetList('exhibition', 3);
     // $content .= makeWidgetList('education', 3);
@@ -47,7 +48,7 @@ $html_data = array(
   // 'leftmenu' => makeSidemenu('left'),
   // 'rightmenu' => makeSidemenu('right'),
   'footer' => makeFooter(),
-  // 'postScript' => getLibraries('postscripts'),
+  'postScript' => getLibraries('postscripts'),
   // 'popup' => makePopupList($popupData),
 );
 echo renderElement(TPL.'template.html', $html_data);
