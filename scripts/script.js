@@ -8,13 +8,29 @@ $(".submenu_back").mouseleave(function(){
 });
 
 
-$(".pop").click(function(){
-    $(this).children(".pop_layer").css("display","block");
+$(".pop01").click(function(){
+    $(".lc01").css("display","block");
 });
-$(".pop").ready(function(){
-$(".layer_close").click(function(){
-    $(this).children(".pop_layer").css("display","none");
+$(".pop02").click(function(){
+    $(".lc02").css("display","block");
 });
+$(".pop03").click(function(){
+    $(".lc03").css("display","block");
+});
+$(".pop04").click(function(){
+    $(".lc04").css("display","block");
+});
+$("#lc01").click(function(){
+    $(".lc01").css("display","none");
+});
+$("#lc02").click(function(){
+    $(".lc02").css("display","none");
+});
+$("#lc03").click(function(){
+    $(".lc03").css("display","none");
+});
+$("#lc04").click(function(){
+    $(".lc01").css("display","none");
 });
 
 var imgs=4;
