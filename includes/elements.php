@@ -134,20 +134,45 @@ function getSerchbox()
 // 네비게이션 출력
 function getNavmenu($sep=null)
 {
-  global $CONF, $ACT;
+  global $CONF, $ACT, $MAIN;
   $main = MAIN;
   $pages = $CONF['pages'];
 
   $navmenu = '';
-  foreach ($pages as $key => $conf) {
-    $active = ($ACT==$key)?'active':'';
-    $navmenu .= "<li class='$active'><a href='$main?action=$key'>$conf[title]</a></li>";
-    if ($sep && $key != array_key_last($pages)) {
-      $navmenu .= "<span class='sep'>$sep</span>";
+  foreach ($pages as $key => $data) {
+    if (!isset($data['categories'])) continue;
+
+    $submenu = '';
+    foreach ($data['categories'] as $subKey => $value) {
+      if ($value['type']=='link') {
+        $submenu .="<li><a href='$value[url]'>$value[title]</a></li>";
+      } else {
+        $submenu .="<li><a href='$MAIN?action=$key&category=$subKey'>$value[title]</a></li>";
+      }
     }
+
+    $defCat = array_shift($data['categories']);
+    $defSubkey = array_key_first($data['categories']);
+    if ($defCat['type']=='link') {
+      $menuLink = $defCat['url'];
+    } else {
+      $menuLink = "$MAIN?action=$key&category=$subKey&category=$defSubkey";
+    }
+
+    $active = ($ACT==$key)?'active':'';
+    $navmenu .= "
+      <li class='dep1 $active'>
+        <a href='$menuLink' class='dep_btn1'>$data[title]</a>
+        <div class='sub'>
+          <ul class='gnb_sub'>
+            $submenu
+          </ul>
+        </div>
+      </li>
+    ";
   }
   
-  $navmenu = '<ul class="menu main">'.$navmenu.'</ul>';
+  // return "<ul class='menu'>$navmenu</ul>";
   return $navmenu;
 }
 
@@ -211,7 +236,7 @@ function makeHeader()
     'headerLink' => getHeaderLink('logo'),
     'loginLink' => getLoginLink('link'),
     'searchbox' => getSerchbox(),
-    'navmenu' => getNavmenu('<i class="xi-minus xi-rotate-90"></i>'),
+    'navmenu' => getNavmenu(),
   );
   $header = renderElement(TPL.'header.html', $header_data);
   return $header;
