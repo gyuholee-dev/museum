@@ -162,7 +162,7 @@ function getNavmenu($sep=null)
     if ($defCat['type']=='link') {
       $menuLink = $defCat['url'];
     } else {
-      $menuLink = "$MAIN?action=$key&category=$subKey&category=$defSubkey";
+      $menuLink = "$MAIN?action=$key&category=$defSubkey";
     }
 
     $active = ($ACT==$key)?'active':'';
