@@ -5,14 +5,115 @@
 // ---------------------------------------------------------
 
 #header {
-  .search_wrap {
-    border: none !important;
-    overflow: initial !important;
+  .header_top {
+    background-image: none;
+    background-color: black;
+    position: relative;
+    z-index: 99;
+    .inner {
+      .search_wrap {
+        border: none;
+        overflow: initial;
+        .search_btn {
+          border: none;
+          background-color: transparent;
+          box-shadow: none;
+          position: absolute;
+          top: 7px;
+          right: 7px;
+          width: 24px;
+          height: 24px;
+          :hover {
+            color: orange;
+          }
+          >i {
+            font-size: 1.5rem;
+            top: 1px;
+          }
+        }
+      }
+    }
+    .util_box > ul > li > a {
+      color: white;
+      &:hover {
+        color: orange;
+      }
+      span {
+        color: inherit;
+      }
+    }
   }
-  .search_btn {
-    border: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
+
+  #gnb {
+    .inner {
+      position: initial;
+    }
+    .fill {
+      background-color: #f5f5f5;
+      position: absolute;
+      left: 0;
+      top: 60px;
+      width: 100%;
+      height: 200px;
+      transform: translateY(-100%);
+      transition: transform 0.35s;
+      z-index: -1;
+    }
+    ul.menu {
+      position: relative;
+      padding: 0;
+      z-index: 10;
+      height: 60px;
+      width: 100%;
+      &:hover {
+        li.dep1 > .sub {
+          transform: translateY(0) !important;
+        }
+        &~.fill {
+          transform: translateY(0) !important;
+        }
+      }
+      li.dep1 {
+        position: relative;
+        float: left;
+        width: 11%;
+        text-align: center;
+        height: 60px;
+        padding: 0;
+        background-color: #f5f5f5;
+        z-index: 9;
+        > a {
+          display: block;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          height: 60px;
+          line-height: 30px;
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+          background-color: #f5f5f5;
+          z-index: 99;
+        }
+        >.sub {
+          display: block;
+          width: 100%;
+          height: 200px;
+          top: 60px;
+          left: 0;
+          border-left: 1px solid #e5e5e5;
+          position: absolute;
+          line-height: 38px;
+          z-index: -1;
+          transform: translateY(-100%);
+          transition: transform 0.35s;
+          background-color: #f5f5f5;
+          ul.gnb_sub {
+            height: 200px;
+            z-index: 1;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -20,5 +121,5 @@
 #container {
   background: initial;
   padding: 0;
-  min-height: 400px;
+  min-height: 4000px;
 }

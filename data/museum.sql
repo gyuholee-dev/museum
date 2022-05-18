@@ -14,7 +14,7 @@ content 내용
 file 파일
 link 링크
 */
-DROP TABLE IF EXISTS post;
+DROP TABLE IF EXISTS museum_post;
 CREATE TABLE post (
   postid INT AUTO_INCREMENT,
   wdate INT,
@@ -39,7 +39,7 @@ avatar 아바타
 link 링크
 usergroup 권한그룹: admin, user
 */
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS museum_user;
 CREATE TABLE user (
   userid CHAR(20) NOT NULL,
   password BLOB,

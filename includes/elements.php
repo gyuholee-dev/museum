@@ -59,19 +59,16 @@ function getHeaderLink($type='logo')
   $active = ($ACT == 'main') ? 'active' : '';
   $theme = $CONF['theme'];
   $siteUrl = ($_SERVER['HTTP_HOST']=='localhost')?MAIN:$INFO['url'];
+  $logo = IMG.$theme['logo'];
   if ($type == 'logo') {
-    $logo = IMG.'icons/'.$theme['logo'];
+    $logo = IMG.$theme['logo'];
     $link = "<a href='$siteUrl'><img src='$logo'></a>";
   } else if ($type == 'title') {
-    $icon = '<i class="logo BI-icon-SL"></i>';
+    $icon = '<i class="icon"></i>';
     $link = "<a href='$siteUrl'>$icon<span>$INFO[title]</span></a>";
   }
 
-  $headerLink = "
-    <div class='title $active'>
-      $link<span class='sep'><i class='xi-angle-right'></i></span>
-    </div>
-  ";
+  $headerLink = "<h1 class='logo $active'>$link</h1>";
 
   return $headerLink;
 }
@@ -105,13 +102,11 @@ function getLoginLink($type='link')
   if ($type == 'link') {
     if ($USER) {
       $loginLink = "
-        <a href='$main?action=user&do=mypage'>Mypage</a>
-        <a href='$main?action=user&do=logout'>Logout</a>
+        <a href='$main?action=user&do=mypage'><span class='ico'>마이페이지</span></a>
       ";
     } else {
       $loginLink = "
-        <a href='$main?action=user&do=login'>Login</a>
-        <a href='$main?action=user&do=signup'>Signup</a>
+        <a href='$main?action=user&do=login'><span class='ico'>로그인</span></a>
       ";
     }
   } else if ($type == 'icon') {
@@ -126,7 +121,14 @@ function getLoginLink($type='link')
     }
 
   }
-  return $loginLink;
+  return "<ul><li class='login'>$loginLink</li></ul>";
+}
+
+// 서치박스
+function getSerchbox()
+{
+  $searchbox = renderElement(TPL.'searchbox.html');
+  return $searchbox;
 }
 
 // 네비게이션 출력
@@ -184,12 +186,12 @@ function makeHead()
   $siteTitle = getSiteTitle();
   $description = $INFO['description'];
   $libraries = $CONF['libraries'];
-  $favicon = IMG.'icons/'.$CONF['theme']['favicon'];
+  $favicon = IMG.$CONF['theme']['favicon'];
 
   $head = "
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=0.75'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='shortcut icon' href='$favicon'>
     <title>$siteTitle</title>
     <meta name='description' content='$description'>
@@ -206,9 +208,10 @@ function makeHead()
 function makeHeader()
 {
   $header_data = array(
+    'headerLink' => getHeaderLink('logo'),
+    'loginLink' => getLoginLink('link'),
+    'searchbox' => getSerchbox(),
     'navmenu' => getNavmenu('<i class="xi-minus xi-rotate-90"></i>'),
-    'headerLink' => getHeaderLink('title'),
-    'loginLink' => getLoginLink('icon')
   );
   $header = renderElement(TPL.'header.html', $header_data);
   return $header;
