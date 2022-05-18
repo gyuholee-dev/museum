@@ -4,17 +4,22 @@
 // Link: </css/style.css>; rel="preload"; as="style"
 function preloadLibrary()
 {
-  global $CONF;
+  global $CONF, $VER, $DEV;
+  $version = $VER;
+  if ($DEV) {
+    // 개발모드일 경우 1일마다 캐시 갱신
+    $version .= '.'.date('ymd');
+  }
   $library = $CONF['libraries'];
   $html = '';
   foreach ($library as $key => $libs) {
     foreach ($libs as $lib) {
       if ($key == 'styles') {
-        header("Link: <$lib>; rel=preload; as=style;");
-      } elseif ($key == 'scripts' || $key == 'deferscripts') {
-        header("Link: <$lib>; rel=preload; as=script;");
+        header("Link: <$lib?v=$version>; rel=preload; as=style;");
+      } elseif ($key == 'scripts') {
+        header("Link: <$lib?v=$version>; rel=preload; as=script;");
       } elseif ($key == 'postscripts') {
-        header("Link: <$lib>; rel=preload; as=script;");
+        header("Link: <$lib?v=$version>; rel=preload; as=script;");
       }
     }
   }
@@ -82,22 +87,24 @@ function getHeaderLink($type='logo')
 // 라이브러리 링크
 function getLibraries($key='styles')
 {
-  global $CONF;
+  global $CONF, $VER, $DEV;
+  $version = $VER;
+  if ($DEV) {
+    // 개발모드일 경우 1일마다 캐시 갱신
+    $version .= '.'.date('ymd');
+  }
   $library = $CONF['libraries'][$key];
   $html = '';
   foreach ($library as $lib) {
     if ($key == 'styles') {
-      $html .= "<link rel='stylesheet' href='$lib'>";
+      $html .= "<link rel='stylesheet' href='$lib?v=$version'>";
     } elseif ($key == 'scripts') {
-      $html .= "<script type='text/javascript' src='$lib'></script>";
-    } elseif ($key == 'deferscripts') {
-      $html .= "<script type='text/javascript' src='$lib' defer='defer'></script>";
+      $html .= "<script type='text/javascript' src='$lib?v=$version'></script>";
     } elseif ($key == 'postscripts') {
-      $html .= "<script type='text/javascript' src='$lib'></script>";
+      $html .= "<script type='text/javascript' src='$lib?v=$version'></script>";
     }
   }
   return $html;
-  
 }
 
 // 로그인링크

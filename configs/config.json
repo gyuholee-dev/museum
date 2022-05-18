@@ -1,6 +1,8 @@
 {
   "mainFile" : "main.php",
   "language" : "ko",
+  "version" : "0.12",
+  "devMode" : true,
 
   "theme" : {
     "logo" : "logo/logo.png",
@@ -12,11 +14,11 @@
 
   "libraries" : {
     "styles" : [
-      "styles/fonts.css?v=0.01",
-      "styles/global.css?v=0.01",
-      "styles/style.css?v=0.01",
-      "styles/fixed.css?v=0.01",
-      "styles/userpage.css?v=0.01"
+      "styles/fonts.css",
+      "styles/global.css",
+      "styles/style.css",
+      "styles/fixed.css",
+      "styles/userpage.css"
     ],
     "scripts" : [
       "scripts/jquery-1.12.4.min.js",

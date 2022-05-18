@@ -21,7 +21,8 @@ define('MAIN', 'main.php');
 
 // 글로벌 변수
 global $MSG;
-global $INFO, $CONF, $DBCONF; 
+global $INFO, $CONF, $DBCONF;
+global $VER, $DEV;
 global $DB, $USER;
 global $ACT, $CAT, $DO, $ID, $PAGE;
 global $MAIN;
@@ -42,6 +43,10 @@ if (isset($_SESSION['MSG'])) {
 // 설정파일 로드
 $CONF = openJson(CONF.'config.json');
 $INFO = openJson(CONF.'info.json');
+
+// 버전, 개발모드
+$VER = $CONF['version'];
+$DEV = $CONF['devMode'];
 
 // DB 초기화 ------------------------------------------------
 
