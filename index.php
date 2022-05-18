@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0">
 <link rel="icon" href="images/slogo.png">
 <link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="scripts/script.js" defer="defer"></script>
 </head>

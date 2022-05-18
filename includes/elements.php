@@ -40,14 +40,20 @@ function renderElement(string $template, array $data=array()) : string
 // 사이트 타이틀
 function getSiteTitle()
 {
-  global $ACT, $DO, $CONF, $INFO;
+  global $ACT, $CAT, $DO, $CONF, $INFO;
+  $pageData = $CONF['pages'];
+
   $siteTitle = $INFO['title'];
   if ($INFO['subtitle']) {
     $siteTitle .= ' : '.$INFO['subtitle'];
-  } else if ($ACT == 'user' && isset($CONF['pages'][$DO])) {
-    $siteTitle .= ($CONF['pages'][$DO]['title'])?' : '.$CONF['pages'][$DO]['title']:'';
-  } else if (isset($CONF['pages'][$ACT])) {
-    $siteTitle .= ($CONF['pages'][$ACT]['title'])?' : '.$CONF['pages'][$ACT]['title']:'';
+  } else if ($ACT == 'user' && isset($pageData[$DO])) {
+    $siteTitle .= ($pageData[$DO]['title'])?' : '.$pageData[$DO]['title']:'';
+  } else if (isset($pageData[$ACT])) {
+    if (isset($CAT) && isset($pageData[$ACT]['categories'][$CAT])) {
+      $siteTitle .= ' : '.$pageData[$ACT]['categories'][$CAT]['title'];
+    } else {
+      $siteTitle .= ' : '.$pageData[$ACT]['title'];
+    }
   }
   return $siteTitle;
 }
@@ -134,7 +140,7 @@ function getSerchbox()
 // 네비게이션 출력
 function getNavmenu($sep=null)
 {
-  global $CONF, $ACT, $MAIN;
+  global $CONF, $ACT, $CAT, $MAIN;
   $main = MAIN;
   $pages = $CONF['pages'];
 
@@ -152,17 +158,18 @@ function getNavmenu($sep=null)
         $defCat = $value;
         $defSubkey = $subKey;
       }
+      $active = ($CAT==$subKey)?'active':'';
       if ($value['type']=='link') {
-        $submenu .="<li><a href='$value[url]'>$value[title]</a></li>";
+        $submenu .="<li class='$active'><a href='$value[url]'>$value[title]</a></li>";
       } else {
-        $submenu .="<li><a href='$MAIN?action=$key&category=$subKey'>$value[title]</a></li>";
+        $submenu .="<li class='$active'><a href='$MAIN?action=$key&category=$subKey'>$value[title]</a></li>";
       }
       $i++;
     }
     if ($defCat['type']=='link') {
       $menuLink = $defCat['url'];
     } else {
-      $menuLink = "$MAIN?action=$key&category=$subKey&category=$defSubkey";
+      $menuLink = "$MAIN?action=$key&category=$defSubkey";
     }
 
     $active = ($ACT==$key)?'active':'';
@@ -208,7 +215,7 @@ function getButton($type, $label='', $attr=array())
   return $button;
 }
 
-// --------------------------------------------------------------------------
+// 기본요소 출력 --------------------------------------------------------------------------
 
 // 헤드 출력
 function makeHead()
@@ -254,9 +261,83 @@ function makeFooter()
   global $INFO;
 
   $footer_data = array(
-    
+    'copyright' => $INFO['copyright'],
   );
   $footer = renderElement(TPL.'footer.html', $footer_data);
   return $footer;
+}
+
+// 본문 출력 -------------------------------------------------------------------------------
+
+// 왼쪽메뉴
+function getLeftmenu($data) 
+{
+  global $ACT, $CAT, $MAIN;
+  if (!isset($data['categories'])) return '';
+  $catData = $data['categories'];
+  $html = '';  
+  foreach ($catData as $key => $data) {
+    $active = ($CAT==$key)?'active':'';
+    $link = "$MAIN?action=$ACT&category=$key";
+    $html .= "<li class='$active'><a href='$link'>$data[title]</a></li>";
+  }
+  return "<ul>$html</ul>";
+}
+
+// 헤더 이미지
+function makeHeaderImg($data)
+{
+  if ($data['headerImg']=='') return '';
+  $IMG = IMG;
+  $imageUrl = $IMG.'header/'.$data['headerImg'];
+  $html = "
+    <div class='sub_visual'
+      style='background-image: url($imageUrl);'
+    ></div>
+  ";
+  return $html;
+}
+
+// 로케이션
+function getLocation($data)
+{
+  global $ACT, $CAT;
+  $catData = $data['categories'][$CAT];
+  $html = "<span class='home'>HOME</span>";
+  $html .= "<span class='loc1 arrow'>$data[title]</span>";
+  $html .= "<span class='loc2 arrow'>$catData[title]</span>";
+
+  return $html;
+}
+
+// 서브타이틀
+function getSubTitle($data)
+{
+  global $ACT, $CAT;
+  $catData = $data['categories'][$CAT];
+  $html = "<h3>$catData[title]<span class='eng'>$catData[name]</span></h3>";
+
+  return $html;
+}
+
+
+// 컨텐츠 출력
+function makeContents()
+{
+  global $CONF, $ACT, $INFO, $USER;
+  $html = '';
+
+  $pageData = $CONF['pages'][$ACT];
+
+  $contents_data = array(
+    'title' => "<h2>$pageData[title]</h2>",
+    'leftmenu' => getLeftmenu($pageData),
+    'headerImg' => makeHeaderImg($pageData),
+    'location' => getLocation($pageData),
+    'subTitle' => getSubTitle($pageData),
+    'innerContent' => '',
+  );
+  $html .= renderElement(TPL.'contents.html', $contents_data);
+  return $html;
 }
 

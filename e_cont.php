@@ -208,10 +208,13 @@
 				<div class="art_wrap gallery popzone">
 					<p class="tit">작품 더 보기</p>
 					<ul>
-						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_BnsfvdHP.jpg" class="lightview" style="max-width:100%; height:auto;"></a>
-							<div class="pop_layer">
+						<li class="pop">
+							<div class="pop01">
+							<a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_BnsfvdHP.jpg" class="lightview" style="max-width:100%; height:auto;"></a>
+                            </div>
+							<div class="pop_layer lc01">
 								<div class="layer_inner">
-									<a href="#" class="layer_close">X</a>
+									<a href="#" class="layer_close" id="lc01">X</a>
 									<div class="inner_wrap">
 										<div class="inner_img"><img src="images/editor_208030_3534906791_BnsfvdHP.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
 										<div class="inner_txt">
@@ -227,10 +230,11 @@
 								</div>
 							</div>
 						</li>
-						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_NHj62Duh.jpg" class="lightview" rel="images/editor_208030_3534906791_NHj62Duh.jpg" style="max-width:100%; height:auto;"></a>
-							<div class="pop_layer">
+						<li class="pop">
+						<div class="pop02"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_NHj62Duh.jpg" class="lightview" rel="images/editor_208030_3534906791_NHj62Duh.jpg" style="max-width:100%; height:auto;"></a></div>
+							<div class="pop_layer lc02">
 								<div class="layer_inner">
-									<a href="#" class="layer_close">X</a>
+									<a href="#" class="layer_close" id="lc02">X</a>
 									<div class="inner_wrap">
 										<div class="inner_img"><img src="images/editor_208030_3534906791_NHj62Duh.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_NHj62Duh.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
 										<div class="inner_txt">
@@ -246,10 +250,11 @@
 								</div>
 							</div>
 						</li>
-						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_6yx2rXzo.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_6yx2rXzo.jpg" style="max-width:100%; height:auto;"></a>
-							<div class="pop_layer">
+						<li class="pop">
+						<div class="pop03"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_6yx2rXzo.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_6yx2rXzo.jpg" style="max-width:100%; height:auto;"></a></div>
+							<div class="pop_layer lc03">
 								<div class="layer_inner">
-									<a href="#" class="layer_close">X</a>
+									<a href="#" class="layer_close" id="lc03">X</a>
 									<div class="inner_wrap">
 										<div class="inner_img"><img src="images/editor_208030_3534906791_6yx2rXzo.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_6yx2rXzo.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
 										<div class="inner_txt">
@@ -263,10 +268,11 @@
 								</div>
 							</div>
 						</li>
-						<li class="pop"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_t8Hh1AWp.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_t8Hh1AWp.jpg" style="max-width:100%; height:auto;"></a>
-							<div class="pop_layer">
+						<li class="pop">
+						<div class="pop04"><a href="#" class="detail" style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; text-align:center; vertical-align:middle;"><img src="images/editor_208030_3534906791_t8Hh1AWp.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_t8Hh1AWp.jpg" style="max-width:100%; height:auto;"></a></div>
+							<div class="pop_layer lc04">
 								<div class="layer_inner">
-									<a href="#" class="layer_close">X</a>
+									<a href="#" class="layer_close" id="lc04">X</a>
 									<div class="inner_wrap">
 										<div class="inner_img"><img src="images/editor_208030_3534906791_t8Hh1AWp.jpg" alt="" class="lightview" rel="images/editor_208030_3534906791_t8Hh1AWp.jpg" style="max-width:100%; height:auto;  max-height:600px;"></div>
 										<div class="inner_txt">
