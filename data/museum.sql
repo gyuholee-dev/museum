@@ -15,7 +15,7 @@ file 파일
 link 링크
 */
 DROP TABLE IF EXISTS museum_post;
-CREATE TABLE post (
+CREATE TABLE museum_post (
   postid INT AUTO_INCREMENT,
   wdate INT,
   userid CHAR(20),
@@ -40,7 +40,7 @@ link 링크
 usergroup 권한그룹: admin, user
 */
 DROP TABLE IF EXISTS museum_user;
-CREATE TABLE user (
+CREATE TABLE museum_user (
   userid CHAR(20) NOT NULL,
   password BLOB,
   nickname VARCHAR(20),
