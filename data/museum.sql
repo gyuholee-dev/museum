@@ -10,9 +10,9 @@ nickname 작성자 이름
 subject 주제:
 category 분류:
 title 타이틀
-content 내용
 file 파일
-link 링크
+galleryid 갤러리 id (차후 추가)
+content 내용
 */
 DROP TABLE IF EXISTS museum_post;
 CREATE TABLE museum_post (
@@ -23,12 +23,11 @@ CREATE TABLE museum_post (
   subject CHAR(20),
   category CHAR(20),
   title VARCHAR(80),
-  content TEXT,
   file VARCHAR(80),
-  link VARCHAR(80),
+  info JSON,
+  content TEXT,
   PRIMARY KEY(postid)
 );
-
 
 /* user 유저
 userid 아이디
