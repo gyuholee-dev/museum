@@ -472,7 +472,6 @@ function getPageNav($page=1, $pageCount=10)
     }
   }
 
-
   $btn_first = '';
   $btn_prev = '';
   if ($page > 1) {
