@@ -395,37 +395,47 @@ function getPostList($listType, $start=0, $items=6)
   $res = mysqli_query($DB, $sql);
 
   $postList = '';
-  while ($data = mysqli_fetch_assoc($res)) {
-    foreach ($data as $key => $value) {
-      $$key = $value;
+  $pageNav = '';
+  if (mysqli_num_rows($res) > 0) {
+    while ($data = mysqli_fetch_assoc($res)) {
+      foreach ($data as $key => $value) {
+        $$key = $value;
+      }
+      $image = FILE.$ACT.'/'.$CAT.'/'.$file;
+      $info = json_decode($info,true);
+      $date = $info['전시기간'];
+      $content = strip_tags($content);
+      $url = "$MAIN?action=$ACT&category=$CAT&do=post&postid=$postid&page=$PAGE";
+  
+      $postList .= "
+        <li>
+          <div class='img' style='text-align:center;'>
+            <img src='$image'>
+          </div>
+          <div class='text'>
+            <p class='tit'>$title</p>
+            <p class='date'>$date</p>
+            <div class='cont'>
+              $content
+            </div>
+            <div class='detail_btn_wrap'>
+              <a href='$url' class='detail_btn'>자세히 보기</a>
+            </div>
+          </div>
+        </li>
+      ";
     }
-    $image = FILE.$ACT.'/'.$CAT.'/'.$file;
-    $info = json_decode($info,true);
-    $date = $info['전시기간'];
-    $content = strip_tags($content);
-    $url = "$MAIN?action=$ACT&category=$CAT&do=post&postid=$postid&page=$PAGE";
-
-    $postList .= "
-      <li>
-        <div class='img' style='text-align:center;'>
-          <img src='$image'>
-        </div>
-        <div class='text'>
-          <p class='tit'>$title</p>
-          <p class='date'>$date</p>
-          <div class='cont'>
-            $content
-          </div>
-          <div class='detail_btn_wrap'>
-            <a href='$url' class='detail_btn'>자세히 보기</a>
-          </div>
-        </div>
-      </li>
+    $pageNav = getPageNav($PAGE, $pageCount);
+  } else {
+    $postList = "
+        <li style='width:100%; height:300px; line-height:300px; text-align:center'>
+          등록된 포스트가 없습니다.
+        </li>
     ";
   }
   $list_data = array(
     'postList' => "<ul>$postList</ul>",
-    'pageNav' => getPageNav($PAGE, $pageCount),
+    'pageNav' => $pageNav,
   );
   $html = renderElement(TPL.'list_'.$listType.'.html', $list_data);
 
