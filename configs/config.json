@@ -61,7 +61,7 @@
       "title" : "전시",
       "items" : 6,
       "listType" : "preview",
-      "postType" : "html",
+      "postType" : "exhibit",
       "headerImg" : "sub_visual03.jpg",
       "categories" : {
         "current" : { 
@@ -109,7 +109,7 @@
       "title" : "소장품",
       "items" : 6,
       "listType" : "gallery",
-      "postType" : "html",
+      "postType" : "media",
       "headerImg" : "sub_visual03.jpg",
       "categories" : {
         "collection" : { 
@@ -139,7 +139,7 @@
       "title" : "스틸아트공방",
       "items" : 6,
       "listType" : "list",
-      "postType" : "html",
+      "postType" : "link",
       "headerImg" : "",
       "categories" : {
         "steel" : { 
