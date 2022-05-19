@@ -382,6 +382,7 @@ function getPostList($listType, $start=0, $items=6)
   global $CONF, $DB;
   global $ACT, $CAT, $PAGE;
   global $MAIN;
+  global $DEV;
 
   $sql = "SELECT COUNT(*) FROM museum_post
           WHERE subject='$ACT' AND category='$CAT' ";
@@ -393,6 +394,13 @@ function getPostList($listType, $start=0, $items=6)
           WHERE subject='$ACT' AND category='$CAT'
           ORDER BY postid DESC
           LIMIT $start, $items ";
+  // 개발모드일 경우 카운트 초과 페이지도 랜덤 리스트로 출력
+  if ($DEV && $PAGE > $pageCount) {
+      $sql = "SELECT * FROM museum_post
+            WHERE subject='$ACT' AND category='$CAT'
+            ORDER BY RAND()
+            LIMIT 0, $items ";
+  }
   $res = mysqli_query($DB, $sql);
 
   $postList = '';
@@ -448,6 +456,7 @@ function getPageNav($page=1, $pageCount=10)
 {
   global $ACT, $CAT;
   global $MAIN;
+  global $DEV;
 
   $btn_page = '';
   for ($i=1; $i <= $pageCount; $i++) { 
@@ -455,6 +464,14 @@ function getPageNav($page=1, $pageCount=10)
     $url = "$MAIN?action=$ACT&category=$CAT&page=$i";
     $btn_page .= "<a class='page_num $current' href='$url'>$i</a>";
   }
+  // 개발모드일 경우 10페이지 채움
+  if ($DEV && $pageCount < 10) {
+    for ($i=$pageCount+1; $i <= 10; $i++) { 
+      $url = "$MAIN?action=$ACT&category=$CAT&page=$i";
+      $btn_page .= "<a class='page_num' href='$url'>$i</a>";
+    }
+  }
+
 
   $btn_first = '';
   $btn_prev = '';
@@ -498,7 +515,7 @@ function makeContents()
 
   $content = '';
   if ($DO == 'list') {
-    $content = getPostList($listType, $PAGE-1, $pageData['items']);
+    $content .= getPostList($listType, ($PAGE-1)*$pageData['items'], $pageData['items']);
   } else if ($DO == 'post') {
     $content = getPostContent($postType, $ID);
   }
