@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to come</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="tobox">
+        <h2 class="come">오시는길</h2>
+    <!-- * 카카오맵 - 지도퍼가기 -->
+<!-- 1. 지도 노드 -->
+<div id="daumRoughmapContainer1652937695708" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+<!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1652937695708",
+		"key" : "2ab2c",
+		"mapWidth" : "640",
+		"mapHeight" : "360"
+	}).render();
+</script>
+<div class="content">
+&nbsp;    
+<div class="drive">주차</div>
+<p>환호공원 주차장 이용</p>
+&nbsp;
+
+<div class="car">자가용으로 오시는 길</div>
+<p>대구방면 : 20번 익산포항고속도로(경부선, 대구포항선) - 31번 영덕 경주방면으로 우측방향 - 영일대해수욕장 방향 - 환호공원내</p>
+<p>경주방면 : 경주톨게이트 - 포항 - 대잠사거리 직진 - 영일대해수욕장에서 약 10분 환호해맞이공원내</p>
+&nbsp;&nbsp;
+<span style="background-color:rgb(161, 161, 161);"><div class="public">대중교통으로 오시는 길</span></div>
+
+    <div class="busbox">
+        <div class="text">
+           <img src="image/image2.gif">
+        <p>(일반) 207, 302, 600, 900, 9000, 양덕1, 양덕3번 환호해맞이그린빌 하차, 도보 3분</p>
+        <p>(시외) 포항시외버스터미널에서 207, 600, 900번 택시이용 소요시간 20분</p>
+        <p>(고속) 포항고속버스터미널에서 207, 600, 900, 9000, 양덕3번 택시이용 소요시간 15분</p>
+    </div>
+</div>    
+<div class="mapbox">
+    <img src="image/image.gif">
+<p>포항역에서 9000번</p>
+<p>택시이용 소요시간 15분</p>
+</div>
+</body>
+</html>
