@@ -552,7 +552,7 @@ input[type=text], input[type=password], textarea, button {
 }
 #firstArea .box_wrap.box1 .cont02 .inner ul li .txt {
     float: left;
-    width: 216px;
+    width: 200px;
     position: relative;
 }
 #firstArea .box_wrap.box1 .cont02 .inner ul li .txt a.tit {
