@@ -391,6 +391,7 @@ function getPostList($listType, $start=0, $items=6)
 
   $sql = "SELECT * FROM museum_post
           WHERE subject='$ACT' AND category='$CAT'
+          ORDER BY postid DESC
           LIMIT $start, $items ";
   $res = mysqli_query($DB, $sql);
 
@@ -497,7 +498,7 @@ function makeContents()
 
   $content = '';
   if ($DO == 'list') {
-    $content = getPostList($listType, $PAGE, $pageData['items']);
+    $content = getPostList($listType, $PAGE-1, $pageData['items']);
   } else if ($DO == 'post') {
     $content = getPostContent($postType, $ID);
   }
