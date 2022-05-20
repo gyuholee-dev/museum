@@ -2,7 +2,7 @@
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '주한세르비아대사관 협력전 - 블라디슬라브 스체파노비치',
 '208030_3534906791_dQYlUmaf.jpg',
 '{
@@ -40,7 +40,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 'POMA 신소장품전 2019-2020',
 '208030_3534906791_HYM0Lqrh.png',
 '{
@@ -84,7 +84,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '2022 POMA Collection: 연결_시제',
 '208030_3534906791_Z7MRX4xd.jpg',
 '{
@@ -134,7 +134,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '제15회 장두건미술상 수상작가 이종길 : 일상은 처음부터 낯익지 않았다.',
 '194340_838777848_yZwnAHrI.jpg',
 '{
@@ -168,7 +168,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '장두건 빠리에 머물다',
 '208030_3534906791_ShIucpqt.png',
 '{
@@ -240,7 +240,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '메타픽션 : 현실 그 너머',
 '216168_3534906791_QdnMfkST.jpg',
 '{
@@ -297,7 +297,7 @@ b.1987) 아홉 작가의 작품 50여점을 선보인다.
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '신화를 담다: 꺼지지 않는 불꽃',
 '208030_3534906791_yT7moRH1.jpg',
 '{
@@ -338,7 +338,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '2021년 「POMA 찾아가는 미술관」 포스코갤러리',
 '208030_3534906791_kuKgWmeG.jpg',
 '{
@@ -388,7 +388,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '《봄이 와 있었다》 연계 교육체험전 《모도리 예술가》',
 '208030_3534906791_lCnZQVHT.jpg',
 '{
@@ -420,7 +420,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '한국근현대미술 《봄이 와 있었다》',
 '208030_3534906791_yw8OQ5MY.jpg',
 '{
@@ -468,7 +468,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '손아유: 1978년, 돌담아래',
 '208030_3534906791_SOBezKrM.jpg',
 '{
@@ -520,7 +520,7 @@ Undulation / Body, Matter, Cosmos」에서 자신이 평생 동안 추구해온 
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'exhibition', 'past',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'exhibition', 'past',
 '제16회 장두건미술상 수상작가 김은솔 : 기억의 파동',
 '208030_3534906791_My9OBcw2.jpg',
 '{

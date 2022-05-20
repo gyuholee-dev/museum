@@ -2,7 +2,7 @@
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'education', 'edu01',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'education', 'edu01',
 '진로교육 프로그램 비욘드 스쿨',
 '208030_3534906791_IL0YlthR.png',
 '{
@@ -58,7 +58,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'education', 'edu01',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'education', 'edu01',
 '전시감상 프로그램 방구석 POMA 톡톡 TALK TALK!',
 'editor_208030_3530068872_Nc6m45vt.jpg',
 '{
@@ -90,7 +90,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'education', 'edu01',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'education', 'edu01',
 '전시감상 프로그램 방구석 POMA 톡톡 TALK TALK!',
 'editor_208030_3534906791_kXF79LHm.jpg',
 '{
@@ -133,7 +133,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'education', 'edu01',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'education', 'edu01',
 '《모도리 예술가》 전시연계 워크숍',
 'editor_208030_3534906791_hwK6W3Zt.jpg',
 '{
@@ -195,7 +195,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'education', 'edu01',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'education', 'edu01',
 '전시감상 프로그램 방구석 POMA 톡톡 TALK TALK!',
 'editor_208030_3534906791_rABxfgOQ.png',
 '{
@@ -232,7 +232,7 @@ VALUES
 INSERT INTO museum_post 
 (wdate, userid, nickname, subject, category, title, file, info, content) 
 VALUES 
-( UNIX_TIMESTAMP(), 'admin', 'Admin', 'education', 'edu01',
+( UNIX_TIMESTAMP(), 'admin', '포항시립미술관', 'education', 'edu01',
 '2021 어린이 전시 감상 워크북 프로그램 [미술관은 내 친구]',
 'editor_208030_3530068872_24DEKofF.jpg',
 '{
@@ -245,8 +245,7 @@ VALUES
   "참가비용": "무료",
   "신청방법": "홈페이지를 통한 온라인 선착순 접수 (1일 1회만 참여하는 수업)"
 }',
-'
-<div class=\"pomabox\">
+'<div class=\"pomabox\">
     <h2 class=\"flame\">2021 어린이 전시 감상 워크북 프로그램 [미술관은 내 친구]</h2>
 </div>    
  
@@ -280,5 +279,5 @@ VALUES
 <p>· 등록여부는 ‘마이페이지’->‘신청히스토리’에서 확인 가능합니다.</p>
 <p> *별도의 연락은 드리지 않습니다. 수강 여부는 미술관의 승인을 거쳐야하니 수강신청 후 1~3시간 뒤 확인 가능합니다.</p>
 
-<p>· 상기 일정은 미술관 사정에 의해 변경될 수 있습니다.</p>>'
+<p>· 상기 일정은 미술관 사정에 의해 변경될 수 있습니다.</p>'
 );
