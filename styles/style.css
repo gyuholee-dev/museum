@@ -1390,11 +1390,7 @@ tbody {
     vertical-align: middle;
     border-color: inherit;
 }
-tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-}
+
 #cont .apply_tbl.noBd tbody .th {
     width: 25%;
     font-weight: normal;
@@ -1610,6 +1606,209 @@ tr {
     margin-bottom: 60px;
     width: 100%;
 }
+
+
+/* 조직도시작 */
+#cont .img_wrap {
+    margin: 0 0 70px;
+    padding: 70px 30px;
+    border: 1px solid #ddd;
+    background: url(../images/img_bg.jpg) repeat;
+    text-align: center;
+}
+#cont .text_wrap .cont_tit {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+#cont .brdList {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+colgroup {
+    display: table-column-group;
+}
+#cont .brdList {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+col {
+    display: table-column;
+}
+#cont .brdList thead th, #cont .brdList tbody th, #cont .brdList tbody td {
+    font-size: 14px;
+}
+
+#cont .brdList thead th, #cont .brdList tbody th {
+    background: #f0f0f0;
+}
+
+#cont .brdList th, #cont .brdList td {
+    padding: 12px 10px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    text-align: center;
+}
+#cont .bulDot, #cont .bulDotList li {
+    margin-top: 2px;
+    text-align: left;
+}
+#cont .text_wrap p {
+    font-size: 14px;
+    word-break: keep-all;
+}
+#cont .director {
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 15px !important;
+    color: #000;
+}
+.cont_tit .director {
+    float: right;
+    padding-bottom: 0;
+    line-height: 40px;
+}
+
+/* p_vision.php 시작 */
+
+#cont .identity_wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+#cont .identity_wrap .img {
+    position: absolute;
+    top: 40px;
+    z-index: 5;
+}
+#cont .identity_wrap .txt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 430px;
+    z-index: 10;
+    background: #f5f5f5;
+}
+#cont .identity_wrap .txt .inner {
+    padding: 30px;
+}
+#cont .identity_wrap .txt .txt1 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+#cont .text_wrap .txt1 {
+    margin: 15px 0;
+}
+#cont .text_wrap p {
+    font-size: 14px;
+    word-break: keep-all;
+}
+#cont .mission_wrap {
+    padding-top: 50px;
+}
+#cont .bdTop {
+    border-top: 1px solid #d9d9d9;
+}
+.alignC {
+    text-align: center !important;
+}
+#cont .history_wrap .inner {
+    margin: 0 auto;
+    width: 608px;
+    overflow: hidden;
+}
+
+#cont .history_wrap.pc_ver dl {
+    float: left;
+}
+#cont .history_wrap.pc_ver dl dt {
+    height: 158px;
+}
+#cont .history_wrap.pc_ver dl dt img {
+    vertical-align: bottom;
+}
+#cont .history_wrap.pc_ver dl dd {
+    padding-top: 20px;
+    text-align: left;
+}
+#cont .history_wrap.pc_ver dl.first ul {
+    margin-left: 4px;
+}
+#cont .history_wrap.pc_ver dl dd ul {
+    padding-left: 10px;
+    border-left: 1px solid #d9d9d9;
+}
+#cont .history_wrap.pc_ver dl dd ul li:first-child {
+    margin-top: 0;
+}
+#cont .history_wrap.pc_ver dl dd ul li {
+    margin-top: 5px;
+}
+#cont .history_wrap.pc_ver dl dd ul li .date {
+    color: #757575;
+    font-size: 13px;
+}
+
+
+
+/* i_intr.php 시작 */
+#cont .dlType06:first-child {
+    margin-top: 0;
+}
+#cont .dlType06 {
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+#cont .dlType06 dt {
+    float: left;
+    padding-left: 10px;
+    width: 100px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+#cont .dlType06 dd {
+    float: left;
+    padding-left: 10px;
+    font-size: 14px;
+    width: 600px;
+}
+#cont .facilities_wrap {
+    position: relative;
+    width: 100%;
+}
+#cont .floor_wrap {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #ccc;
+}
+#cont .floor_wrap p.floor_tit {
+    display: block;
+    position: absolute;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background: #c4161c;
+    color: #fff;
+    text-align: center;
+}
+#cont .floor_wrap .pc_ver {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
 
 
 
