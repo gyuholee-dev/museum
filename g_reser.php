@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
    session_start();
 ?>
 <html>
@@ -13,7 +13,7 @@
 <script src="scripts/script.js" defer="defer"></script>
 </head>
 
-<body> -->
+<body>
 
 
 
@@ -213,4 +213,4 @@
 </div>
 
 
-<!-- </body></html> -->
+</body></html>
