@@ -292,7 +292,7 @@ function getLeftmenu($data)
 }
 
 // 헤더 이미지
-function makeHeaderImg($data)
+function getHeaderImg($data)
 {
   if ($data['headerImg']=='') return '';
   $IMG = IMG;
@@ -327,26 +327,212 @@ function getSubTitle($data)
   return $html;
 }
 
+function getInfoList($data)
+{
+  $html = '';
+  foreach ($data as $key => $value) {
+    $html .= "
+      <li>
+        <span class='tit'>$key</span>
+        <span class='cont'>$value</span>
+      </li>
+    ";
+  }
+  return "<ul>$html</ul>";
+}
+
+// 컨텐츠 본문 출력
+// postType: html, media, exhibit
+function getPostContent($postType, $postid=1)
+{
+  global $CONF, $DB;
+  global $ACT, $CAT, $DO, $ID, $PAGE;
+  global $MAIN;
+
+  $sql = "SELECT * FROM museum_post "; 
+  $sql .= "WHERE subject='$ACT' AND category='$CAT' AND postid='$postid'";
+  $res = mysqli_query($DB, $sql);
+
+  $html = '';
+  while ($data = mysqli_fetch_assoc($res)) {
+    foreach ($data as $key => $value) {
+      $$key = $value;
+    }
+    $image = FILE.$ACT.'/'.$CAT.'/'.$file;
+    $info = getInfoList(json_decode($info,true));
+
+    $post_data = array(
+      'image' => $image,
+      'title' => $title,
+      'info' => $info,
+      'content' => $content,
+      'gallery' => renderElement(TPL.'gallery.html'),
+      'listUrl' => "$MAIN?action=$ACT&category=$CAT&page=$PAGE",
+    );
+    $html .= renderElement(TPL.'post_'.$postType.'.html', $post_data);
+  }
+
+  return $html;
+}
+
+// 컨텐츠 리스트 출력
+// listType : preview, list, gallery
+function getPostList($listType, $start=0, $items=6)
+{
+  global $CONF, $DB;
+  global $ACT, $CAT, $PAGE;
+  global $MAIN;
+  global $DEV;
+
+  $sql = "SELECT COUNT(*) FROM museum_post
+          WHERE subject='$ACT' AND category='$CAT' ";
+  $res = mysqli_query($DB, $sql);
+  $count = mysqli_fetch_row($res)[0];
+  $pageCount = ceil($count/$items);
+
+  $sql = "SELECT * FROM museum_post
+          WHERE subject='$ACT' AND category='$CAT'
+          ORDER BY postid DESC
+          LIMIT $start, $items ";
+  // 개발모드일 경우 카운트 초과 페이지도 랜덤 리스트로 출력
+  if ($DEV && $PAGE > $pageCount) {
+      $sql = "SELECT * FROM museum_post
+            WHERE subject='$ACT' AND category='$CAT'
+            ORDER BY RAND()
+            LIMIT 0, $items ";
+  }
+  $res = mysqli_query($DB, $sql);
+
+  $postList = '';
+  $pageNav = '';
+  if (mysqli_num_rows($res) > 0) {
+    while ($data = mysqli_fetch_assoc($res)) {
+      foreach ($data as $key => $value) {
+        $$key = $value;
+      }
+      $image = FILE.$ACT.'/'.$CAT.'/'.$file;
+      $info = json_decode($info,true);
+      $date = $info['전시기간'];
+      $content = strip_tags($content);
+      $url = "$MAIN?action=$ACT&category=$CAT&do=post&postid=$postid&page=$PAGE";
+  
+      $postList .= "
+        <li>
+          <div class='img' style='text-align:center;'>
+            <img src='$image'>
+          </div>
+          <div class='text'>
+            <p class='tit'>$title</p>
+            <p class='date'>$date</p>
+            <div class='cont'>
+              $content
+            </div>
+            <div class='detail_btn_wrap'>
+              <a href='$url' class='detail_btn'>자세히 보기</a>
+            </div>
+          </div>
+        </li>
+      ";
+    }
+    $pageNav = getPageNav($PAGE, $pageCount);
+  } else {
+    $postList = "
+        <li style='width:100%; height:300px; line-height:300px; text-align:center'>
+          등록된 포스트가 없습니다.
+        </li>
+    ";
+  }
+  $list_data = array(
+    'postList' => "<ul>$postList</ul>",
+    'pageNav' => $pageNav,
+  );
+  $html = renderElement(TPL.'list_'.$listType.'.html', $list_data);
+
+  return $html;
+}
+
+// 페이지 내비게이션
+function getPageNav($page=1, $pageCount=10)
+{
+  global $ACT, $CAT;
+  global $MAIN;
+  global $DEV;
+
+  $btn_page = '';
+  for ($i=1; $i <= $pageCount; $i++) { 
+    $current = ($page == $i)?'current':'';
+    $url = "$MAIN?action=$ACT&category=$CAT&page=$i";
+    $btn_page .= "<a class='page_num $current' href='$url'>$i</a>";
+  }
+  // 개발모드일 경우 10페이지 채움
+  if ($DEV && $pageCount < 10) {
+    for ($i=$pageCount+1; $i <= 10; $i++) { 
+      $current = ($page == $i)?'current':'';
+      $url = "$MAIN?action=$ACT&category=$CAT&page=$i";
+      $btn_page .= "<a class='page_num $current' href='$url'>$i</a>";
+    }
+  }
+
+  $btn_first = '';
+  $btn_prev = '';
+  if ($page > 1) {
+    $url_first = "$MAIN?action=$ACT&category=$CAT&page=1";
+    $btn_first = "<a class='first_page' href='$url_first'>&nbsp;</a>";
+    $url_prev = "$MAIN?action=$ACT&category=$CAT&page=".$page-1;
+    $btn_prev = "<a class='prev_page' href='$url_prev'>&nbsp;</a>";
+  } else {
+    $btn_first = "<a class='first_page'>&nbsp;</a>";
+    $btn_prev = "<a class='prev_page'>&nbsp;</a>";
+  }
+
+  $btn_next = '';
+  $btn_last = '';
+  if ($page < $pageCount) {
+    $url_next = "$MAIN?action=$ACT&category=$CAT&page=".$page+1;
+    $btn_next = "<a class='next_page' href='$url_next'>&nbsp;</a>";
+    $url_last = "$MAIN?action=$ACT&category=$CAT&page=$pageCount";
+    $btn_last = "<a class='last_page' href='$url_last'>&nbsp;</a>";
+  } else {
+    $btn_next = "<a class='next_page'>&nbsp;</a>";
+    $btn_last = "<a class='last_page'>&nbsp;</a>";
+  }
+
+  return $btn_first.$btn_prev.$btn_page.$btn_next.$btn_last;
+}
 
 // 컨텐츠 출력
+// listType : preview, list, gallery
+// postType: html, media, exhibit
 function makeContents()
 {
-  global $CONF, $ACT, $INFO, $USER;
+  global $CONF;
+  global $ACT, $DO, $ID, $PAGE;
   $html = '';
 
   $pageData = $CONF['pages'][$ACT];
+  $listType = $pageData['listType'];
+  $postType = $pageData['postType'];
+
+  $content = '';
+  if ($DO == 'list') {
+    $content .= getPostList($listType, ($PAGE-1)*$pageData['items'], $pageData['items']);
+  } else if ($DO == 'post') {
+    $content = getPostContent($postType, $ID);
+  }
 
   $contents_data = array(
     'title' => "<h2>$pageData[title]</h2>",
     'leftmenu' => getLeftmenu($pageData),
-    'headerImg' => makeHeaderImg($pageData),
+    'headerImg' => getHeaderImg($pageData),
     'location' => getLocation($pageData),
     'subTitle' => getSubTitle($pageData),
-    'innerContent' => '',
+    'content' => $content,
   );
   $html .= renderElement(TPL.'contents.html', $contents_data);
   return $html;
 }
+
+// 유저페이지 출력 -------------------------------------------------------------------------------
 
 // 유저페이지 출력
 function makeUserPage() : string
