@@ -1390,11 +1390,7 @@ tbody {
     vertical-align: middle;
     border-color: inherit;
 }
-tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-}
+
 #cont .apply_tbl.noBd tbody .th {
     width: 25%;
     font-weight: normal;
@@ -1612,6 +1608,71 @@ tr {
 }
 
 
+/* 조직도시작 */
+#cont .img_wrap {
+    margin: 0 0 70px;
+    padding: 70px 30px;
+    border: 1px solid #ddd;
+    background: url(../images/img_bg.jpg) repeat;
+    text-align: center;
+}
+#cont .text_wrap .cont_tit {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+#cont .brdList {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+colgroup {
+    display: table-column-group;
+}
+#cont .brdList {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+col {
+    display: table-column;
+}
+#cont .brdList thead th, #cont .brdList tbody th, #cont .brdList tbody td {
+    font-size: 14px;
+}
+
+#cont .brdList thead th, #cont .brdList tbody th {
+    background: #f0f0f0;
+}
+
+#cont .brdList th, #cont .brdList td {
+    padding: 12px 10px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    text-align: center;
+}
+#cont .bulDot, #cont .bulDotList li {
+    margin-top: 2px;
+    text-align: left;
+}
+#cont .text_wrap p {
+    font-size: 14px;
+    word-break: keep-all;
+}
+#cont .director {
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: 15px !important;
+    color: #000;
+}
+.cont_tit .director {
+    float: right;
+    padding-bottom: 0;
+    line-height: 40px;
+}
 
 
 /* f */
