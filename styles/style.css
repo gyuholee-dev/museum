@@ -17,6 +17,7 @@ body, th, td, input, select, textarea, button {
     color: #212121;
     /* letter-spacing: -0.05em; */
 }
+
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
     margin: 0;
     padding: 0;
@@ -1312,19 +1313,132 @@ form {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* login page end */
 
 
+#cont .application_wrap {
+    border: solid #ddd;
+    border-width: 1px 0 1px 0;
+}
+#cont .section_tit {
+    float: left;
+    padding: 15px 10px;
+    width: 150px;
+    font-size: 17px;
+}
+#cont .section_tit p {
+    font-weight: bold;
+}
+#cont .section_cont {
+    float: left;
+    padding: 15px 0;
+    width: 650px;
+    overflow: hidden;
+}
+.dlType04 {padding-bottom: 10px;padding-top: 10px;width: 200px;
+           border-bottom: 1px solid #ddd;}
+.dlType04 input{border: 1px solid #ddd;}
+.dlType04 option{padding: 2px 20px;}
+.clearAfter:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#cont .section_cont .ulType01 li:first-child {
+    border: 0;
+}
+#cont .section_cont .ulType01 li {
+    padding: 15px 5px;
+    border-top: 1px solid #ddd;
+}
+#cont .section_cont .dlType03 {
+    overflow: hidden;
+}
+#cont .section_cont .dlType03 dt {
+    float: left;
+    width: 150px;
+}
+#cont .section_cont .dlType03 dd {
+    float: left;
+    width: 490px;
+}
+#cont .section_cont .ulType02 {
+    overflow: hidden;
+}
+#cont .section_cont .ulType01 li:first-child {
+    border: 0;
+}
+#cont .section_cont .ulType02 li {
+    float: left;
+    margin-right: 13px;
+    padding: 0;
+    border-top: 0;
+}
+#cont .application_wrap input {
+    padding: 5px;
+    max-width: 95%;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ddd;
+}
+#cont .application_wrap input {
+    padding: 5px;
+    max-width: 95%;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ddd;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+#cont .apply_tbl.noBd tbody .th {
+    width: 25%;
+    font-weight: normal;
+    text-align: left;
+}
+#cont .apply_tbl.noBd tbody .td {
+    width: 75%;
+}
+#cont .apply_tbl.noBd tbody td {
+    padding: 10px 5px;
+    border-top: 0;
+    text-align: center;
+}
 
+#cont .section_cont .dlType03 textarea { border: 1px solid #ddd;width: 90%;}
+#cont .application_wrap .stxt {
+    font-size: 13px;
+}
+.emph_red {
+    color: #c4151c !important;
+}
+#cont .section_cont {
+    float: left;
+    padding: 15px 0;
+    width: 650px;
+    overflow: hidden;
+}
+.padB10 {
+    padding-bottom: 10px !important;
+}
+#cont .application_wrap .terms {
+    padding: 2%;
+    width: 94%;
+    height: 150px;
+    border: 1px solid #ddd;
+    white-space: pre-line;
+    overflow-y: auto;
+}
+#cont .btn_wrap a:hover{
+    background-color: #212121;color: #fff;
+}
 
 
 
