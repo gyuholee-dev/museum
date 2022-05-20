@@ -582,7 +582,7 @@ function getPageNav($page=1, $pageCount=10)
   if ($page > 1) {
     $url_first = "$MAIN?action=$ACT&category=$CAT&page=1";
     $btn_first = "<a class='first_page' href='$url_first'>&nbsp;</a>";
-    $url_prev = "$MAIN?action=$ACT&category=$CAT&page=".$page-1;
+    $url_prev = "$MAIN?action=$ACT&category=$CAT&page=".($page-1);
     $btn_prev = "<a class='prev_page' href='$url_prev'>&nbsp;</a>";
   } else {
     $btn_first = "<a class='first_page'>&nbsp;</a>";
@@ -592,7 +592,7 @@ function getPageNav($page=1, $pageCount=10)
   $btn_next = '';
   $btn_last = '';
   if ($page < $pageCount) {
-    $url_next = "$MAIN?action=$ACT&category=$CAT&page=".$page+1;
+    $url_next = "$MAIN?action=$ACT&category=$CAT&page=".($page+1);
     $btn_next = "<a class='next_page' href='$url_next'>&nbsp;</a>";
     $url_last = "$MAIN?action=$ACT&category=$CAT&page=$pageCount";
     $btn_last = "<a class='last_page' href='$url_last'>&nbsp;</a>";
