@@ -1674,6 +1674,89 @@ col {
     line-height: 40px;
 }
 
+/* p_vision.php 시작 */
+
+#cont .identity_wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+#cont .identity_wrap .img {
+    position: absolute;
+    top: 40px;
+    z-index: 5;
+}
+#cont .identity_wrap .txt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 430px;
+    z-index: 10;
+    background: #f5f5f5;
+}
+#cont .identity_wrap .txt .inner {
+    padding: 30px;
+}
+#cont .identity_wrap .txt .txt1 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+#cont .text_wrap .txt1 {
+    margin: 15px 0;
+}
+#cont .text_wrap p {
+    font-size: 14px;
+    word-break: keep-all;
+}
+#cont .mission_wrap {
+    padding-top: 50px;
+}
+#cont .bdTop {
+    border-top: 1px solid #d9d9d9;
+}
+.alignC {
+    text-align: center !important;
+}
+#cont .history_wrap .inner {
+    margin: 0 auto;
+    width: 608px;
+    overflow: hidden;
+}
+
+#cont .history_wrap.pc_ver dl {
+    float: left;
+}
+#cont .history_wrap.pc_ver dl dt {
+    height: 158px;
+}
+#cont .history_wrap.pc_ver dl dt img {
+    vertical-align: bottom;
+}
+#cont .history_wrap.pc_ver dl dd {
+    padding-top: 20px;
+    text-align: left;
+}
+#cont .history_wrap.pc_ver dl.first ul {
+    margin-left: 4px;
+}
+#cont .history_wrap.pc_ver dl dd ul {
+    padding-left: 10px;
+    border-left: 1px solid #d9d9d9;
+}
+#cont .history_wrap.pc_ver dl dd ul li:first-child {
+    margin-top: 0;
+}
+#cont .history_wrap.pc_ver dl dd ul li {
+    margin-top: 5px;
+}
+#cont .history_wrap.pc_ver dl dd ul li .date {
+    color: #757575;
+    font-size: 13px;
+}
+
+
+
 
 /* f */
 /* o */
