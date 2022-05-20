@@ -383,9 +383,18 @@ input[type=text], input[type=password], textarea, button {
 }
 #cont .paging_wrap a.next_page {
     background: #f5f5f5 url(../images/paging_next_ico.png) no-repeat center center;
+    
 }
 #cont .paging_wrap a.last_page {
     background: #f5f5f5 url(../images/paging_last_ico.png) no-repeat center center;
+}
+#cont .paging_wrap a.prev_page {
+    background: #f5f5f5 url(../images/paging_next_ico.png) no-repeat center center;
+    transform: rotate(180deg);
+}
+#cont .paging_wrap a.first_page {
+    background: #f5f5f5 url(../images/paging_last_ico.png) no-repeat center center;
+    transform: rotate(180deg);
 }
 
 #cont .btn_wrap {
