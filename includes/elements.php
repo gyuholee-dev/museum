@@ -390,6 +390,25 @@ function getPostContent($postid=1, $postType='html')
   return $html;
 }
 
+// 컨텐츠 본문 페이지 출력
+function getPageContent()
+{
+  global $CONF, $DB;
+  global $ACT, $CAT, $DO, $ID, $PAGE;
+  global $MAIN;
+
+  $sql = "SELECT * FROM museum_post "; 
+  $sql .= "WHERE subject='$ACT' AND category='$CAT'
+           ORDER BY postid DESC LIMIT 1 ";
+  $res = mysqli_query($DB, $sql);
+  if (mysqli_num_rows($res) > 0) {
+    $data = mysqli_fetch_assoc($res);
+    return $data['content'];
+  } else {
+    return '';
+  }
+}
+
 // 포스트 내비게이션
 function getPostNav($postid)
 {
@@ -591,18 +610,21 @@ function getPageNav($page=1, $pageCount=10)
 function makeContents()
 {
   global $CONF;
-  global $ACT, $DO, $ID, $PAGE;
+  global $ACT, $CAT, $DO, $ID, $PAGE;
   $html = '';
 
   $pageData = $CONF['pages'][$ACT];
   $listType = $pageData['listType'];
   $postType = $pageData['postType'];
+  $viewType = $CONF['pages'][$ACT]['categories'][$CAT]['type'];
 
   $content = '';
-  if ($DO == 'list') {
-    $content .= getPostList($listType, ($PAGE-1)*$pageData['items'], $pageData['items']);
+  if ($viewType == 'page') {
+    $content = getPageContent();
   } else if ($DO == 'post') {
     $content = getPostContent($ID, $postType);
+  } else if ($DO == 'list') {
+    $content .= getPostList($listType, ($PAGE-1)*$pageData['items'], $pageData['items']);
   }
 
   $contents_data = array(

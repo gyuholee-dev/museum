@@ -1,3 +1,7 @@
+body { background-color: #f1f1f1; }
+
+#container { background: initial; padding: 0; padding-bottom: 35px; min-height: 600px; }
+
 #header { height: initial; }
 
 #header .header_top { background-image: none; background-color: black; position: relative; z-index: 99; }
@@ -42,13 +46,13 @@
 
 #cont .dlType_wrap .dlType03 dd { padding: 0; padding-left: 10px; }
 
+#cont .greeting_wrap .sign { vertical-align: bottom; margin-left: 5px; height: 47px; width: auto; }
+
 #board .bbs_gallery_defalut > ul li p.tit { margin-bottom: 8px; }
 
 #board .bbs_gallery_defalut > ul li .info { margin: 0; color: #959595; }
 
 #board .bbs_gallery_defalut > ul li .info label { font-weight: initial; color: black; }
-
-#container { background: initial; padding: 0; min-height: 600px; }
 
 #footer { background: none; background-color: black; }
 
