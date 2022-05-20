@@ -467,8 +467,9 @@ function getPageNav($page=1, $pageCount=10)
   // 개발모드일 경우 10페이지 채움
   if ($DEV && $pageCount < 10) {
     for ($i=$pageCount+1; $i <= 10; $i++) { 
+      $current = ($page == $i)?'current':'';
       $url = "$MAIN?action=$ACT&category=$CAT&page=$i";
-      $btn_page .= "<a class='page_num' href='$url'>$i</a>";
+      $btn_page .= "<a class='page_num $current' href='$url'>$i</a>";
     }
   }
 
