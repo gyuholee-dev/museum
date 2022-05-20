@@ -1570,6 +1570,50 @@ tr {
 
 /* 콘텐츠 바이 */
 
+#cont .mi_wrap {
+    margin-bottom: 60px;
+    width: 100%;
+}
+#cont .mi_wrap .img {
+    float: left;
+    margin-right: 15px;
+    width: 400px;
+}
+#cont .mi_wrap .text {
+    float: left;
+    width: 405px;
+}
+#cont .mi_wrap .text .tit {
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+#cont .mi_wrap .text .cont {
+    padding: 10px;
+    text-align: left;
+    word-break: keep-all;
+}
+#cont .mi_wrap .text .cont {
+    padding: 10px;
+    text-align: left;
+    word-break: keep-all;
+}
+#cont .bulDot, #cont .bulDotList {
+    padding-left: 7px;
+}
+#cont .bulDot, #cont .bulDotList li {
+    margin-top: 2px;
+}
+#cont .mi_wrap {
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+
+
+
 /* f */
 /* o */
 /* o */
