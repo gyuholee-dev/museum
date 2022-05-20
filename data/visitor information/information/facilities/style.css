@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  max-width: 100%;
+  max-height: 100px;
+}
+
+.content .cafe {
+  padding-left: 10px;
+  max-width: 137px;
+  max-height: 36px;
+  line-height: 35px;
+  background: #f0f0f0;
+  font-weight: bold;
+}
+
+.content .cafe .images {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content .cafe .images .img {
+  width: 100%;
+}
+
+.content .library {
+  padding-left: 10px;
+  width: 137px;
+  height: 36px;
+  line-height: 35px;
+  background: #f0f0f0;
+  font-weight: bold;
+}
+
+.content .box {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content .box .img {
+  width: 100%;
+}

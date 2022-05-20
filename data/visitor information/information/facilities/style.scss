@@ -1,0 +1,43 @@
+* {
+    padding:0;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+.content {
+    max-width:100%;
+    max-height:100px;
+    .cafe {
+        padding-left:10px;
+        max-width:137px;
+        max-height:36px;
+        line-height:35px;
+        background:#f0f0f0;
+        font-weight:bold;
+        .images {
+            display:block;
+            width:100%;
+            overflow:hidden;
+            .img {
+                width:100%;
+            }
+        }
+    }
+    .library {
+        padding-left:10px;
+        width:137px;
+        height:36px;
+        line-height:35px;
+        background:#f0f0f0;
+        font-weight:bold;
+    }
+    .box {
+        display:block;
+        width:100%;
+        overflow:hidden;
+        .img {
+            width:100%;
+        }
+    }
+}
