@@ -16,7 +16,7 @@
     "styles" : [
       "styles/fonts.css",
       "styles/global.css",
-      "styles/style.css",
+      "styles/main.css",
       "styles/fixed.css",
       "styles/userpage.css"
     ],

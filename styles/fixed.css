@@ -6,6 +6,10 @@ body { background-color: #f1f1f1; }
 
 #header .header_top { background-image: none; background-color: black; position: relative; z-index: 99; }
 
+#header .header_top .inner .util_box .login { margin-right: 15px; }
+
+#header .header_top .inner .util_box .login .icon { font-size: 2em; }
+
 #header .header_top .inner .search_wrap { border: none; overflow: initial; }
 
 #header .header_top .inner .search_wrap .search_btn { border: none; background-color: transparent; box-shadow: none; position: absolute; top: 7px; right: 7px; width: 24px; height: 24px; }

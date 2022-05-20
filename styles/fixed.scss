@@ -23,6 +23,14 @@ body {
     position: relative;
     z-index: 99;
     .inner {
+      .util_box {
+        .login {
+          margin-right: 15px;
+          .icon {
+            font-size: 2em;
+          }
+        }
+      }
       .search_wrap {
         border: none;
         overflow: initial;
