@@ -23,7 +23,7 @@
 			<h1 class="logo"><a href="#"><img src="images/logo.png"></a></h1>
 			<div class="util_box">
 				<ul>
-					<li class="login"><a href="login.php"><span class="ico">로그인</span></a></li>
+					<li class="login"><a href="login.php"><span class="ico"><i class="xi-profile-o"></i></span></a></li>
 				</ul>
 			</div>
 			<div class="search_wrap">

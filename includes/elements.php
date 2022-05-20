@@ -115,11 +115,11 @@ function getLoginLink($type='link')
   if ($type == 'link') {
     if ($USER) {
       $loginLink = "
-        <a href='$main?action=user&do=mypage'><span class='ico'>마이페이지</span></a>
+        <a href='$main?action=user&do=mypage'><span class='ico'><i class='xi-profile-o'></i></span></a>
       ";
     } else {
       $loginLink = "
-        <a href='$main?action=user&do=login'><span class='ico'>로그인</span></a>
+        <a href='$main?action=user&do=login'><span class='ico'><i class='xi-user-o'></i></span></a>
       ";
     }
   } else if ($type == 'icon') {
