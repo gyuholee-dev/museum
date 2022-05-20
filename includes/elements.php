@@ -115,21 +115,21 @@ function getLoginLink($type='link')
   if ($type == 'link') {
     if ($USER) {
       $loginLink = "
-        <a href='$main?action=user&do=mypage'><span class='ico'><i class='xi-profile-o'></i></span></a>
+        <a href='$main?action=user&do=mypage'>마이페이지</a>
       ";
     } else {
       $loginLink = "
-        <a href='$main?action=user&do=login'><span class='ico'><i class='xi-user-o'></i></span></a>
+        <a href='$main?action=user&do=login'>로그인</a>
       ";
     }
   } else if ($type == 'icon') {
     if ($USER) {
       $loginLink = "
-        <a href='$main?action=user&do=mypage'><i class='xi-user-o'></i></a>
+        <a class='icon' href='$main?action=user&do=mypage'><i class='xi-user-o'></i></a>
       ";
     } else {
       $loginLink = "
-        <a href='$main?action=user&do=login'><i class='xi-log-in'></i></a>
+        <a class='icon' href='$main?action=user&do=login'><i class='xi-log-in'></i></a>
       ";
     }
 
@@ -254,7 +254,7 @@ function makeHeader()
 {
   $header_data = array(
     'headerLink' => getHeaderLink('logo'),
-    'loginLink' => getLoginLink('link'),
+    'loginLink' => getLoginLink('icon'),
     'searchbox' => getSerchbox(),
     'navmenu' => getNavmenu(),
   );
