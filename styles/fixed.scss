@@ -130,6 +130,24 @@
   } 
 }
 
+#board {
+  .bbs_gallery_defalut {
+    > ul li {
+      p.tit {
+        margin-bottom: 8px;
+      }
+      .info {
+        margin: 0;
+        color: #959595;
+        label {
+          font-weight: initial;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
 
 #container {
   background: initial;

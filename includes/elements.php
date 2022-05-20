@@ -412,8 +412,21 @@ function getPostList($listType, $start=0, $items=6)
       }
       $image = FILE.$ACT.'/'.$CAT.'/'.$file;
       $info = json_decode($info,true);
-      $date = $info['전시기간'];
-      $content = strip_tags($content);
+      $infomation = '';
+      $summary = '';
+      if ($ACT == 'exhibition') {
+        $infomation = "
+          <p class='info date'>$info[전시기간]</p>
+        ";
+        $content = strip_tags($content);
+        $summary = "<div class='cont'>$content</div>";
+      } else if ($ACT == 'education') {
+        $infomation = "
+          <p class='info date'><label>교육일자</label>$info[교육일자]</p>
+          <p class='info place'><label>교육장소</label>$info[교육장소]</p>
+          <p class='info target'><label>교육대상</label>$info[교육대상]</p>
+        ";
+      }
       $url = "$MAIN?action=$ACT&category=$CAT&do=post&postid=$postid&page=$PAGE";
   
       $postList .= "
@@ -423,10 +436,8 @@ function getPostList($listType, $start=0, $items=6)
           </div>
           <div class='text'>
             <p class='tit'>$title</p>
-            <p class='date'>$date</p>
-            <div class='cont'>
-              $content
-            </div>
+            $infomation
+            $summary
             <div class='detail_btn_wrap'>
               <a href='$url' class='detail_btn'>자세히 보기</a>
             </div>
