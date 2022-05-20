@@ -1757,6 +1757,61 @@ col {
 
 
 
+/* i_intr.php 시작 */
+#cont .dlType06:first-child {
+    margin-top: 0;
+}
+#cont .dlType06 {
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+#cont .dlType06 dt {
+    float: left;
+    padding-left: 10px;
+    width: 100px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+#cont .dlType06 dd {
+    float: left;
+    padding-left: 10px;
+    font-size: 14px;
+    width: 600px;
+}
+#cont .facilities_wrap {
+    position: relative;
+    width: 100%;
+}
+#cont .floor_wrap {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #ccc;
+}
+#cont .floor_wrap p.floor_tit {
+    display: block;
+    position: absolute;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background: #c4161c;
+    color: #fff;
+    text-align: center;
+}
+#cont .floor_wrap .pc_ver {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+
 
 /* f */
 /* o */
