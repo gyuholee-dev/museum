@@ -38,6 +38,10 @@
 
 #cont .sub_tit h3 .eng { margin-left: 15px; }
 
+#cont .dlType_wrap .dlType03 dt { border-top: 1px solid #ddd; text-align: center; }
+
+#cont .dlType_wrap .dlType03 dd { padding: 0; padding-left: 10px; }
+
 #board .bbs_gallery_defalut > ul li p.tit { margin-bottom: 8px; }
 
 #board .bbs_gallery_defalut > ul li .info { margin: 0; color: #959595; }

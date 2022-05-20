@@ -127,7 +127,19 @@
         margin-left: 15px;
       }
     }
-  } 
+  }
+  .dlType_wrap {
+    .dlType03 {
+      dt {
+        border-top: 1px solid #ddd;
+        text-align: center;
+      }
+      dd {
+        padding: 0;
+        padding-left: 10px;
+      }
+    }
+  }
 }
 
 #board {

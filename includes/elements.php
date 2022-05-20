@@ -327,23 +327,32 @@ function getSubTitle($data)
   return $html;
 }
 
-function getInfoList($data)
+function getInfoList($data, $postType='html')
 {
   $html = '';
   foreach ($data as $key => $value) {
-    $html .= "
-      <li>
-        <span class='tit'>$key</span>
-        <span class='cont'>$value</span>
-      </li>
-    ";
+    if ($postType=='exhibit') {
+      $html .= "
+        <li>
+          <span class='tit'>$key</span>
+          <span class='cont'>$value</span>
+        </li>
+      ";
+    } else if ($postType=='html') {
+      $html .= "
+        <dl class='dlType03'>
+          <dt>$key</dt>
+          <dd>$value</dd>
+        </dl>
+      ";
+    }
   }
   return "<ul>$html</ul>";
 }
 
 // 컨텐츠 본문 출력
 // postType: html, media, exhibit
-function getPostContent($postType, $postid=1)
+function getPostContent($postid=1, $postType='html')
 {
   global $CONF, $DB;
   global $ACT, $CAT, $DO, $ID, $PAGE;
@@ -358,22 +367,87 @@ function getPostContent($postType, $postid=1)
     foreach ($data as $key => $value) {
       $$key = $value;
     }
+    $wdate = date('Y-m-d', $wdate);
+    $hits = rand(128, 1024);
     $image = FILE.$ACT.'/'.$CAT.'/'.$file;
-    $info = getInfoList(json_decode($info,true));
+    $info = getInfoList(json_decode($info,true), $postType);
 
     $post_data = array(
       'image' => $image,
       'title' => $title,
+      'nickname' => $nickname,
+      'wdate' => $wdate,
+      'hits' => $hits,
       'info' => $info,
       'content' => $content,
       'gallery' => renderElement(TPL.'gallery.html'),
       'listUrl' => "$MAIN?action=$ACT&category=$CAT&page=$PAGE",
+      'postNav' => getPostNav($postid),
     );
     $html .= renderElement(TPL.'post_'.$postType.'.html', $post_data);
   }
 
   return $html;
 }
+
+// 포스트 내비게이션
+function getPostNav($postid)
+{
+  global $DB;
+  global $ACT, $CAT, $DO, $ID, $PAGE;
+  global $MAIN, $DEV;
+
+  $prev = $next = '';
+
+  $sql = "SELECT * FROM museum_post 
+          WHERE subject='$ACT' AND category='$CAT' AND postid < '$postid' ORDER BY postid DESC LIMIT 1";
+  $res = mysqli_query($DB, $sql);
+  if (mysqli_num_rows($res) > 0) {
+    $data = mysqli_fetch_assoc($res);
+    $prev = "<a href='$MAIN?action=$ACT&category=$CAT&do=post&postid=$data[postid]&page=$PAGE'>$data[title]</a>";
+  } else {
+    if ($DEV) {
+      $sql = "SELECT * FROM museum_post 
+              WHERE subject='$ACT' AND category='$CAT' ORDER BY postid DESC LIMIT 1";
+      $res = mysqli_query($DB, $sql);
+      $data = mysqli_fetch_assoc($res);
+      $prev = "<a href='$MAIN?action=$ACT&category=$CAT&do=post&postid=$data[postid]&page=$PAGE'>$data[title]</a>";
+    } else {
+      $prev = '이전글이 없습니다.';
+    }
+  }
+
+  $sql = "SELECT * FROM museum_post 
+          WHERE subject='$ACT' AND category='$CAT' AND postid > '$postid' ORDER BY postid ASC LIMIT 1";
+  $res = mysqli_query($DB, $sql);
+  if (mysqli_num_rows($res) > 0) {
+    $data = mysqli_fetch_assoc($res);
+    $next = "<a href='$MAIN?action=$ACT&category=$CAT&do=post&postid=$data[postid]&page=$PAGE'>$data[title]</a>";
+  } else {
+    if ($DEV) {
+      $sql = "SELECT * FROM museum_post 
+              WHERE subject='$ACT' AND category='$CAT' ORDER BY postid ASC LIMIT 1";
+      $res = mysqli_query($DB, $sql);
+      $data = mysqli_fetch_assoc($res);
+      $next = "<a href='$MAIN?action=$ACT&category=$CAT&do=post&postid=$data[postid]&page=$PAGE'>$data[title]</a>";
+    } else {
+        $next = '다음글이 없습니다.';
+    }
+  }
+
+  $html = "
+    <dl>
+      <dt>이전글</dt><dd>$prev</dd>
+    </dl>
+    <dl>
+      <dt>다음글</dt><dd>$next</dd>
+    </dl>
+  ";
+
+  return $html;
+}
+
+
 
 // 컨텐츠 리스트 출력
 // listType : preview, list, gallery
@@ -410,6 +484,7 @@ function getPostList($listType, $start=0, $items=6)
       foreach ($data as $key => $value) {
         $$key = $value;
       }
+      $url = "$MAIN?action=$ACT&category=$CAT&do=post&postid=$postid&page=$PAGE";
       $image = FILE.$ACT.'/'.$CAT.'/'.$file;
       $info = json_decode($info,true);
       $infomation = '';
@@ -427,7 +502,6 @@ function getPostList($listType, $start=0, $items=6)
           <p class='info target'><label>교육대상</label>$info[교육대상]</p>
         ";
       }
-      $url = "$MAIN?action=$ACT&category=$CAT&do=post&postid=$postid&page=$PAGE";
   
       $postList .= "
         <li>
@@ -528,7 +602,7 @@ function makeContents()
   if ($DO == 'list') {
     $content .= getPostList($listType, ($PAGE-1)*$pageData['items'], $pageData['items']);
   } else if ($DO == 'post') {
-    $content = getPostContent($postType, $ID);
+    $content = getPostContent($ID, $postType);
   }
 
   $contents_data = array(
