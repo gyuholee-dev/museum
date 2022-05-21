@@ -4,19 +4,7 @@
 
 // ---------------------------------------------------------
 
-body {
-  background-color: #f1f1f1;;
-}
-
-#container {
-  background: initial;
-  padding: 0;
-  padding-bottom: 35px;
-  min-height: 600px;
-}
-
 #header {
-  height: initial;
   .header_top {
     background-image: none;
     background-color: black;
@@ -144,18 +132,6 @@ body {
     h3 {
       .eng {
         margin-left: 15px;
-      }
-    }
-  }
-  .dlType_wrap {
-    .dlType03 {
-      dt {
-        border-top: 1px solid #ddd;
-        text-align: center;
-      }
-      dd {
-        padding: 0;
-        padding-left: 10px;
       }
     }
   }

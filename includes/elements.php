@@ -379,8 +379,9 @@ function getPostContent($postid=1, $postType='html')
       'wdate' => $wdate,
       'hits' => $hits,
       'info' => $info,
-      'content' => $content,
-      'gallery' => renderElement(TPL.'gallery.html'),
+      'content' => "<pre>$content</pre>",
+      // 'gallery' => renderElement(TPL.'gallery.html'),
+      'gallery' => '',
       'listUrl' => "$MAIN?action=$ACT&category=$CAT&page=$PAGE",
       'postNav' => getPostNav($postid),
     );

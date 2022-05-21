@@ -1,227 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
+@import "_theme_light.scss";
 
-a {
-  text-decoration: none;
-  color: #000;
-
-  &:link {
-    text-decoration: none;
-  }
-
-  &:active {
-    text-decoration: none;
-  }
-
-  &:visited {
-    text-decoration: none;
-  }
-}
-
-html {
-  scrollbar-face-color: #FFFFFF;
-  scrollbar-shadow-color: #AEBDBD;
-  scrollbar-highlight-color: #AEBDBD;
-  scrollbar-3dlight-color: #D2DADA;
-  scrollbar-darkshadow-color: #D2DADA;
-  scrollbar-track-color: #FFFFFF;
-  scrollbar-arrow-color: #AEBDBD;
-}
-
-body {
-  scrollbar-face-color: #FFFFFF;
-  scrollbar-shadow-color: #AEBDBD;
-  scrollbar-highlight-color: #AEBDBD;
-  scrollbar-3dlight-color: #D2DADA;
-  scrollbar-darkshadow-color: #D2DADA;
-  scrollbar-track-color: #FFFFFF;
-  scrollbar-arrow-color: #AEBDBD;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Nanum Gothic', '나눔 고딕', 'Malgun Gothic', '맑은 고딕', '굴림', 'gulim', sans-serif;
-  color: #212121;
-  margin: 0;
-  padding: 0;
-}
-
-div {
-  scrollbar-face-color: #FFFFFF;
-  scrollbar-shadow-color: #AEBDBD;
-  scrollbar-highlight-color: #AEBDBD;
-  scrollbar-3dlight-color: #D2DADA;
-  scrollbar-darkshadow-color: #D2DADA;
-  scrollbar-track-color: #FFFFFF;
-  scrollbar-arrow-color: #AEBDBD;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  scrollbar-face-color: #FFFFFF;
-  scrollbar-shadow-color: #AEBDBD;
-  scrollbar-highlight-color: #AEBDBD;
-  scrollbar-3dlight-color: #D2DADA;
-  scrollbar-darkshadow-color: #D2DADA;
-  scrollbar-track-color: #FFFFFF;
-  scrollbar-arrow-color: #AEBDBD;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Nanum Gothic', '나눔 고딕', 'Malgun Gothic', '맑은 고딕', '굴림', 'gulim', sans-serif;
-  color: #212121;
-  margin: 0;
-  margin: 0;
-  padding: 0;
-  padding: 0;
-  -webkit-appearance: none;
-}
-
-th {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Nanum Gothic', '나눔 고딕', 'Malgun Gothic', '맑은 고딕', '굴림', 'gulim', sans-serif;
-  color: #212121;
-  margin: 0;
-  padding: 0;
-}
-
-td {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Nanum Gothic', '나눔 고딕', 'Malgun Gothic', '맑은 고딕', '굴림', 'gulim', sans-serif;
-  color: #212121;
-  margin: 0;
-  padding: 0;
-}
-
-input {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Nanum Gothic', '나눔 고딕', 'Malgun Gothic', '맑은 고딕', '굴림', 'gulim', sans-serif;
-  color: #212121;
-  margin: 0;
-  padding: 0;
-}
-
-select {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Nanum Gothic', '나눔 고딕', 'Malgun Gothic', '맑은 고딕', '굴림', 'gulim', sans-serif;
-  color: #212121;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Nanum Gothic', '나눔 고딕', 'Malgun Gothic', '맑은 고딕', '굴림', 'gulim', sans-serif;
-  color: #212121;
-  margin: 0;
-  padding: 0;
-  -webkit-appearance: none;
-}
-
-dl {
-  margin: 0;
-  padding: 0;
-}
-
-dt {
-  margin: 0;
-  padding: 0;
-}
-
-dd {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ol {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  margin: 0;
-  padding: 0;
-}
-
-h3 {
-  margin: 0;
-  padding: 0;
-}
-
-h4 {
-  margin: 0;
-  padding: 0;
-}
-
-h5 {
-  margin: 0;
-  padding: 0;
-}
-
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-pre {
-  margin: 0;
-  padding: 0;
-}
-
-code {
-  margin: 0;
-  padding: 0;
-}
-
-form {
-  margin: 0;
-  padding: 0;
-  display: block;
-  margin-top: 0em;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-legend {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-blockquote {
-  margin: 0;
-  padding: 0;
-}
 
 #wrap {
   position: relative;
@@ -231,7 +9,6 @@ blockquote {
 
 #header {
   position: relative;
-  height: 141px;
 
   .header_top {
     border-bottom: 1px solid #b2b5b8;
@@ -431,10 +208,10 @@ input[type=password] {
 
 #container {
   position: relative;
-  background: #f5f5f5;
-  position: relative;
   width: 100%;
-  padding: 120px 0;
+  padding: 0;
+  margin-bottom: 35px;
+  min-height: 600px;
 
   .steelArt_wrap {
     display: none;
@@ -606,11 +383,6 @@ input[type=password] {
   }
 }
 
-#container.sub {
-  padding-bottom: 35px;
-  background: #f1f1f1;
-}
-
 #sCon {
   margin: 0 auto;
   width: 1100px;
@@ -674,8 +446,6 @@ input[type=password] {
 }
 
 #cont {
-  font-size: 14px;
-  line-height: 1.7;
   min-height: 600px;
   border-left: 1px solid #d9d9d9;
 
@@ -686,7 +456,7 @@ input[type=password] {
     span {
       display: inline-block;
       padding: 0 5px 0 10px;
-      font-size: 13px;
+      font-size: 0.9rem;
     }
 
     .arrow {
@@ -694,19 +464,19 @@ input[type=password] {
     }
   }
 
-  .sub_tit {
+  .sub_title {
     margin-bottom: 40px;
     padding: 0 40px;
     line-height: 1.5;
 
     h3 {
-      padding-bottom: 30px;
+      padding-bottom: 25px;
       font-size: 30px;
       font-weight: normal;
       border-bottom: 1px solid #d9d9d9;
 
       .eng {
-        color: #bdbdbd;
+        color: $color-text-faint;
         font-size: 25px;
       }
     }
@@ -850,26 +620,14 @@ input[type=password] {
   .dlType_wrap {
     width: auto;
     overflow: hidden;
+    margin-bottom: 15px;
 
-    .dlType01 {
-      float: left;
-      margin: 0 2% 30px 0;
-      width: 48%;
-      box-sizing: border-box;
-
-      dt {
-        padding-left: 10px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 16px;
-        font-weight: bold;
-        background: #f0f0f0;
-      }
-
-      dd {
-        padding: 10px;
-        height: 65px;
-        font-size: 14px;
+    dl {
+      @include flex(stretch, start);
+      width: 100%;
+      border-bottom: 1px solid $color-border;
+      &:first-child {
+        border-top: 1px solid $color-border;
       }
     }
 
@@ -879,10 +637,10 @@ input[type=password] {
       margin: 0 auto;
     }
 
-    .dlType02 {
-      margin: 0 0 50px 0;
-      width: 100%;
-
+    .dlType01 {
+      margin: 0 2% 30px 0;
+      width: 48%;
+      box-sizing: border-box;
       dt {
         padding-left: 10px;
         height: 35px;
@@ -891,21 +649,35 @@ input[type=password] {
         font-weight: bold;
         background: #f0f0f0;
       }
+      dd {
+        padding: 10px;
+        height: 65px;
+        font-size: 14px;
+      }
+    }
 
+    .dlType02 {
+      margin: 0 0 50px 0;
+      width: 100%;
+      dt {
+        padding-left: 10px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        font-weight: bold;
+        background: #f0f0f0;
+      }
       dd {
         position: relative;
         padding: 10px;
         font-size: 14px;
-
         p {
           &:first-child {
             margin-top: 0;
             margin-top: 0;
           }
-
           margin-top: 30px;
         }
-
         .reservation_btn {
           position: absolute;
           right: 0;
@@ -923,9 +695,28 @@ input[type=password] {
     }
 
     .dlType03 {
-      dd {
-        padding: 10px;
+      margin: 0;
+      width: 100%;
+      overflow: hidden;
+      min-height: 40px;
+      dt {
+        text-align: center;
+        width: 140px;
+        min-width: 140px;
+        line-height: 40px;
+        background: #f5f5f5;
+        font-weight: bold;
       }
+      dd {
+        width: 100%;
+        padding: 6px 10px;
+      }
+    }
+
+    .dlType04 {
+      margin: 0;
+      width: 100%;
+      overflow: hidden;
     }
   }
 
@@ -1046,16 +837,6 @@ input[type=password] {
 
     .dlType03 {
       overflow: hidden;
-
-      dt {
-        float: left;
-        width: 150px;
-      }
-
-      dd {
-        float: left;
-        width: 490px;
-      }
 
       textarea {
         border: 1px solid #ddd;
@@ -1185,14 +966,7 @@ input[type=password] {
       }
     }
 
-    th {
-      padding: 12px 10px;
-      border-top: 1px solid #ddd;
-      border-left: 1px solid #ddd;
-      text-align: center;
-    }
-
-    td {
+    th, td {
       padding: 12px 10px;
       border-top: 1px solid #ddd;
       border-left: 1px solid #ddd;
@@ -1243,7 +1017,7 @@ input[type=password] {
   }
 
   .bdTop {
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid $color-border;
   }
 
   .history_wrap {
@@ -1272,7 +1046,7 @@ input[type=password] {
 
         ul {
           padding-left: 10px;
-          border-left: 1px solid #d9d9d9;
+          border-left: 1px solid $color-border;
 
           li {
             &:first-child {
@@ -1365,7 +1139,7 @@ input[type=password] {
         }
 
         padding: 20px 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $color-border;
         overflow: hidden;
       }
 
@@ -1407,7 +1181,7 @@ input[type=password] {
               line-height: 28px;
               color: #656565;
               font-size: 13px;
-              border: 1px solid #ddd;
+              border: 1px solid $color-border;
               background: #f5f5f5;
               text-align: center;
             }
@@ -1434,65 +1208,49 @@ input[type=password] {
   }
 
   .exh_view_default {
+    @include flex(center, start, column);
     .art_img_wrap {
       margin-bottom: 50px;
     }
 
     .info {
-      float: left;
-      margin-right: 30px;
-      width: 535px;
+      width: 100%;
+      margin-bottom: 30px;
 
-      >.tit {
+      >.title {
+        font-size: 1.5rem;
         margin-bottom: 0;
         padding-bottom: 20px;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $color-border;
       }
 
       .info_box {
         margin-bottom: 30px;
         padding: 30px 10px 30px;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $color-border;
 
         ul {
           li {
+            margin-top: 5px;
+            overflow: hidden;
             &:first-child {
               margin-top: 0;
             }
-
-            margin-top: 5px;
-            overflow: hidden;
-
-            .tit {
-              width: 80px;
-              color: #000;
-            }
-
             span {
               display: inline-block;
-              color: #959595;
+            }
+            .tit {
+              width: 80px;
+              vertical-align: top;
+            }
+            .cont {
+              color: $color-text-faint;
             }
           }
         }
       }
-
       .info_text {
-        p {
-          &:first-child {
-            margin-top: 0;
-          }
-
-          margin-top: 30px;
-          line-height: 23px;
-          text-align: justify;
-        }
-      }
-    }
-
-    .art_wrap {
-      >.tit {
-        margin-bottom: 20px;
-        font-size: 23px;
+        padding: 0 10px;
       }
     }
 
@@ -1666,7 +1424,7 @@ input[type=password] {
         td {
           padding: 12px 0;
           color: #959595;
-          border-bottom: 1px solid #ddd;
+          border-bottom: 1px solid $color-border;
           text-align: center;
         }
       }
@@ -1675,29 +1433,28 @@ input[type=password] {
 
   .edu_view_default {
     .edu_view_table {
-      border-top: 2px solid #959595;
+      border-top: 2px solid $color-border;
 
       .post_tit {
-        font-size: 20px;
+        font-size: 1.5rem;
         font-weight: bold;
         border-top: 0;
       }
 
       .post_td {
         padding: 13px 10px;
-        border-top: 1px solid #ddd;
+        border-bottom: 1px solid $color-border;
       }
 
       .post_writer {
-        color: #959595;
+        color: $color-text-faint;
         overflow: hidden;
-        color: #959595;
-        overflow: hidden;
+        border: none;
 
         .date {
           margin-left: 10px;
           padding-left: 10px;
-          border-left: 1px solid #ddd;
+          border-left: 1px solid $color-border;
         }
 
         .hits {
@@ -1718,62 +1475,6 @@ input[type=password] {
       color: #fff;
       font-size: 13px;
       text-align: center;
-    }
-  }
-
-  .dlType_wrap {
-    .dlType03 {
-      margin: 0;
-      width: 100%;
-      overflow: hidden;
-
-      dt {
-        float: left;
-        padding: 0 0 0 10px;
-        width: 140px;
-        height: 40px;
-        line-height: 40px;
-        background: #f5f5f5;
-        font-weight: bold;
-      }
-
-      dd {
-        float: left;
-        padding: 0 0 0 10px;
-        width: 650px;
-        height: 20px;
-        line-height: 40px;
-      }
-    }
-
-    dl {
-      dd {
-        border-top: 1px solid #ddd;
-      }
-    }
-
-    .dlType04 {
-      margin: 0;
-      width: 100%;
-      overflow: hidden;
-
-      dt {
-        float: left;
-        padding: 0 0 0 10px;
-        width: 140px;
-        height: 40px;
-        line-height: 40px;
-        background: #f5f5f5;
-        font-weight: bold;
-      }
-
-      dd {
-        float: left;
-        padding: 0 0 0 10px;
-        width: 250px;
-        height: 40px;
-        line-height: 40px;
-      }
     }
   }
 
@@ -2130,16 +1831,6 @@ input[type=password] {
         }
       }
     }
-  }
-}
-
-.clearAfter {
-  *zoom: 1;
-
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
   }
 }
 

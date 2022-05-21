@@ -1,8 +1,10 @@
-body { background-color: #f1f1f1; }
+body { background-color: #f2f2f2; color: #0d0d0d; }
 
-#container { background: initial; padding: 0; padding-bottom: 35px; min-height: 600px; }
+header { background-color: initial; }
 
-#header { height: initial; }
+section { background-color: #ffffff; }
+
+footer { background-color: #ffffff; }
 
 #header .header_top { background-image: none; background-color: black; position: relative; z-index: 99; }
 
@@ -45,10 +47,6 @@ body { background-color: #f1f1f1; }
 #header #gnb ul.menu li.dep1 > .sub ul.gnb_sub { height: 200px; z-index: 1; }
 
 #cont .sub_tit h3 .eng { margin-left: 15px; }
-
-#cont .dlType_wrap .dlType03 dt { border-top: 1px solid #ddd; text-align: center; }
-
-#cont .dlType_wrap .dlType03 dd { padding: 0; padding-left: 10px; }
 
 #cont .greeting_wrap .sign { vertical-align: bottom; margin-left: 5px; height: 47px; width: auto; }
 

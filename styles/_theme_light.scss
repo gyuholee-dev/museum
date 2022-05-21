@@ -2,15 +2,15 @@
 
 // light theme
 $color-background: $grey-95;
-$color-header: rgba($white, 0.65);
+$color-header: initial;
 $color-section: $white;
 $color-footer: $white;
 
 $color-text: $grey-5;
-$color-text-faint: $grey-15;
+$color-text-faint: $grey-65;
 $color-text-emp: $black;
 $color-text-link: $blue;
-$color-border: $grey-75;
+$color-border: $grey-85;
 $color-border-emp: $sky;
 
 $color-button: $grey-95;
@@ -24,16 +24,16 @@ $color-box-antique: antiquewhite;
 
 $color-light: $white;
 
-// body {
-//   background-color: $color-background;
-//   color: $color-text;
-// }
-// header {
-//   background-color: $color-header;
-// }
-// section {
-//   background-color: $color-section;
-// }
-// footer {
-//   background-color: $color-footer;
-// }
+body {
+  background-color: $color-background;
+  color: $color-text;
+}
+header {
+  background-color: $color-header;
+}
+section {
+  background-color: $color-section;
+}
+footer {
+  background-color: $color-footer;
+}
