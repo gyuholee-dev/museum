@@ -59,9 +59,17 @@ table input[type=text], table input[type=number], table input[type=password], ta
 
 table textarea { min-height: 120px; resize: none; }
 
+table.table-center { margin: 0 auto; }
+
+table.table-left { margin-right: auto; }
+
+table.table-right { margin-left: auto; }
+
 table.table-bordered th, table.table-bordered td { border: 1px solid #a5a5a5; }
 
 table.table-bordered th { background-color: #f2f2f2; }
+
+table.table-none th, table.table-none td { padding: 0; }
 
 table.text-center th, table.text-center td { text-align: center; }
 

@@ -1,5 +1,12 @@
 @import "_theme_light.scss";
 
+#container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  min-height: 600px;
+}
+
 
 #wrap {
   position: relative;
@@ -201,12 +208,6 @@ input[type=password] {
 }
 
 #container {
-  position: relative;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 35px;
-  min-height: 600px;
-
   .steelArt_wrap {
     display: none;
   }
@@ -443,6 +444,12 @@ input[type=password] {
   min-height: 600px;
   border-left: 1px solid #d9d9d9;
 
+  >.inner {
+    padding: 0 40px;
+    padding-bottom: 25px;
+    position: relative;
+  }
+
   .location {
     padding: 30px 40px 0;
     text-align: right;
@@ -456,6 +463,19 @@ input[type=password] {
     .arrow {
       background: url(../images/location_arr.png) no-repeat 0 center;
     }
+  }
+
+  .flexbox {
+    @include flex(start, space-between);
+  }
+
+  .textbox {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background: #f5f5f5;
+    padding: 30px;
+    width: fit-content;
   }
 
   .sub_title {
@@ -475,10 +495,6 @@ input[type=password] {
         margin-left: 15px;
       }
     }
-  }
-
-  >.inner {
-    padding: 0 40px 30px;
   }
 
   .paging_wrap {
@@ -560,27 +576,11 @@ input[type=password] {
     }
   }
 
-  .text_wrap {
-    margin: 35px 0;
-    margin: 35px 0;
-
-    .cont_tit {
-      font-size: 20px;
-      margin-bottom: 12px;
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    p {
-      font-size: 14px;
-      word-break: keep-all;
-      font-size: 14px;
-      word-break: keep-all;
-    }
-
-    .txt1 {
-      margin: 15px 0;
-    }
+  .cont_title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $color-border;
   }
 
   .gallery_wrap {
@@ -870,41 +870,6 @@ input[type=password] {
     }
   }
 
-  .mi_wrap {
-    margin-bottom: 60px;
-    width: 100%;
-    margin-bottom: 60px;
-    width: 100%;
-
-    .img {
-      float: left;
-      margin-right: 15px;
-      width: 400px;
-    }
-
-    .text {
-      float: left;
-      width: 405px;
-
-      .tit {
-        padding-left: 10px;
-        height: 35px;
-        line-height: 35px;
-        background: #f0f0f0;
-        font-weight: bold;
-      }
-
-      .cont {
-        padding: 10px;
-        text-align: left;
-        word-break: keep-all;
-        padding: 10px;
-        text-align: left;
-        word-break: keep-all;
-      }
-    }
-  }
-
   .bulDot {
     padding-left: 7px;
     margin-top: 2px;
@@ -920,14 +885,6 @@ input[type=password] {
       margin-top: 2px;
       text-align: left;
     }
-  }
-
-  .img_wrap {
-    margin: 0 0 70px;
-    padding: 70px 30px;
-    border: 1px solid #ddd;
-    background: url(../images/img_bg.jpg) repeat;
-    text-align: center;
   }
 
   .brdList {
@@ -975,96 +932,6 @@ input[type=password] {
     color: #000;
   }
 
-  .identity_wrap {
-    position: relative;
-    width: 100%;
-    height: 300px;
-
-    .img {
-      position: absolute;
-      top: 40px;
-      z-index: 5;
-    }
-
-    .txt {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 430px;
-      z-index: 10;
-      background: #f5f5f5;
-
-      .inner {
-        padding: 30px;
-      }
-
-      .txt1 {
-        margin: 0 0 20px;
-        font-size: 20px;
-        line-height: 1.5;
-      }
-    }
-  }
-
-  .mission_wrap {
-    padding-top: 50px;
-  }
-
-  .bdTop {
-    border-top: 1px solid $color-border;
-  }
-
-  .history_wrap {
-    .inner {
-      margin: 0 auto;
-      width: 608px;
-      overflow: hidden;
-    }
-  }
-
-  .history_wrap.pc_ver {
-    dl {
-      float: left;
-
-      dt {
-        height: 158px;
-
-        img {
-          vertical-align: bottom;
-        }
-      }
-
-      dd {
-        padding-top: 20px;
-        text-align: left;
-
-        ul {
-          padding-left: 10px;
-          border-left: 1px solid $color-border;
-
-          li {
-            &:first-child {
-              margin-top: 0;
-            }
-
-            margin-top: 5px;
-
-            .date {
-              color: #757575;
-              font-size: 13px;
-            }
-          }
-        }
-      }
-    }
-
-    dl.first {
-      ul {
-        margin-left: 4px;
-      }
-    }
-  }
-
   .dlType06 {
     &:first-child {
       margin-top: 0;
@@ -1087,37 +954,6 @@ input[type=password] {
       padding-left: 10px;
       font-size: 14px;
       width: 600px;
-    }
-  }
-
-  .facilities_wrap {
-    position: relative;
-    width: 100%;
-  }
-
-  .floor_wrap {
-    position: relative;
-    width: 100%;
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid #ccc;
-
-    p.floor_tit {
-      display: block;
-      position: absolute;
-      top: -15px;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      border-radius: 15px;
-      background: #c4161c;
-      color: #fff;
-      text-align: center;
-    }
-
-    .pc_ver {
-      display: block;
-      margin: 0 auto;
     }
   }
 }
@@ -2062,14 +1898,6 @@ colgroup {
 
 col {
   display: table-column;
-}
-
-.cont_tit {
-  .director {
-    float: right;
-    padding-bottom: 0;
-    line-height: 40px;
-  }
 }
 
 .alignC {

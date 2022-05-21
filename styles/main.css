@@ -7,6 +7,8 @@ section { background-color: #ffffff; }
 
 footer { background-color: #ffffff; }
 
+#container { position: relative; width: 100%; padding: 0; min-height: 600px; }
+
 #wrap { position: relative; width: 100%; min-width: 320px; }
 
 #header { position: relative; }
@@ -64,8 +66,6 @@ input[type=password] { -webkit-appearance: none; }
 .dep1 > div { display: none; width: 100%; height: 200px; top: 40px; left: 0; border-left: 1px solid #e5e5e5; position: absolute; z-index: 99; line-height: 38px; transition: all 0.4s; }
 
 .submenu_back { width: 100%; height: 210px; background-color: #f5f5f5; transition: all 0.4s; position: fixed; top: 140px; display: none; border-bottom: 1px solid #b2b5b8; }
-
-#container { position: relative; width: 100%; padding: 0; margin-bottom: 35px; min-height: 600px; }
 
 #container .steelArt_wrap { display: none; }
 
@@ -133,19 +133,23 @@ input[type=password] { -webkit-appearance: none; }
 
 #cont { min-height: 600px; border-left: 1px solid #d9d9d9; }
 
+#cont > .inner { padding: 0 40px; padding-bottom: 25px; position: relative; }
+
 #cont .location { padding: 30px 40px 0; text-align: right; }
 
 #cont .location span { display: inline-block; padding: 0 5px 0 10px; font-size: 0.9rem; }
 
 #cont .location .arrow { background: url(../images/location_arr.png) no-repeat 0 center; }
 
+#cont .flexbox { display: flex; flex-direction: row; align-items: start; justify-content: space-between; flex-wrap: nowrap; }
+
+#cont .textbox { display: inline-block; position: relative; z-index: 1; background: #f5f5f5; padding: 30px; width: fit-content; }
+
 #cont .sub_title { margin-bottom: 40px; padding: 0 40px; line-height: 1.5; }
 
 #cont .sub_title h3 { padding-bottom: 25px; font-size: 30px; font-weight: normal; border-bottom: 1px solid #d9d9d9; }
 
 #cont .sub_title h3 .eng { color: #a6a6a6; font-size: 25px; margin-left: 15px; }
-
-#cont > .inner { padding: 0 40px 30px; }
 
 #cont .paging_wrap { width: 100%; margin: 50px 0 50px; vertical-align: top; text-align: center; width: 100%; margin: 50px 0 50px; vertical-align: top; text-align: center; }
 
@@ -169,13 +173,7 @@ input[type=password] { -webkit-appearance: none; }
 
 #cont .btn_wrap a:hover { background-color: #212121; color: #fff; }
 
-#cont .text_wrap { margin: 35px 0; margin: 35px 0; }
-
-#cont .text_wrap .cont_tit { font-size: 20px; margin-bottom: 12px; font-size: 20px; margin-bottom: 12px; }
-
-#cont .text_wrap p { font-size: 14px; word-break: keep-all; font-size: 14px; word-break: keep-all; }
-
-#cont .text_wrap .txt1 { margin: 15px 0; }
+#cont .cont_title { font-size: 1.5rem; margin-bottom: 0; padding-bottom: 15px; border-bottom: 1px solid #d9d9d9; }
 
 #cont .gallery_wrap { padding: 20px 5px 0; border-top: 2px solid #ddd; overflow: hidden; }
 
@@ -273,23 +271,11 @@ input[type=password] { -webkit-appearance: none; }
 
 #cont .apply_tbl.noBd tbody td { padding: 10px 5px; border-top: 0; text-align: center; }
 
-#cont .mi_wrap { margin-bottom: 60px; width: 100%; margin-bottom: 60px; width: 100%; }
-
-#cont .mi_wrap .img { float: left; margin-right: 15px; width: 400px; }
-
-#cont .mi_wrap .text { float: left; width: 405px; }
-
-#cont .mi_wrap .text .tit { padding-left: 10px; height: 35px; line-height: 35px; background: #f0f0f0; font-weight: bold; }
-
-#cont .mi_wrap .text .cont { padding: 10px; text-align: left; word-break: keep-all; padding: 10px; text-align: left; word-break: keep-all; }
-
 #cont .bulDot { padding-left: 7px; margin-top: 2px; margin-top: 2px; text-align: left; }
 
 #cont .bulDotList { padding-left: 7px; }
 
 #cont .bulDotList li { margin-top: 2px; margin-top: 2px; text-align: left; }
-
-#cont .img_wrap { margin: 0 0 70px; padding: 70px 30px; border: 1px solid #ddd; background: url(../images/img_bg.jpg) repeat; text-align: center; }
 
 #cont .brdList { table-layout: fixed; width: 100%; border-collapse: collapse; border-top: 2px solid #ddd; border-bottom: 1px solid #ddd; table-layout: fixed; width: 100%; border-collapse: collapse; border-top: 2px solid #ddd; border-bottom: 1px solid #ddd; }
 
@@ -303,40 +289,6 @@ input[type=password] { -webkit-appearance: none; }
 
 #cont .director { padding-bottom: 15px; font-weight: bold; font-size: 15px !important; color: #000; }
 
-#cont .identity_wrap { position: relative; width: 100%; height: 300px; }
-
-#cont .identity_wrap .img { position: absolute; top: 40px; z-index: 5; }
-
-#cont .identity_wrap .txt { position: absolute; top: 0; right: 0; width: 430px; z-index: 10; background: #f5f5f5; }
-
-#cont .identity_wrap .txt .inner { padding: 30px; }
-
-#cont .identity_wrap .txt .txt1 { margin: 0 0 20px; font-size: 20px; line-height: 1.5; }
-
-#cont .mission_wrap { padding-top: 50px; }
-
-#cont .bdTop { border-top: 1px solid #d9d9d9; }
-
-#cont .history_wrap .inner { margin: 0 auto; width: 608px; overflow: hidden; }
-
-#cont .history_wrap.pc_ver dl { float: left; }
-
-#cont .history_wrap.pc_ver dl dt { height: 158px; }
-
-#cont .history_wrap.pc_ver dl dt img { vertical-align: bottom; }
-
-#cont .history_wrap.pc_ver dl dd { padding-top: 20px; text-align: left; }
-
-#cont .history_wrap.pc_ver dl dd ul { padding-left: 10px; border-left: 1px solid #d9d9d9; }
-
-#cont .history_wrap.pc_ver dl dd ul li { margin-top: 5px; }
-
-#cont .history_wrap.pc_ver dl dd ul li:first-child { margin-top: 0; }
-
-#cont .history_wrap.pc_ver dl dd ul li .date { color: #757575; font-size: 13px; }
-
-#cont .history_wrap.pc_ver dl.first ul { margin-left: 4px; }
-
 #cont .dlType06 { margin-top: 20px; width: 100%; overflow: hidden; }
 
 #cont .dlType06:first-child { margin-top: 0; }
@@ -344,14 +296,6 @@ input[type=password] { -webkit-appearance: none; }
 #cont .dlType06 dt { float: left; padding-left: 10px; width: 100px; background: #f0f0f0; font-weight: bold; }
 
 #cont .dlType06 dd { float: left; padding-left: 10px; font-size: 14px; width: 600px; }
-
-#cont .facilities_wrap { position: relative; width: 100%; }
-
-#cont .floor_wrap { position: relative; width: 100%; margin-top: 60px; padding-top: 40px; border-top: 1px solid #ccc; }
-
-#cont .floor_wrap p.floor_tit { display: block; position: absolute; top: -15px; width: 30px; height: 30px; line-height: 30px; border-radius: 15px; background: #c4161c; color: #fff; text-align: center; }
-
-#cont .floor_wrap .pc_ver { display: block; margin: 0 auto; }
 
 #board { width: 100%; }
 
@@ -640,8 +584,6 @@ tbody { display: table-row-group; vertical-align: middle; border-color: inherit;
 colgroup { display: table-column-group; }
 
 col { display: table-column; }
-
-.cont_tit .director { float: right; padding-bottom: 0; line-height: 40px; }
 
 .alignC { text-align: center !important; }
 

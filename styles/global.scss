@@ -159,6 +159,16 @@ table {
     resize: none;
   }
 
+  &.table-center {
+    margin: 0 auto;
+  }
+  &.table-left {
+    margin-right: auto;
+  }
+  &.table-right {
+    margin-left: auto;
+  }
+
   &.table-bordered {
     // border: 1px solid $light;
     th, td {
@@ -166,6 +176,11 @@ table {
     }
     th {
       background-color: $grey-95;
+    }
+  }
+  &.table-none {
+    th, td {
+      padding: 0;
     }
   }
   &.text-center {
