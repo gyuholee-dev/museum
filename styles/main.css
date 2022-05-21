@@ -145,7 +145,7 @@ input[type=password] { -webkit-appearance: none; }
 
 #cont .sub_title h3 { padding-bottom: 25px; font-size: 30px; font-weight: normal; border-bottom: 1px solid #d9d9d9; }
 
-#cont .sub_title h3 .eng { color: #a6a6a6; font-size: 25px; }
+#cont .sub_title h3 .eng { color: #a6a6a6; font-size: 25px; margin-left: 15px; }
 
 #cont > .inner { padding: 0 40px 30px; }
 
