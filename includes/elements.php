@@ -322,7 +322,7 @@ function getSubTitle($data)
 {
   global $ACT, $CAT;
   $catData = $data['categories'][$CAT];
-  $html = "<h3>$catData[title]<span class='eng'>$catData[name]</span></h3>";
+  $html = "$catData[title]<span class='name'>$catData[name]</span>";
 
   return $html;
 }
@@ -338,7 +338,7 @@ function getInfoList($data, $postType='html')
           <span class='cont'>$value</span>
         </li>
       ";
-    } else if ($postType=='html') {
+    } else if ($postType=='html' || $postType=='media') {
       $html .= "
         <dl class='dlType03'>
           <dt>$key</dt>
@@ -543,7 +543,7 @@ function getPostList($listType, $start=0, $items=6)
         $postList .= "
           <li>
             <div class='img' style='height: 153.44px;'>
-              <img src='$image' style='width:100%;'>
+              <a href='$url'><img src='$image' style='width:100%;'></a>
             </div>
             <div class='text' style='text-overflow:ellipsis; white-space:nowrap; overflow:hidden'>
               <a href='$url'>$title</a>
@@ -642,6 +642,8 @@ function makeContents()
   }
 
   $contents_data = array(
+    'do' => $DO,
+    'action' => $ACT,
     'title' => "<h2>$pageData[title]</h2>",
     'leftmenu' => getLeftmenu($pageData),
     'headerImg' => getHeaderImg($pageData),

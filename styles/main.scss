@@ -381,7 +381,6 @@ input[type=password] {
   .sub_visual {
     width: 901px;
     height: 150px;
-    float: left;
     position: relative;
     border-bottom: 1px solid #c4161c;
     background: url(../images/sub_visual03.jpg) no-repeat 0 0;
@@ -431,7 +430,39 @@ input[type=password] {
 
 #cont {
   min-height: 600px;
-  border-left: 1px solid #d9d9d9;
+  border-left: 1px solid $color-border;
+  position: relative;
+
+  .location {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    span {
+      display: inline-block;
+      padding: 0 5px 0 10px;
+      font-size: 0.9rem;
+    }
+    .arrow {
+      background: url(../images/location_arr.png) no-repeat 0 center;
+    }
+  }
+
+  .sub_title {
+    margin-bottom: 40px;
+    padding: 25px 40px;
+    line-height: 1.5;
+    font-size: 30px;
+    font-weight: normal;
+    border-bottom: 1px solid #d9d9d9;
+    .name {
+      color: $color-text-faint;
+      font-size: 25px;
+      margin-left: 15px;
+    }
+  }
+  &.post .sub_title {
+    margin-bottom: 25px;
+  }
 
   >.inner {
     padding: 0 40px;
@@ -541,21 +572,6 @@ input[type=password] {
     }
   }
 
-  .location {
-    padding: 30px 40px 0;
-    text-align: right;
-
-    span {
-      display: inline-block;
-      padding: 0 5px 0 10px;
-      font-size: 0.9rem;
-    }
-
-    .arrow {
-      background: url(../images/location_arr.png) no-repeat 0 center;
-    }
-  }
-
   .flexbox {
     @include flex(start, space-between);
     &.column {
@@ -570,25 +586,6 @@ input[type=password] {
     background: #f5f5f5;
     padding: 30px;
     width: fit-content;
-  }
-
-  .sub_title {
-    margin-bottom: 40px;
-    padding: 0 40px;
-    line-height: 1.5;
-
-    h3 {
-      padding-bottom: 25px;
-      font-size: 30px;
-      font-weight: normal;
-      border-bottom: 1px solid #d9d9d9;
-
-      .eng {
-        color: $color-text-faint;
-        font-size: 25px;
-        margin-left: 15px;
-      }
-    }
   }
 
   .paging_wrap {
@@ -1035,7 +1032,14 @@ input[type=password] {
   .exh_view_default {
     @include flex(center, start, column);
     .art_img_wrap {
-      margin-bottom: 50px;
+      width: 100%;
+      margin-bottom: 35px;
+      // margin-top: 50px;
+      >img {
+        display: block;
+        margin: 0 auto;
+        max-width: fit-content;
+      }
     }
 
     .info {
@@ -1258,13 +1262,15 @@ input[type=password] {
 
   .edu_view_default {
     .edu_view_table {
-      border-top: 2px solid $color-border;
+      // border-top: 2px solid $color-border;
       margin-bottom: 15px;
 
-      .post_tit {
+      .post_title {
         font-size: 1.5rem;
         font-weight: bold;
         border-top: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $color-border;
       }
 
       .post_td {
