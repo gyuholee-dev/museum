@@ -404,7 +404,7 @@ function getPageContent()
   $res = mysqli_query($DB, $sql);
   if (mysqli_num_rows($res) > 0) {
     $data = mysqli_fetch_assoc($res);
-    return $data['content'];
+    return "<pre>$data[content]</pre>";
   } else {
     return '';
   }

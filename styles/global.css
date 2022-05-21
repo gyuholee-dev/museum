@@ -27,6 +27,14 @@ a:hover { color: #ff6c00; }
 
 img { width: 100%; }
 
+img.img-fit { max-width: fit-content; }
+
+img.img-center { display: block; margin: 0 auto; }
+
+img.img-left { display: block; margin-right: auto; }
+
+img.img-right { display: block; margin-left: auto; }
+
 pre { font-family: "나눔 고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; white-space: break-spaces; }
 
 form { display: flex; flex-direction: column; align-items: start; justify-content: center; flex-wrap: nowrap; width: 100%; }

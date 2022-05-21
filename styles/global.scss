@@ -83,6 +83,21 @@ a {
 
 img {
   width: 100%;
+  &.img-fit {
+    max-width: fit-content;
+  }
+  &.img-center {
+    display: block;
+    margin: 0 auto;
+  }
+  &.img-left {
+    display: block;
+    margin-right: auto;
+  }
+  &.img-right {
+    display: block;
+    margin-left: auto;
+  }
 }
 
 pre {

@@ -35,8 +35,6 @@ footer { background-color: #ffffff; }
 
 .ico { color: #fff; padding-right: 20px; font-size: 2em; line-height: 0.5em; }
 
-img { vertical-align: top; max-width: 100%; border: none; }
-
 .hide { display: none; }
 
 input[type=text] { -webkit-appearance: none; }
