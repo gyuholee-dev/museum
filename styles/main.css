@@ -189,7 +189,7 @@ input[type=password] { -webkit-appearance: none; }
 
 #cont .gallery_list li .text { font-size: 14px; text-align: center; margin-top: 10px; }
 
-#cont .dlType_wrap { width: auto; overflow: hidden; margin-bottom: 15px; }
+#cont .dlType_wrap { width: auto; overflow: hidden; }
 
 #cont .dlType_wrap dl { display: flex; flex-direction: row; align-items: stretch; justify-content: start; flex-wrap: nowrap; width: 100%; border-bottom: 1px solid #d9d9d9; }
 
@@ -447,7 +447,7 @@ input[type=password] { -webkit-appearance: none; }
 
 #board .bbs_list_defalut table tbody td { padding: 12px 0; color: #959595; border-bottom: 1px solid #d9d9d9; text-align: center; }
 
-#board .edu_view_default .edu_view_table { border-top: 2px solid #d9d9d9; }
+#board .edu_view_default .edu_view_table { border-top: 2px solid #d9d9d9; margin-bottom: 15px; }
 
 #board .edu_view_default .edu_view_table .post_tit { font-size: 1.5rem; font-weight: bold; border-top: 0; }
 
@@ -458,6 +458,8 @@ input[type=password] { -webkit-appearance: none; }
 #board .edu_view_default .edu_view_table .post_writer .date { margin-left: 10px; padding-left: 10px; border-left: 1px solid #d9d9d9; }
 
 #board .edu_view_default .edu_view_table .post_writer .hits { float: right; }
+
+#board .edu_view_default .post_subject { margin-bottom: 30px; }
 
 #board .edu_view_default .state_btn.end { background: #aaa; }
 

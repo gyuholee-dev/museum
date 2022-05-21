@@ -620,7 +620,6 @@ input[type=password] {
   .dlType_wrap {
     width: auto;
     overflow: hidden;
-    margin-bottom: 15px;
 
     dl {
       @include flex(stretch, start);
@@ -1434,6 +1433,7 @@ input[type=password] {
   .edu_view_default {
     .edu_view_table {
       border-top: 2px solid $color-border;
+      margin-bottom: 15px;
 
       .post_tit {
         font-size: 1.5rem;
@@ -1461,6 +1461,10 @@ input[type=password] {
           float: right;
         }
       }
+    }
+
+    .post_subject {
+      margin-bottom: 30px;
     }
 
     .state_btn.end {
