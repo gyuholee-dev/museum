@@ -558,6 +558,9 @@ input[type=password] {
 
   .flexbox {
     @include flex(start, space-between);
+    &.column {
+      @include flex(center, start, column);
+    }
   }
 
   .textbox {
@@ -672,6 +675,7 @@ input[type=password] {
     margin-bottom: 0;
     padding-bottom: 15px;
     border-bottom: 1px solid $color-border;
+    align-items: center;
     >.round {
       font-size: 1rem;
       position: absolute;
