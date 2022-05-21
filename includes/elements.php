@@ -523,21 +523,34 @@ function getPostList($listType, $start=0, $items=6)
         ";
       }
   
-      $postList .= "
-        <li>
-          <div class='img' style='text-align:center;'>
-            <img src='$image'>
-          </div>
-          <div class='text'>
-            <p class='tit'>$title</p>
-            $infomation
-            $summary
-            <div class='detail_btn_wrap'>
-              <a href='$url' class='detail_btn'>자세히 보기</a>
+      if ($listType == 'preview') {
+        $postList .= "
+          <li>
+            <div class='img' style='text-align:center;'>
+              <img src='$image'>
             </div>
-          </div>
-        </li>
-      ";
+            <div class='text'>
+              <p class='tit'>$title</p>
+              $infomation
+              $summary
+              <div class='detail_btn_wrap'>
+                <a href='$url' class='detail_btn'>자세히 보기</a>
+              </div>
+            </div>
+          </li>
+        ";
+      } else if ($listType == 'gallery') {
+        $postList .= "
+          <li>
+            <div class='img' style='height: 153.44px;'>
+              <img src='$image' style='width:100%;'>
+            </div>
+            <div class='text' style='text-overflow:ellipsis; white-space:nowrap; overflow:hidden'>
+              <a href='$url'>$title</a>
+            </div>
+          </li>
+        ";
+      }
     }
     $pageNav = getPageNav($PAGE, $pageCount);
   } else {
@@ -548,7 +561,7 @@ function getPostList($listType, $start=0, $items=6)
     ";
   }
   $list_data = array(
-    'postList' => "<ul>$postList</ul>",
+    'postList' => "<ul class='${listType}_list'>$postList</ul>",
     'pageNav' => $pageNav,
   );
   $html = renderElement(TPL.'list_'.$listType.'.html', $list_data);
