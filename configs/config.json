@@ -83,7 +83,7 @@
     },
     "education" : {
       "title" : "교육",
-      "items" : 6,
+      "items" : 5,
       "listType" : "preview",
       "postType" : "html",
       "headerImg" : "sub_visual09.jpg",
@@ -152,7 +152,7 @@
     },
     "community" : {
       "title" : "참여마당",
-      "items" : 6,
+      "items" : 16,
       "listType" : "list",
       "postType" : "html",
       "headerImg" : "sub_visual08.jpg",
