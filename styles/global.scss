@@ -76,6 +76,9 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+  &:hover {
+    color: $color-text-emp;
+  }
 }
 
 img {
@@ -139,6 +142,21 @@ table {
   textarea {
     min-height: 120px;
     resize: none;
+  }
+
+  &.table-bordered {
+    // border: 1px solid $light;
+    th, td {
+      border: 1px solid $light;
+    }
+    th {
+      background-color: $grey-95;
+    }
+  }
+  &.text-center {
+    th, td {
+      text-align: center;
+    }
   }
 }
 
