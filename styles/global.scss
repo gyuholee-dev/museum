@@ -6,7 +6,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
@@ -187,6 +186,16 @@ table {
     th, td {
       text-align: center;
     }
+  }
+}
+
+ol,ul {
+  &:not(.list) {
+    list-style: none;
+  }
+  &.list {
+    padding-left: 20px;
+    white-space: normal;
   }
 }
 

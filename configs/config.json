@@ -120,12 +120,12 @@
         "endowment" : { 
           "title" : "작품기증",
           "name" : "Endowment",
-          "type" : "list"
+          "type" : "page"
         },
         "book" : { 
           "title" : "도서",
           "name" : "Book",
-          "type" : "list"
+          "type" : "page"
         },
         "app" : { 
           "title" : "AR 도슨트 투어",

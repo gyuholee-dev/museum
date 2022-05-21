@@ -7,7 +7,7 @@ section { background-color: #ffffff; }
 
 footer { background-color: #ffffff; }
 
-* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
 html { font-family: "나눔 고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 16px; line-height: 1.6; word-break: break-all; white-space: normal; }
 
@@ -72,6 +72,10 @@ table.table-bordered th { background-color: #f2f2f2; }
 table.table-none th, table.table-none td { padding: 0; }
 
 table.text-center th, table.text-center td { text-align: center; }
+
+ol:not(.list), ul:not(.list) { list-style: none; }
+
+ol.list, ul.list { padding-left: 20px; white-space: normal; }
 
 .btn, button, input[type=submit], input[type=button], input[type=reset] { font-family: "나눔 고딕", "Nanum Gothic", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; cursor: pointer; color: inherit; font-size: 1rem; font-weight: bold; line-height: 1.12; padding: 8px 12px; background-color: #f2f2f2; border: 1px solid rgba(0, 0, 0, 0.35); border-radius: 8px; overflow: hidden; }
 

@@ -635,6 +635,9 @@ function makeContents()
   $content = '';
   if ($viewType == 'page') {
     $content = getPageContent();
+  } else if ($viewType == 'link') {
+    $content = "";
+    header('Location: '.$CONF['pages'][$ACT]['categories'][$CAT]['url']);
   } else if ($DO == 'post') {
     $content = getPostContent($ID, $postType);
   } else if ($DO == 'list') {
