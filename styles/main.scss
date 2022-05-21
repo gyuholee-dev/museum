@@ -7,7 +7,6 @@
   min-height: 600px;
 }
 
-
 #wrap {
   position: relative;
   width: 100%;
@@ -30,7 +29,6 @@
         float: left;
         padding-top: 28px;
       }
-
       .util_box {
         float: left;
         margin: 30px 0 0 80px;
@@ -39,24 +37,16 @@
 
         >ul {
           >li {
+            display: inline-block;
+            margin-left: 15px;
+            display: inline-block;
+            margin-left: 15px;
             &:first-child {
               margin-left: 0;
             }
-
-            display: inline-block;
-            margin-left: 15px;
-            display: inline-block;
-            margin-left: 15px;
-
             >a {
               display: inline-block;
             }
-          }
-        }
-
-        ul {
-          li.language {
-            position: relative;
           }
         }
       }
@@ -79,7 +69,6 @@
           box-sizing: border-box;
           font-size: 14px;
         }
-
         .search_btn {
           position: absolute;
           top: 6px;
@@ -450,6 +439,108 @@ input[type=password] {
     position: relative;
   }
 
+  .dlType01 {
+    margin: 0 2% 30px 0;
+    width: 48%;
+    box-sizing: border-box;
+    dt {
+      padding-left: 10px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 16px;
+      font-weight: bold;
+      background: #f0f0f0;
+    }
+    dd {
+      padding: 10px;
+      height: 65px;
+      font-size: 14px;
+    }
+  }
+
+  .dlType02 {
+    margin: 0 0 50px 0;
+    width: 100%;
+    dt {
+      padding-left: 10px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 16px;
+      font-weight: bold;
+      background: #f0f0f0;
+    }
+    dd {
+      position: relative;
+      padding: 10px;
+      font-size: 14px;
+      p {
+        &:first-child {
+          margin-top: 0;
+          margin-top: 0;
+        }
+        margin-top: 30px;
+      }
+      .reservation_btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 155px;
+        height: 40px;
+        line-height: 40px;
+        color: #656565;
+        border: 1px solid #ddd;
+        background: #f0f0f0;
+        text-align: center;
+      }
+    }
+  }
+
+  dl {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: normal;
+  }
+  .dlType03 {
+    min-height: 40px;
+    dt {
+      text-align: center;
+      width: 140px;
+      min-width: 140px;
+      line-height: 40px;
+      background: #f5f5f5;
+      font-weight: bold;
+    }
+    dd {
+      width: 100%;
+      padding: 6px 10px;
+    }
+  }
+
+  // .dlType04 {
+  //   margin: 0;
+  //   width: 100%;
+  //   overflow: hidden;
+  // }
+
+  .dlType06 {
+    @include flex(center, start);
+    dt, dd {
+      padding: 5px 10px;
+    }
+
+    dt {
+      width: 140px;
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+
+    dd {
+      width: 100%;
+    }
+  }
+
   .location {
     padding: 30px 40px 0;
     text-align: right;
@@ -581,6 +672,17 @@ input[type=password] {
     margin-bottom: 0;
     padding-bottom: 15px;
     border-bottom: 1px solid $color-border;
+    >.round {
+      font-size: 1rem;
+      position: absolute;
+      border-radius: 50%;
+      line-height: 1;
+      padding: 6px;
+      &.red {
+        background-color: red;
+        color: white;
+      }
+    }
   }
 
   .gallery_wrap {
@@ -629,88 +731,6 @@ input[type=password] {
       width: 102%;
       overflow: hidden;
       margin: 0 auto;
-    }
-
-    .dlType01 {
-      margin: 0 2% 30px 0;
-      width: 48%;
-      box-sizing: border-box;
-      dt {
-        padding-left: 10px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 16px;
-        font-weight: bold;
-        background: #f0f0f0;
-      }
-      dd {
-        padding: 10px;
-        height: 65px;
-        font-size: 14px;
-      }
-    }
-
-    .dlType02 {
-      margin: 0 0 50px 0;
-      width: 100%;
-      dt {
-        padding-left: 10px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 16px;
-        font-weight: bold;
-        background: #f0f0f0;
-      }
-      dd {
-        position: relative;
-        padding: 10px;
-        font-size: 14px;
-        p {
-          &:first-child {
-            margin-top: 0;
-            margin-top: 0;
-          }
-          margin-top: 30px;
-        }
-        .reservation_btn {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          display: inline-block;
-          width: 155px;
-          height: 40px;
-          line-height: 40px;
-          color: #656565;
-          border: 1px solid #ddd;
-          background: #f0f0f0;
-          text-align: center;
-        }
-      }
-    }
-
-    .dlType03 {
-      margin: 0;
-      width: 100%;
-      overflow: hidden;
-      min-height: 40px;
-      dt {
-        text-align: center;
-        width: 140px;
-        min-width: 140px;
-        line-height: 40px;
-        background: #f5f5f5;
-        font-weight: bold;
-      }
-      dd {
-        width: 100%;
-        padding: 6px 10px;
-      }
-    }
-
-    .dlType04 {
-      margin: 0;
-      width: 100%;
-      overflow: hidden;
     }
   }
 
@@ -830,7 +850,6 @@ input[type=password] {
     }
 
     .dlType03 {
-      overflow: hidden;
 
       textarea {
         border: 1px solid #ddd;
@@ -839,8 +858,6 @@ input[type=password] {
     }
 
     .ulType02 {
-      overflow: hidden;
-
       li {
         float: left;
         margin-right: 13px;
@@ -930,31 +947,6 @@ input[type=password] {
     font-weight: bold;
     font-size: 15px !important;
     color: #000;
-  }
-
-  .dlType06 {
-    &:first-child {
-      margin-top: 0;
-    }
-
-    margin-top: 20px;
-    width: 100%;
-    overflow: hidden;
-
-    dt {
-      float: left;
-      padding-left: 10px;
-      width: 100px;
-      background: #f0f0f0;
-      font-weight: bold;
-    }
-
-    dd {
-      float: left;
-      padding-left: 10px;
-      font-size: 14px;
-      width: 600px;
-    }
   }
 }
 
