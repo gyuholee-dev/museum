@@ -576,6 +576,9 @@ input[type=password] {
     @include flex(start, space-between);
     &.column {
       @include flex(center, start, column);
+      &.start {
+        @include flex(start, start, column);
+      }
     }
   }
 

@@ -633,7 +633,9 @@ function makeContents()
   $viewType = $CONF['pages'][$ACT]['categories'][$CAT]['type'];
 
   $content = '';
-  if ($viewType == 'page') {
+  if ($ACT == 'guide' && $CAT == 'reserve') {
+    $content = renderElement(TPL.'post_reserve.html');
+  } else if ($viewType == 'page') {
     $content = getPageContent();
   } else if ($viewType == 'link') {
     $content = "";

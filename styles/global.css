@@ -115,7 +115,7 @@ input[type=radio], input[type=checkbox] { background-color: white; cursor: point
 
 label { font-size: 1rem; cursor: pointer; font-weight: bold; margin-right: 5px; }
 
-h1.title, h2.title, h3.title, h4.title, h5.title, h6.title { padding: 0.15rem 0.5rem; width: 100%; }
+h1.title, h2.title, h3.title, h4.title, h5.title, h6.title { padding: 5px 10px; width: 100%; }
 
 i { position: relative; }
 
