@@ -23,7 +23,7 @@ CREATE TABLE museum_post (
   subject CHAR(20),
   category CHAR(20),
   title VARCHAR(80),
-  file VARCHAR(80),
+  file VARCHAR(140),
   info JSON,
   content TEXT,
   PRIMARY KEY(postid)
