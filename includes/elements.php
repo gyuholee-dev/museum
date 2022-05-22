@@ -354,11 +354,12 @@ function getInfoList($data, $postType='html')
 // postType: html, media, exhibit
 function getPostContent($postid=1, $postType='html')
 {
-  global $CONF, $DB;
+  global $CONF, $DB, $DBCONF;
   global $ACT, $CAT, $DO, $ID, $PAGE;
   global $MAIN;
 
-  $sql = "SELECT * FROM museum_post "; 
+  $table = $DBCONF['prefix'].$CONF['pages'][$ACT]['table'];
+  $sql = "SELECT * FROM $table "; 
   $sql .= "WHERE subject='$ACT' AND category='$CAT' AND postid='$postid'";
   $res = mysqli_query($DB, $sql);
 
@@ -394,11 +395,12 @@ function getPostContent($postid=1, $postType='html')
 // 컨텐츠 본문 페이지 출력
 function getPageContent()
 {
-  global $CONF, $DB;
+  global $CONF, $DB, $DBCONF;
   global $ACT, $CAT, $DO, $ID, $PAGE;
   global $MAIN;
 
-  $sql = "SELECT * FROM museum_post "; 
+  $table = $DBCONF['prefix'].$CONF['pages'][$ACT]['table'];
+  $sql = "SELECT * FROM $table "; 
   $sql .= "WHERE subject='$ACT' AND category='$CAT'
            ORDER BY postid DESC LIMIT 1 ";
   $res = mysqli_query($DB, $sql);
@@ -413,13 +415,14 @@ function getPageContent()
 // 포스트 내비게이션
 function getPostNav($postid)
 {
-  global $DB;
+  global $DB, $CONF, $DBCONF;
   global $ACT, $CAT, $DO, $ID, $PAGE;
   global $MAIN, $DEV;
 
   $prev = $next = '';
 
-  $sql = "SELECT * FROM museum_post 
+  $table = $DBCONF['prefix'].$CONF['pages'][$ACT]['table'];
+  $sql = "SELECT * FROM $table 
           WHERE subject='$ACT' AND category='$CAT' AND postid < '$postid' ORDER BY postid DESC LIMIT 1";
   $res = mysqli_query($DB, $sql);
   if (mysqli_num_rows($res) > 0) {
@@ -427,7 +430,7 @@ function getPostNav($postid)
     $prev = "<a href='$MAIN?action=$ACT&category=$CAT&do=post&postid=$data[postid]&page=$PAGE'>$data[title]</a>";
   } else {
     if ($DEV) {
-      $sql = "SELECT * FROM museum_post 
+      $sql = "SELECT * FROM $table 
               WHERE subject='$ACT' AND category='$CAT' ORDER BY postid DESC LIMIT 1";
       $res = mysqli_query($DB, $sql);
       $data = mysqli_fetch_assoc($res);
@@ -437,7 +440,7 @@ function getPostNav($postid)
     }
   }
 
-  $sql = "SELECT * FROM museum_post 
+  $sql = "SELECT * FROM $table 
           WHERE subject='$ACT' AND category='$CAT' AND postid > '$postid' ORDER BY postid ASC LIMIT 1";
   $res = mysqli_query($DB, $sql);
   if (mysqli_num_rows($res) > 0) {
@@ -445,7 +448,7 @@ function getPostNav($postid)
     $next = "<a href='$MAIN?action=$ACT&category=$CAT&do=post&postid=$data[postid]&page=$PAGE'>$data[title]</a>";
   } else {
     if ($DEV) {
-      $sql = "SELECT * FROM museum_post 
+      $sql = "SELECT * FROM $table 
               WHERE subject='$ACT' AND category='$CAT' ORDER BY postid ASC LIMIT 1";
       $res = mysqli_query($DB, $sql);
       $data = mysqli_fetch_assoc($res);
@@ -473,24 +476,25 @@ function getPostNav($postid)
 // listType : preview, list, gallery
 function getPostList($listType, $start=0, $items=6)
 {
-  global $CONF, $DB;
+  global $CONF, $DB, $DBCONF;
   global $ACT, $CAT, $PAGE;
   global $MAIN;
   global $DEV;
 
-  $sql = "SELECT COUNT(*) FROM museum_post
+  $table = $DBCONF['prefix'].$CONF['pages'][$ACT]['table'];
+  $sql = "SELECT COUNT(*) FROM $table
           WHERE subject='$ACT' AND category='$CAT' ";
   $res = mysqli_query($DB, $sql);
   $count = mysqli_fetch_row($res)[0];
   $pageCount = ceil($count/$items);
 
-  $sql = "SELECT * FROM museum_post
+  $sql = "SELECT * FROM $table
           WHERE subject='$ACT' AND category='$CAT'
           ORDER BY postid DESC
           LIMIT $start, $items ";
   // 개발모드일 경우 카운트 초과 페이지도 랜덤 리스트로 출력
   if ($DEV && $PAGE > $pageCount) {
-      $sql = "SELECT * FROM museum_post
+      $sql = "SELECT * FROM $table
             WHERE subject='$ACT' AND category='$CAT'
             ORDER BY RAND()
             LIMIT 0, $items ";
@@ -665,12 +669,13 @@ function makeContents()
 // 유저페이지 출력
 function makeUserPage() : string
 {
-  global $DB, $USER, $DO;
+  global $DB, $DBCONF, $USER, $DO;
   if (!isset($DO) || !isset($USER)) return false; 
 
   if ($DO == 'mypage') {
     $userid = $USER['userid'];
-    $sql = "SELECT * FROM museum_user WHERE userid = '$userid' ";
+    $table = $DBCONF['prefix'].'user';
+    $sql = "SELECT * FROM $table WHERE userid = '$userid' ";
     $res = mysqli_query($DB, $sql);
     $data = mysqli_fetch_assoc($res);
   
