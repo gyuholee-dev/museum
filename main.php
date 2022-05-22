@@ -80,10 +80,12 @@ preloadLibrary();
 // 랜더링
 $html_data = array(
   'head' => makeHead(),
-  'header' => makeHeader(),
+  'topmenu' => makeTopmenu(),
+  'navmenu' => makeNavmenu(),
   'content' => $content,
   // 'leftmenu' => makeSidemenu('left'),
   // 'rightmenu' => makeSidemenu('right'),
+  'footmenu' => makeFootmenu(),
   'footer' => makeFooter(),
   'postScript' => getLibraries('postscripts'),
   // 'popup' => makePopupList($popupData),

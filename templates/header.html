@@ -1,25 +1,24 @@
 <div id="message"></div>
-<div class="header_top">
-  <div class="inner">
-    {headerLink}
-    <div class="util_box">
-      {loginLink}
-    </div>
-    <div class="search_wrap">
-      {searchbox}
-    </div>
+
+<nav id="topmenu">
+  {headerLink}
+  <div class="util_box">
+    {loginLink}
   </div>
-</div>
-<div class="clear"></div>
-<div id="gnb">
+  <div class="search_wrap">
+    {searchbox}
+  </div>
+</nav>
+
+<nav id="mainmenu">
   <div class="submenu_back"></div>
   <div class="inner">
     <h2 class="logo">
       <img src="images/gnb_logo.png" alt="포항시립미술관">
     </h2>
-    <ul class="menu">
+    <ul class="menu" style="display:none;">
       {navmenu}
     </ul>
     <div class="fill"></div>
   </div>
-</div>
+</nav>

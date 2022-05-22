@@ -2,16 +2,17 @@
 
 // light theme
 $color-background: $grey-95;
-$color-header: initial;
+$color-header: $black;
+$color-nav: $white;
 $color-section: $white;
-$color-footer: $white;
+$color-footer: $black;
 
 $color-text: $grey-5;
-$color-text-faint: $grey-65;
+$color-text-faint: $grey-60;
 $color-text-emp: $orange;
 $color-text-link: $blue;
 $color-border: $grey-85;
-$color-border-emp: $sky;
+$color-border-emp: $red;
 
 $color-button: $grey-95;
 $color-button-float: $white;
@@ -30,6 +31,9 @@ body {
 }
 header {
   background-color: $color-header;
+}
+nav {
+  background-color: $color-nav;
 }
 section {
   background-color: $color-section;

@@ -73,13 +73,11 @@ function getHeaderLink($type='logo')
   $logo = IMG.$theme['logo'];
   if ($type == 'logo') {
     $logo = IMG.$theme['logo'];
-    $link = "<a href='$siteUrl'><img src='$logo'></a>";
+    $headerLink = "<a class='logo $active' href='$siteUrl'><img src='$logo'></a>";
   } else if ($type == 'title') {
     $icon = '<i class="icon"></i>';
-    $link = "<a href='$siteUrl'>$icon<span>$INFO[title]</span></a>";
+    $headerLink = "<a class='logo $active' href='$siteUrl'>$icon<span>$INFO[title]</span></a>";
   }
-
-  $headerLink = "<h1 class='logo $active'>$link</h1>";
 
   return $headerLink;
 }
@@ -108,39 +106,43 @@ function getLibraries($key='styles')
 }
 
 // 로그인링크
-function getLoginLink($type='link')
+function getUsermenu($type='link')
 {
-  global $USER;
-  $main = MAIN;
+  global $USER, $MAIN;
   if ($type == 'link') {
     if ($USER) {
-      $loginLink = "
-        <a href='$main?action=user&do=mypage'>마이페이지</a>
+      $usermenu = "
+        <a href='$MAIN?action=user&do=mypage'>마이페이지</a>
       ";
     } else {
-      $loginLink = "
-        <a href='$main?action=user&do=login'>로그인</a>
+      $usermenu = "
+        <a href='$MAIN?action=user&do=login'>로그인</a>
       ";
     }
   } else if ($type == 'icon') {
     if ($USER) {
-      $loginLink = "
-        <a class='icon' href='$main?action=user&do=mypage'><i class='xi-user-o'></i></a>
+      $usermenu = "
+        <a class='icon' href='$MAIN?action=user&do=mypage'><i class='xi-user-o'></i></a>
       ";
     } else {
-      $loginLink = "
-        <a class='icon' href='$main?action=user&do=login'><i class='xi-log-in'></i></a>
+      $usermenu = "
+        <a class='icon' href='$MAIN?action=user&do=login'><i class='xi-log-in'></i></a>
       ";
     }
 
   }
-  return "<ul><li class='login'>$loginLink</li></ul>";
+  return "<div class='usermenu'>$usermenu</div>";
 }
 
 // 서치박스
 function getSerchbox()
 {
-  $searchbox = renderElement(TPL.'searchbox.html');
+  $searchbox = "
+    <form class='searchbox' name='search' method='get' action=''>
+      <input type='text' name='query' placeholder='검색어를 입력하세요'>
+      <button type='submit' class='btn none icon'><i class='xi-search'></i></button>
+    </form>
+  ";
   return $searchbox;
 }
 
@@ -152,6 +154,7 @@ function getNavmenu($sep=null)
   $pages = $CONF['pages'];
 
   $navmenu = '';
+  $lastKey = array_key_last($pages);
   foreach ($pages as $key => $data) {
     if (!isset($data['categories'])) continue;
 
@@ -167,9 +170,9 @@ function getNavmenu($sep=null)
       }
       $active = ($CAT==$subKey)?'active':'';
       if ($value['type']=='link') {
-        $submenu .="<li class='$active'><a href='$value[url]'>$value[title]</a></li>";
+        $submenu .="<li class='item $active'><a href='$value[url]'>$value[title]</a></li>";
       } else {
-        $submenu .="<li class='$active'><a href='$MAIN?action=$key&category=$subKey'>$value[title]</a></li>";
+        $submenu .="<li class='item $active'><a href='$MAIN?action=$key&category=$subKey'>$value[title]</a></li>";
       }
       $i++;
     }
@@ -180,14 +183,13 @@ function getNavmenu($sep=null)
     }
 
     $active = ($ACT==$key)?'active':'';
+    $sep = ($lastKey!=$key)?"<i class='sep xi-minus xi-rotate-90'></i>":'';
     $navmenu .= "
-      <li class='dep1 $active'>
-        <a href='$menuLink' class='dep_btn1'>$data[title]</a>
-        <div class='sub'>
-          <ul class='gnb_sub'>
-            $submenu
-          </ul>
-        </div>
+      <li class='item $active'>
+        <a href='$menuLink' class='dep_btn1'><label>$data[title]</label></a>$sep
+        <ul class='subnmenu'>
+          $submenu
+        </ul>
       </li>
     ";
   }
@@ -249,17 +251,36 @@ function makeHead()
   return $head;
 }
 
-// 헤더 출력
-function makeHeader()
+// 탑메뉴
+function makeTopmenu()
 {
   $header_data = array(
     'headerLink' => getHeaderLink('logo'),
-    'loginLink' => getLoginLink('icon'),
+    'usermenu' => getUsermenu('icon'),
     'searchbox' => getSerchbox(),
+  );
+  $header = renderElement(TPL.'topmenu.html', $header_data);
+  return $header;
+}
+
+// 네비게이션메뉴
+function makeNavmenu()
+{
+  $header_data = array(
     'navmenu' => getNavmenu(),
   );
-  $header = renderElement(TPL.'header.html', $header_data);
+  $header = renderElement(TPL.'navmenu.html', $header_data);
   return $header;
+}
+
+// 하단메뉴
+function makeFootmenu()
+{
+  $footmenu_data = array(
+    // 'bottomLink' => getbottomLink(),
+  );
+  $footmenu = renderElement(TPL.'footmenu.html', $footmenu_data);
+  return $footmenu;
 }
 
 // 푸터 출력
@@ -285,8 +306,9 @@ function getLeftmenu($data)
   $html = '';  
   foreach ($catData as $key => $data) {
     $active = ($CAT==$key)?'active':'';
+    $class = ($CAT==$key)?'xi-angle-right':'';
     $link = "$MAIN?action=$ACT&category=$key";
-    $html .= "<li class='$active'><a href='$link'>$data[title]</a></li>";
+    $html .= "<li class='item $active'><a class='$class' href='$link'>$data[title]</a></li>";
   }
   return "<ul>$html</ul>";
 }
@@ -310,9 +332,13 @@ function getLocation($data)
 {
   global $ACT, $CAT;
   $catData = $data['categories'][$CAT];
-  $html = "<span class='home'>HOME</span>";
-  $html .= "<span class='loc1 arrow'>$data[title]</span>";
-  $html .= "<span class='loc2 arrow'>$catData[title]</span>";
+  $html = "
+    <span class='home'>HOME</span>
+    <i class='sep xi-angle-right'></i>
+    <span class='subject'>$data[title]</span>
+    <i class='sep xi-angle-right'></i>
+    <span class='category'>$catData[title]</span>
+  ";
 
   return $html;
 }
@@ -486,8 +512,6 @@ function getPostNav($postid)
   return $html;
 }
 
-
-
 // 컨텐츠 리스트 출력
 // listType : preview, list, gallery
 function getPostList($listType, $start=0, $items=6)
@@ -575,17 +599,6 @@ function getPostList($listType, $start=0, $items=6)
         ";
       } else if ($listType == 'table') {
         $postid += $randNum;
-        // $postList .= "
-        //   <tr class='toptr'>
-        //     <td class='number notice'>공지</td>
-        //     <td class='subject notice'>
-        //       <a href='$url' title='$title'>$title</a>
-        //     </td>
-        //     <td class='writer'>$nickname</td>
-        //     <td class='date'>$wdate</td>
-        //     <td class='hits'>$hits</td>
-        //   </tr>
-        // ";
         $postList .= "
           <tr class='toptr'>
             <td class='number'>$postid</td>
@@ -617,6 +630,7 @@ function getPostList($listType, $start=0, $items=6)
   }
   $list_data = array(
     'postList' => "<ul class='${listType}_list'>$postList</ul>",
+    'postSearch' => "",
     'pageNav' => $pageNav,
   );
   $html = renderElement(TPL.'list_'.$listType.'.html', $list_data);
@@ -650,24 +664,24 @@ function getPageNav($page=1, $pageCount=10)
   $btn_prev = '';
   if ($page > 1) {
     $url_first = "$MAIN?action=$ACT&category=$CAT&page=1";
-    $btn_first = "<a class='first_page' href='$url_first'>&nbsp;</a>";
+    $btn_first = "<a class='first_page' href='$url_first'><i class='xi-angle-left'></i></a>";
     $url_prev = "$MAIN?action=$ACT&category=$CAT&page=".($page-1);
-    $btn_prev = "<a class='prev_page' href='$url_prev'>&nbsp;</a>";
+    $btn_prev = "<a class='prev_page' href='$url_prev'><i class='xi-arrow-left'></i></a>";
   } else {
-    $btn_first = "<a class='first_page'>&nbsp;</a>";
-    $btn_prev = "<a class='prev_page'>&nbsp;</a>";
+    $btn_first = "<a class='first_page disabled'><i class='xi-angle-left'></i></a>";
+    $btn_prev = "<a class='prev_page disabled'><i class='xi-arrow-left'></i></a>";
   }
 
   $btn_next = '';
   $btn_last = '';
   if ($page < $pageCount) {
     $url_next = "$MAIN?action=$ACT&category=$CAT&page=".($page+1);
-    $btn_next = "<a class='next_page' href='$url_next'>&nbsp;</a>";
+    $btn_next = "<a class='next_page' href='$url_next'><i class='xi-arrow-right'></i></a>";
     $url_last = "$MAIN?action=$ACT&category=$CAT&page=$pageCount";
-    $btn_last = "<a class='last_page' href='$url_last'>&nbsp;</a>";
+    $btn_last = "<a class='last_page' href='$url_last'><i class='xi-angle-right'></i></a>";
   } else {
-    $btn_next = "<a class='next_page'>&nbsp;</a>";
-    $btn_last = "<a class='last_page'>&nbsp;</a>";
+    $btn_next = "<a class='next_page disabled'><i class='xi-arrow-right'></i></a>";
+    $btn_last = "<a class='last_page disabled'><i class='xi-angle-right'></i></a>";
   }
 
   return $btn_first.$btn_prev.$btn_page.$btn_next.$btn_last;
