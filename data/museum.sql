@@ -23,7 +23,7 @@ CREATE TABLE museum_post (
   subject CHAR(20),
   category CHAR(20),
   title VARCHAR(80),
-  file VARCHAR(140),
+  file VARCHAR(120),
   info JSON,
   content TEXT,
   PRIMARY KEY(postid)
@@ -48,4 +48,30 @@ CREATE TABLE museum_user (
   link VARCHAR(80),
   usergroup CHAR(10) DEFAULT 'user',
   PRIMARY KEY(userid)
+);
+
+/* board 게시판
+postid 인덱스: 자동증가 정수
+wdate 날짜: 타임스탬프
+userid 작성자 id
+nickname 작성자 이름
+subject 주제:
+category 분류:
+title 타이틀
+file 파일
+content 내용
+*/
+DROP TABLE IF EXISTS museum_board;
+CREATE TABLE museum_board (
+  postid INT AUTO_INCREMENT,
+  wdate INT,
+  userid CHAR(20),
+  nickname VARCHAR(20),
+  subject CHAR(20),
+  category CHAR(20),
+  title VARCHAR(80),
+  file VARCHAR(120),
+  info JSON,
+  content TEXT,
+  PRIMARY KEY(postid)
 );
