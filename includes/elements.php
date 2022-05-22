@@ -332,7 +332,7 @@ function getInfoList($data, $postType='html')
   $html = '';
   foreach ($data as $key => $value) {
     if ($key == '첨부파일') {
-      if ($postType=='exhibit' || $value == '') continue;
+      if ($value == '') continue;
       $fileName = basename($value);
       $value = "<a href='$value' download='$fileName'>$fileName</a>";
     }
@@ -377,7 +377,9 @@ function getPostContent($postid=1, $postType='html')
     $wdate = date('Y-m-d', $wdate);
     $hits = rand(128, 1024);
     $info = ($info)?json_decode($info,true):array();
-    $info['첨부파일'] = ($file)?FILE.$ACT.'/'.$CAT.'/'.$file:'';
+    if ($postType=='html') {
+      $info['첨부파일'] = ($file)?FILE.$ACT.'/'.$CAT.'/'.$file:'';
+    }
     $info = getInfoList($info, $postType);
     $image = '';
     $fileExt = getExt($file);
