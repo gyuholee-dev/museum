@@ -2,13 +2,14 @@
 
 // 컨펌 처리
 if (isset($_POST['confirm'])) {
+  $table = $DBCONF['prefix'].'user';
   switch ($DO) {
     case 'login': 
       $success = false;
       $userid = $_POST['userid'];
       $password = $_POST['password'];
     
-      $sql = "SELECT * FROM museum_user WHERE userid='$userid'";
+      $sql = "SELECT * FROM $table WHERE userid='$userid'";
       $res = mysqli_query($DB, $sql);
 
       if (mysqli_num_rows($res) == 1) {
@@ -39,7 +40,7 @@ if (isset($_POST['confirm'])) {
       $email .= $_POST['domain']? '@'.$_POST['domain'] : '';
       $avatar = $_POST['avatar'];
       $link = $_POST['link'];
-      $sql = "INSERT INTO museum_user 
+      $sql = "INSERT INTO $table 
               (userid, password, nickname, email, avatar, link) 
               VALUES
               ('$userid', AES_ENCRYPT('$password', '$password'), '$nickname', '$email', '$avatar', '$link') ";
@@ -62,7 +63,7 @@ if (isset($_POST['confirm'])) {
       $email = $_POST['email'];
       $avatar = $_POST['avatar'];
       $link = $_POST['link'];
-      $sql = "UPDATE museum_user SET 
+      $sql = "UPDATE $table SET 
               password = AES_ENCRYPT('$password', '$password'), 
               nickname = '$nickname', 
               email = '$email', 
