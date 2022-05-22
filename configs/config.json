@@ -59,6 +59,7 @@
     },
     "exhibition" : {
       "title" : "전시",
+      "table" : "museum_post",
       "items" : 6,
       "listType" : "preview",
       "postType" : "exhibit",
@@ -83,6 +84,7 @@
     },
     "education" : {
       "title" : "교육",
+      "table" : "museum_post",
       "items" : 5,
       "listType" : "preview",
       "postType" : "html",
@@ -107,6 +109,7 @@
     },
     "collection" : {
       "title" : "소장품",
+      "table" : "museum_post",
       "items" : 6,
       "listType" : "gallery",
       "postType" : "media",
@@ -137,6 +140,7 @@
     },
     "steel_art" : {
       "title" : "스틸아트공방",
+      "table" : "museum_post",
       "items" : 6,
       "listType" : "list",
       "postType" : "link",
@@ -152,6 +156,7 @@
     },
     "community" : {
       "title" : "참여마당",
+      "table" : "museum_board",
       "items" : 16,
       "listType" : "list",
       "postType" : "html",
@@ -181,6 +186,7 @@
     },
     "guide" : {
       "title" : "관람안내",
+      "table" : "museum_post",
       "items" : 6,
       "listType" : "list",
       "postType" : "html",
@@ -210,6 +216,7 @@
     },
     "greeting" : {
       "title" : "미술관소개",
+      "table" : "museum_post",
       "items" : 6,
       "listType" : "list",
       "postType" : "html",
