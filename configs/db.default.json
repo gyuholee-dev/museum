@@ -5,5 +5,5 @@
   "database" : "museum",
   "port" : 3306,
   "socket" : null,
-  "prefix" : "museum"
+  "prefix" : "museum_"
 }
