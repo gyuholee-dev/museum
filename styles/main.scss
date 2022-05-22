@@ -720,14 +720,15 @@ input[type=password] {
   .dlType_wrap {
     width: auto;
     overflow: hidden;
+    border-top: 1px solid $color-border;
 
     dl {
       @include flex(stretch, start);
       width: 100%;
       border-bottom: 1px solid $color-border;
-      &:first-child {
-        border-top: 1px solid $color-border;
-      }
+      // &:first-child {
+      //   border-top: 1px solid $color-border;
+      // }
     }
 
     .inner {
@@ -1204,45 +1205,43 @@ input[type=password] {
       border-top: 1px solid #ddd;
       table-layout: fixed;
 
-      caption {
-        width: 0;
-        height: 0;
-        overflow: hidden;
+      tr:hover {
+        background-color: rgba(black, 0.025);
       }
 
-      thead {
-        th {
-          padding: 13px 0;
-          border-bottom: 1px solid #ddd;
-          background: #f5f5f5;
+      th {
+        padding: 10px 5px;
+        border-bottom: 1px solid #ddd;
+        background: #f5f5f5;
+        &.number {
+          width: 75px;
         }
-
-        th.hits {
-          width: 10%;
+        // &.subject {
+        //   width: 56%;
+        // }
+        &.writer {
+          width: 120px;
         }
-
-        th.subject {
-          width: 56%;
+        &.date {
+          width: 120px;
         }
-
-        th.writer {
-          width: 12%;
-        }
-
-        th.date {
-          width: 12%;
+        &.hits {
+          width: 80px;
         }
       }
 
-      tbody {
-        td.notice {
-          color: #000;
+      td {
+        padding: 10px 5px;
+        color: $color-text-faint;
+        border-bottom: 1px solid $color-border;
+        text-align: center;
+        &.notice {
+          color: $color-text;
           font-weight: bold;
         }
-
-        td.subject {
+        &.subject {
+          color: $color-text;
           text-align: left;
-
           a {
             display: inline-block;
             max-width: 93%;
@@ -1251,13 +1250,6 @@ input[type=password] {
             white-space: nowrap;
             vertical-align: middle;
           }
-        }
-
-        td {
-          padding: 12px 0;
-          color: #959595;
-          border-bottom: 1px solid $color-border;
-          text-align: center;
         }
       }
     }

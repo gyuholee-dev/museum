@@ -331,6 +331,11 @@ function getInfoList($data, $postType='html')
 {
   $html = '';
   foreach ($data as $key => $value) {
+    if ($key == '첨부파일') {
+      if ($postType=='exhibit' || $value == '') continue;
+      $fileName = basename($value);
+      $value = "<a href='$value' download='$fileName'>$fileName</a>";
+    }
     if ($postType=='exhibit') {
       $html .= "
         <li>
@@ -358,7 +363,8 @@ function getPostContent($postid=1, $postType='html')
   global $ACT, $CAT, $DO, $ID, $PAGE;
   global $MAIN;
 
-  $table = $DBCONF['prefix'].$CONF['pages'][$ACT]['table'];
+  $tableName = $CONF['pages'][$ACT]['table'];
+  $table = $DBCONF['prefix'].$tableName;
   $sql = "SELECT * FROM $table "; 
   $sql .= "WHERE subject='$ACT' AND category='$CAT' AND postid='$postid'";
   $res = mysqli_query($DB, $sql);
@@ -370,8 +376,16 @@ function getPostContent($postid=1, $postType='html')
     }
     $wdate = date('Y-m-d', $wdate);
     $hits = rand(128, 1024);
-    $image = FILE.$ACT.'/'.$CAT.'/'.$file;
-    $info = getInfoList(json_decode($info,true), $postType);
+    $info = ($info)?json_decode($info,true):array();
+    $info['첨부파일'] = ($file)?FILE.$ACT.'/'.$CAT.'/'.$file:'';
+    $info = getInfoList($info, $postType);
+    $image = '';
+    $fileExt = getExt($file);
+    if ($fileExt == "jpg" || $fileExt == "jpeg" || $fileExt == "png" || $fileExt == "gif") {
+      $imgClass = ($postType == 'html')?'img-center img-fit':'img-center';
+      $imgStyle = ($postType != 'exhibit')?'margin-bottom:15px;':'';
+      $image = "<img class='$imgClass' src='".FILE.$ACT.'/'.$CAT.'/'.$file."' style='$imgStyle'>";
+    }
 
     $post_data = array(
       'image' => $image,
@@ -503,11 +517,14 @@ function getPostList($listType, $start=0, $items=6)
 
   $postList = '';
   $pageNav = '';
+  $randNum = rand(128, 1024);
   if (mysqli_num_rows($res) > 0) {
     while ($data = mysqli_fetch_assoc($res)) {
       foreach ($data as $key => $value) {
         $$key = $value;
       }
+      $wdate = date('Y-m-d', $wdate);
+      $hits = rand(128, 1024);
       $url = "$MAIN?action=$ACT&category=$CAT&do=post&postid=$postid&page=$PAGE";
       $image = FILE.$ACT.'/'.$CAT.'/'.$file;
       $info = json_decode($info,true);
@@ -554,15 +571,47 @@ function getPostList($listType, $start=0, $items=6)
             </div>
           </li>
         ";
+      } else if ($listType == 'table') {
+        $postid += $randNum;
+        // $postList .= "
+        //   <tr class='toptr'>
+        //     <td class='number notice'>공지</td>
+        //     <td class='subject notice'>
+        //       <a href='$url' title='$title'>$title</a>
+        //     </td>
+        //     <td class='writer'>$nickname</td>
+        //     <td class='date'>$wdate</td>
+        //     <td class='hits'>$hits</td>
+        //   </tr>
+        // ";
+        $postList .= "
+          <tr class='toptr'>
+            <td class='number'>$postid</td>
+            <td class='subject'>
+              <a href='$url' title='$title'>$title</a>
+            </td>
+            <td class='writer'>$nickname</td>
+            <td class='date'>$wdate</td>
+            <td class='hits'>$hits</td>
+          </tr>
+        ";
       }
     }
     $pageNav = getPageNav($PAGE, $pageCount);
   } else {
-    $postList = "
+    if ($listType == 'table') {
+      $postList = "
+        <tr><td colspan='5' style='width:100%; height:300px; line-height:300px; text-align:center'>
+          등록된 게시물이 없습니다.
+        </td></tr>
+      ";
+    } else {
+      $postList = "
         <li style='width:100%; height:300px; line-height:300px; text-align:center'>
           등록된 포스트가 없습니다.
         </li>
-    ";
+      ";
+    }
   }
   $list_data = array(
     'postList' => "<ul class='${listType}_list'>$postList</ul>",

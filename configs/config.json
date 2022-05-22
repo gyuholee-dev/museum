@@ -158,7 +158,7 @@
       "title" : "참여마당",
       "table" : "board",
       "items" : 16,
-      "listType" : "list",
+      "listType" : "table",
       "postType" : "html",
       "headerImg" : "sub_visual08.jpg",
       "categories" : {
@@ -188,7 +188,7 @@
       "title" : "관람안내",
       "table" : "post",
       "items" : 6,
-      "listType" : "list",
+      "listType" : "table",
       "postType" : "html",
       "headerImg" : "sub_visual05.jpg",
       "categories" : {
@@ -218,7 +218,7 @@
       "title" : "미술관소개",
       "table" : "post",
       "items" : 6,
-      "listType" : "list",
+      "listType" : "table",
       "postType" : "html",
       "headerImg" : "sub_visual07.jpg",
       "categories" : {

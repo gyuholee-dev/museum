@@ -90,6 +90,12 @@ function numStr($numb, $numSize)
   return $numb;
 }
 
+// 파일 확장자
+function getExt($file)
+{
+  return pathinfo($file, PATHINFO_EXTENSION);
+}
+
 // 유저기능 함수 ------------------------------------------------
 
 // 유저 아이디 존재 검사

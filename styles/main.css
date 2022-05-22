@@ -227,11 +227,9 @@ input[type=password] { -webkit-appearance: none; }
 
 #cont .gallery_wrap .gallery_list li .text { font-size: 14px; text-align: center; margin-top: 10px; }
 
-#cont .dlType_wrap { width: auto; overflow: hidden; }
+#cont .dlType_wrap { width: auto; overflow: hidden; border-top: 1px solid #d9d9d9; }
 
 #cont .dlType_wrap dl { display: flex; flex-direction: row; align-items: stretch; justify-content: start; flex-wrap: nowrap; width: 100%; border-bottom: 1px solid #d9d9d9; }
-
-#cont .dlType_wrap dl:first-child { border-top: 1px solid #d9d9d9; }
 
 #cont .dlType_wrap .inner { width: 102%; overflow: hidden; margin: 0 auto; }
 
@@ -375,25 +373,25 @@ input[type=password] { -webkit-appearance: none; }
 
 #board .bbs_list_defalut table { width: 100%; border-collapse: collapse; border-spacing: 0; border-top: 1px solid #ddd; table-layout: fixed; }
 
-#board .bbs_list_defalut table caption { width: 0; height: 0; overflow: hidden; }
+#board .bbs_list_defalut table tr:hover { background-color: rgba(0, 0, 0, 0.025); }
 
-#board .bbs_list_defalut table thead th { padding: 13px 0; border-bottom: 1px solid #ddd; background: #f5f5f5; }
+#board .bbs_list_defalut table th { padding: 10px 5px; border-bottom: 1px solid #ddd; background: #f5f5f5; }
 
-#board .bbs_list_defalut table thead th.hits { width: 10%; }
+#board .bbs_list_defalut table th.number { width: 75px; }
 
-#board .bbs_list_defalut table thead th.subject { width: 56%; }
+#board .bbs_list_defalut table th.writer { width: 120px; }
 
-#board .bbs_list_defalut table thead th.writer { width: 12%; }
+#board .bbs_list_defalut table th.date { width: 120px; }
 
-#board .bbs_list_defalut table thead th.date { width: 12%; }
+#board .bbs_list_defalut table th.hits { width: 80px; }
 
-#board .bbs_list_defalut table tbody td.notice { color: #000; font-weight: bold; }
+#board .bbs_list_defalut table td { padding: 10px 5px; color: #a6a6a6; border-bottom: 1px solid #d9d9d9; text-align: center; }
 
-#board .bbs_list_defalut table tbody td.subject { text-align: left; }
+#board .bbs_list_defalut table td.notice { color: #0d0d0d; font-weight: bold; }
 
-#board .bbs_list_defalut table tbody td.subject a { display: inline-block; max-width: 93%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; vertical-align: middle; }
+#board .bbs_list_defalut table td.subject { color: #0d0d0d; text-align: left; }
 
-#board .bbs_list_defalut table tbody td { padding: 12px 0; color: #959595; border-bottom: 1px solid #d9d9d9; text-align: center; }
+#board .bbs_list_defalut table td.subject a { display: inline-block; max-width: 93%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; vertical-align: middle; }
 
 #board .edu_view_default .edu_view_table { margin-bottom: 15px; }
 
