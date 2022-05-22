@@ -4,5 +4,6 @@
   "password" : null,
   "database" : "museum",
   "port" : 3306,
-  "socket" : null
+  "socket" : null,
+  "prefix" : "museum"
 }
