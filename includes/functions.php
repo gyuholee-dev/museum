@@ -96,8 +96,9 @@ function numStr($numb, $numSize)
 // TODO: 테이블명 및 필드명 변수처리
 function checkId($userid)
 {
-  global $DB;
-  $sql = "SELECT * FROM museum_user WHERE userid = '$userid' ";
+  global $DB, $DBCONF;
+  $table = $DBCONF['prefix'].'user';
+  $sql = "SELECT * FROM $table WHERE userid = '$userid' ";
   $res = mysqli_query($DB, $sql);
   return mysqli_num_rows($res);
 }
@@ -160,8 +161,9 @@ function unsetUserData() : bool
 // 유저 데이터 삭제
 function deleteUserData($userid) : bool
 {
-  global $DB;
-  $sql = "DELETE FROM museum_user WHERE userid = '$userid' ";
+  global $DB, $DBCONF;
+  $table = $DBCONF['prefix'].'user';
+  $sql = "DELETE FROM $table WHERE userid = '$userid' ";
   $res = mysqli_query($DB, $sql);
   return $res;
 }
