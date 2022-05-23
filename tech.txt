@@ -1,0 +1,58 @@
+https://gyuholee.cafe24.com/museum/main.php
+
+* 스펙
+# 테이블 3개. 사이트, 게시판, 회원
+# 게시물 각 1페이지. 약 70개.
+# 게시물 작성수정삭제, 검색, 예약, 슬라이드, 팝업 등 기능 미구현.
+# 사이트는 https://gyuholee.cafe24.com/museum
+# 소스코드는 깃허브 https://github.com/leegyuho-dev/museum
+
+* 분업
+# 백엔드 이규호 
+# 프론트엔드 신원정 
+# 데이터(컨텐츠) 김가현
+
+* 개요
+# 다양한 뷰를 최우선 순위로 잡았음.
+# 핵심기능: 동일 데이터를 게시판 마다 세가지의 리스트뷰와 포스트뷰로 보여준다.
+# 서브데이터는 json, 본문은 html.
+
+* 리스트뷰: list, preview, gallery
+list: https://gyuholee.cafe24.com/museum/main.php?action=community&category=notice
+preview: https://gyuholee.cafe24.com/museum/main.php?action=education&category=edu02
+gallery: https://gyuholee.cafe24.com/museum/main.php?action=collection&category=collection
+
+* 포스트뷰: html, media, exhibit
+html: https://gyuholee.cafe24.com/museum/main.php?action=education&category=edu01&do=post&postid=42&page=1
+media: https://gyuholee.cafe24.com/museum/main.php?action=collection&category=collection&do=post&postid=71&page=1
+exhibit: https://gyuholee.cafe24.com/museum/main.php?action=exhibition&category=past&do=post&postid=32&page=1
+
+* 기술
+# 다이나믹 웹페이지 -> 템플릿 랜더링.
+
+main.php 메인파일
+- init.php 초기화 스크립트
+-- 사이트 초기화. 
+# 기초 코드를 미리 전부 다 처리해버림.
+-- php 설정, 세션 스타트
+-- 상수 선언 (모든 디렉토리 패스)
+-- 글로벌 변수 (지속적으로 쓰이는 변수를 전역으로 선언)
+-- 설정파일 로드
+-- DB 검사 및 접속
+-- 로그인 체크
+-- 리퀘스트 
+# 메뉴=action, 카테고리=category, 동작=do, 게시물=postid, 페이지=page
+- functions.php 함수 스크립트
+- elements.php 랜더링 스크립트
+
+main.php 메인파일
+-- 사이트 로직. 
+# 메뉴 카테고리 등 리퀘스트 값에 따라 각기 다른 뷰를 보여주거나 페이지로 연결.
+# 예를들어 유저 페이지 경우 로그인되어 있지 않으면 mypage 를 이용할수 없음.
+
+-- 랜더링
+# template.html 참조
+# template.html 를 템플릿으로 내용을 각 함수를 통해 동적으로 생성하고 랜더링한다.
+# head, topmenu, navmenu, content, footmenu, footmenu, postScript 로 데이터 구성.
+# 본문: makeContents(), contents.html 참조.
+# title, leftmenu, headerImg, location, subTitle, content 로 데이터 구성
