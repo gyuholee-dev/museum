@@ -521,7 +521,7 @@ footer > .wrapper { display: flex; flex-direction: row; align-items: center; jus
 
 #firstArea .box_wrap.box2 { position: relative; width: 340px; height: 315px; }
 
-#firstArea .box_wrap.box2 .cont03 { margin-bottom: 20px; width: 338px; height: 198px; }
+#firstArea .box_wrap.box2 .cont03 { margin-bottom: 20px; width: 338px; height: 198px; font-size: 0.9rem; }
 
 #firstArea .box_wrap.box2 .cont03 .inner { padding: 10px 17px; height: 100%; }
 
